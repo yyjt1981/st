@@ -1,0 +1,714 @@
+@charset "utf-8";
+/* CSS Document */
+/*左侧内容*/
+.con_left{
+	float:left;
+	width:960px}
+/*搜索、焦点图*/
+.st_left{
+	float:left;
+	width:960px;
+	height:300px}
+.st_search_l{
+	float:left;
+	width:358px;
+	height:300px;
+	background:url(../images/top_ss_bg.png) left no-repeat}	
+.zh_search{
+	float:left;
+	width:342px;
+	height:284px;
+	margin:8px;
+	background:#fff}
+#switchBox{
+	float:left;
+	width:342px;
+	height:284px}
+#switchBox dt{
+	float:left;
+	width:330px;
+	height:42px;
+	padding:0 6px;
+	background:url(../images/index_search_bg.gif) left repeat-x}
+#switchBox dt span{
+	float:left;
+	color:#4b4b4b;
+	width:66px;
+	height:42px;
+	line-height:42px;
+	font-family:"微软雅黑";
+	font-size:16px;
+	text-align:center;
+	cursor:pointer;
+	background:url(../images/span_on.gif) right no-repeat}
+#switchBox dt span.bg_none{
+	background:none}
+#switchBox dt span.on{
+	background:url(../images/span_on.gif) right no-repeat #fff}
+#switchBox dd{
+	float:left;
+	width:342px;}
+#switchBox .nr_ul{
+	float:left;
+	width:338px;
+	margin:10px 0 0 15px}
+#switchBox .nr_ul li{
+	float:left;
+	width:320px;
+	height:28px;
+	line-height:28px;
+	margin-bottom:13px;}
+#switchBox .nr_ul li label{
+	float:left;
+	color:#555;
+	width:60px;
+	font-size:13px}
+#switchBox .nr_ul li .text{
+	float:left;
+	width:250px;
+	height:26px;
+	line-height:26px;
+	border:1px solid #a3a3a3;
+	background:url(../images/text_box_bg.png) no-repeat}
+#switchBox .nr_ul li .jd_name{
+	float:left;
+	width:250px;
+	height:26px;
+	line-height:26px;
+	border:1px solid #a3a3a3}
+#switchBox .nr_ul li .md{
+	background-position:right -116px}
+#switchBox .nr_ul li .rz{
+	background-position:right -38px}
+#switchBox .nr_ul li .ld{
+	background-position:right -76px}
+#switchBox .nr_ul li .diy_select_btn{
+	background:url(../images/text_box_bg.png) no-repeat -5px -146px}
+#switchBox .nr_ul li .diy_select{
+	width:253px;
+	border:1px solid #a3a3a3}
+#switchBox .nr_ul li .diy_select_txt{
+	width:225px}	
+#switchBox .nr_ul li .diy_select li{
+	width:253px;
+	margin-bottom:0}
+#switchBox .cp_cx{
+	float:left;
+	width:218px;}
+#switchBox .cp_cx a{
+	color:#fff;
+	float:left;
+	width:122px;
+	height:33px;
+	line-height:32px;
+	text-align:center;
+	margin-left:75px;
+	font-family:"微软雅黑";
+	font-size:16px;
+	font-weight:500;
+	background:url(../images/top_ss_btn.png) left no-repeat}
+#switchBox .cp_cx a:hover{
+	color:#fff}	
+/*团购*/
+.tuan_con{
+	float:left;
+	width:960px;
+	margin-top:20px}
+.tuan_con .tuan_bt{
+	float:left;
+	width:960px;
+	height:40px;
+	line-height:40px;
+	border-bottom:3px solid #65b71f;
+	background:url(../images/index2.png) no-repeat 725px -293px}
+.tuan_con .tuan_bt h3{
+	float:left;
+	color:#464646;
+	font-size:18px;
+	font-weight:500;
+	font-family:"微软雅黑"}
+.tuan_con .tuan_bt s{
+	float:left;
+	width:37px;
+	height:30px;
+	margin:5px 5px 0;
+	background:url(../images/index2.png) no-repeat 0 -119px}
+.tuan_con ul{
+	float:left;
+	width:960px;
+	height:auto;
+	margin-top:15px;
+	overflow:hidden}
+.tuan_con ul li{
+	float:left;
+	width:223px;
+	height:240px;
+	margin-right:20px;
+	overflow:hidden;
+	position:relative;
+	border:1px solid #dcdcdc}
+.tuan_con ul li.mr_0{
+	margin-right:0}
+.tuan_con ul li .tuan_ico{
+	width:44px;
+	height:60px;
+	position:absolute;
+	right:5px;
+	top:0;
+	color:#fff;
+	text-align:center;
+	font-size:12px;
+	font-family:"微软雅黑";
+	background:url(../images/index2.png) no-repeat right -73px}
+.tuan_con ul li .tuan_ico span{
+	display:block;
+	width:42px;
+	font-size:20px}
+.tuan_con ul li .p1{
+	float:left;
+	width:203px;
+	height:30px;
+	padding:10px 10px 0}
+.tuan_con ul li .p1 a{
+	float:left;
+	color:#666;
+	width:203px;
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	overflow:hidden;
+	text-overflow:ellipsis}
+.tuan_con ul li .p1 a:hover,.gl_con dl dd a:hover{
+	color:#f60;
+	text-decoration:underline}
+.tuan_con ul li .p2{
+	float:left;
+	color:#999;
+	width:203px;
+	height:30px;
+	line-height:30px;
+	padding:0 10px}
+.tuan_con ul li .p2 span{
+	float:left;
+	color:#666;
+	font-size:14px}
+.tuan_con ul li .p2 span i{
+	color:#f60;
+	font-style:normal}
+.tuan_con ul li .p2 span strong{
+	color:#f60;
+	font-size:24px;
+	font-weight:500;
+	margin-left:3px}
+.tuan_con ul li .p2 s{
+	float:right;
+	height:20px;
+	line-height:20px;
+	margin-top:8px}
+/*旅游线路*/
+.line_list_con,.hotel_con,.ticket_con{
+	float:left;
+	width:960px;
+	height:auto;
+	margin-top:20px}
+.line_list_con .list_bt,.hotel_con .hotel_bt,.ticket_con .ticket_bt{
+	float:left;
+	width:960px;
+	height:40px;
+	line-height:40px;
+	border-bottom:3px solid #65b71f;
+	background:url(../images/index2.png) no-repeat 725px -217px}
+.line_list_con .list_bt s,.hotel_con .hotel_bt s,.ticket_con .ticket_bt s{
+	float:left;
+	width:37px;
+	height:30px;
+	margin:5px 5px 0;
+	background:url(../images/index2.png) no-repeat 0 -73px}
+.line_list_con .list_bt span,.hotel_con .hotel_bt span,.ticket_con .ticket_bt span{
+	float:left;
+	color:#6c6c6c;
+	width:auto;
+	height:33px;
+	line-height:33px;
+	font-size:14px;
+	padding:0 15px;
+	margin:5px 0 0 -1px;
+	text-align:center;
+	cursor:pointer;
+	background:#f2f1f2;
+	border:1px solid #dcdcdc}
+.line_list_con .list_bt span.on,.hotel_con .hotel_bt span.on,.ticket_con .ticket_bt span.on{
+	color:#fff;
+	height:35px;
+	line-height:35px;
+	background:#65b71f;
+	border:0}
+.line_list_con .list_bt h3,.hotel_con .hotel_bt h3,.ticket_con .ticket_bt h3{
+	float:left;
+	color:#464646;
+	margin-right:82px;
+	font-size:18px;
+	font-weight:500;
+	font-family:"微软雅黑"}
+.line_list_con .list_bt a,.tuan_con .tuan_bt a,.hotel_con .hotel_bt a,.ticket_con .ticket_bt a{
+	height:24px;
+	line-height:24px;
+	font-size:12px;
+	float:right;
+	margin-top:16px;
+	font-family:"微软雅黑";
+	padding-right:10px}
+.menu_left{
+	float:left;
+	width:200px}
+.menu_left .line_menu_txt{
+	float:left;
+	width:200px;
+	overflow:hidden;
+	background:#fdfdfd;
+	border-left:1px solid #e5e5e5;
+	box-shadow:2px 0 2px #eee}
+.menu_left .line_menu_txt a{
+	float:left;
+	color:#666;
+	width:85px;
+	height:30px;
+	line-height:30px;
+	margin-left:-1px;
+	padding-left:15px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	border-top:0;
+	border-right:1px solid #e5e5e5;
+	border-bottom:1px solid #e5e5e5;
+	border-left:0}
+.menu_left .line_menu_txt a:hover{
+	color:#fff;
+	background:#65b71f}	
+.menu_left .line_menu_pic{
+	float:left;
+	width:200px;
+	overflow:hidden}
+.list_rig{
+	float:right;
+	width:746px}
+.list_rig ul{
+	float:left;
+	margin-top:5px;}
+.list_rig ul li{
+	float:left;
+	width:740px;
+	padding:10px 0 10px 6px;
+	border-bottom:1px solid #f2f2f2}
+.list_rig ul li:hover{
+	background:#ebf5e2}
+/*.list_rig ul li.pad_bom{
+	padding-bottom:0}*/
+.list_rig ul li .con_txt{
+	float:left;
+	width:500px;
+	margin-left:10px}
+.list_rig ul li .con_txt p{
+	color:#999;
+	width:500px;
+	height:20px;
+	line-height:20px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap}
+.list_rig ul li .con_txt a{
+	float:left;
+	color:#f60;
+	width:500px;
+	height:20px;
+	line-height:20px;
+	font-size:14px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap}
+.list_rig ul li .con_txt a:hover{
+	text-decoration:underline}
+.list_rig ul li .con_txt .p3 .color_f60{
+	color:#65b71f}
+.list_rig ul li .con_txt .p3 .wid_1{
+	float:left;
+	width:130px;
+	height:20px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis}
+.list_rig ul li .con_txt .p3 .wid_2{
+	float:left;
+	width:234px;
+	height:20px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis}
+.list_rig ul li .price{
+	float:right;
+	width:100px;
+	padding-right:10px}
+.list_rig ul li .price p{
+	float:left;
+	width:100px;
+	height:30px;
+	line-height:30px;
+	text-align:right}
+.list_rig ul li .price .p1 span{
+	color:#f60;
+	font-size:14px;}
+.list_rig ul li .price .p1 strong{
+	color:#f60;
+	font-size:24px;
+	margin-left:3px;
+	font-weight:500;
+	font-family:Arial;}
+.list_rig ul li .price .p1 i{
+	font-style:normal;
+	color:#999;
+	margin-left:3px}
+.list_rig ul li .price .p2{
+	float:right;
+	color:#f60;
+	width:30px;
+	height:17px;
+	line-height:17px;
+	padding-left:20px;
+	text-align:center;
+	margin-top:5px;
+	background:url(../images/dsp_bg.png) no-repeat 0 0}
+/*推荐酒店*/
+.hotel_con .hotel_left,.ticket_con .ticket_left{
+	float:left;
+	width:200px;
+	margin-top:5px;
+	overflow:hidden}
+.hotel_con .hotel_list,.ticket_con .ticket_list{
+	float:right;
+	width:745px;
+	margin-top:15px}
+.hotel_con .hotel_list li,.ticket_con .ticket_list li{
+	float:left;
+	width:175px;
+	height:150px;
+	margin-right:15px}
+.hotel_con .hotel_list li.mr_0,.ticket_con .ticket_list li.mr_0{
+	margin-right:0}
+.hotel_con .hotel_list li p,.ticket_con .ticket_list li p{
+	float:left;
+	width:165px;
+	height:28px;
+	line-height:28px;
+	padding:0 5px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis}
+.hotel_con .hotel_list li .p1,.ticket_con .ticket_list li .p1{
+	margin-top:-28px;
+	background:#000;
+	opacity:0.5;
+	filter:alpha(opacity=50);
+	position:relative;
+	z-index:99}
+.hotel_con .hotel_list li .p2,.ticket_con .ticket_list li .p2{
+	color:#fff;
+	margin-top:-28px;
+	font-size:16px;
+	position:relative;
+	z-index:999}
+.hotel_con .hotel_list li .p3 a,.ticket_con .ticket_list li .p3 a{
+	color:#666}
+.hotel_con .hotel_list li .p3 a:hover,.ticket_con .ticket_list li .p3 a:hover{
+	color:#f60;
+	text-decoration:underline}
+/*相册*/
+.photo_con{
+	float:left;
+	width:960px;
+	height:340px;
+	margin-top:20px;
+	overflow:hidden}
+.photo_con .pic{
+	position:relative}
+.photo_con p{
+	float:left;
+	width:100%;
+	height:30px;
+	line-height:30px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	background:url(../images/toum_bg.png) left repeat-x}	
+.photo_con .pic img{
+	opacity:0.9}
+.photo_con p a{
+	color:#fff;
+	float:right;
+	padding:0 10px;
+	font-size:14px;
+	font-weight:bold;}
+.photo_left{
+	float:left;
+	width:231px;
+	overflow:hidden}
+.photo_left h3{
+	float:left;
+	color:#fff;
+	width:231px;
+	height:36px;
+	line-height:36px;
+	font-size:20px;
+	font-family:"微软雅黑";
+	font-weight:500;
+	text-align:center;
+	background:#65b71f}
+.photo_left .pic{
+	float:left;
+	width:231px;
+	height:150px;
+	overflow:hidden;
+	margin-top:2px}
+.photo_center{
+	float:left;
+	width:479px;
+	height:340px;
+	overflow:hidden}
+.photo_center .pic{
+	float:left;
+	margin:0 0 2px 2px}
+.photo_center .n1{
+	width:316px;
+	height:220px}
+.photo_center .n2{
+	width:157px;
+	height:109px}
+.photo_center .n3{
+	width:157px;
+	height:118px}
+.photo_rig{
+	float:right;
+	width:250px;
+	overflow:hidden}
+.photo_rig .pic{
+	float:left;
+	width:250px;
+	height:169px;
+	overflow:hidden;
+	margin-bottom:2px}
+/*攻略游记*/
+.article_con{
+	float:left;
+	width:928px;
+	height:auto;
+	padding:15px;
+	margin-top:20px;
+	border:1px solid #e5e5e5}	
+.atc_left{
+	float:left;
+	width:630px;
+	height:500px;
+	overflow:hidden}
+.gl_con{
+	float:left;
+	width:630px;
+	height:235px;}	
+.gl_con h3{
+	float:left;
+	color:#65b71f;
+	width:630px;
+	height:35px;
+	font-family:"微软雅黑";
+	font-weight:500;
+	font-size:18px}	
+.gl_con dl{
+	float:left;
+	width:630px;
+	height:200px;
+	overflow:hidden;}
+.gl_con dl dt{
+	float:left;
+	width:280px;
+	height:190px;
+	overflow:hidden}
+.gl_con dl dt p{
+	float:left;
+	width:280px;
+	height:30px;
+	margin-top:-30px;
+	background:url(../images/toum_bg.png) left repeat-x}
+.gl_con dl dt p a{
+	color:#fff;
+	float:left;
+	width:260px;
+	height:30px;
+	line-height:30px;
+	padding:0 10px;
+	font-size:14px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;}
+.gl_con dl dd{
+	float:right;
+	width:330px}
+.gl_con dl dd a{
+	float:left;
+	color:#777;
+	width:315px;
+	height:24px;
+	line-height:24px;
+	padding-left:15px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	background:url(../images/artcile_list_link.png) left no-repeat}
+.gl_con dl dd a:hover{
+	background:url(../images/artcile_list_hover.png) left no-repeat}
+.yj_con{
+	float:left;
+	width:630px;}
+.yj_con h3{
+	float:left;
+	color:#65b71f;
+	width:630px;
+	height:40px;
+	line-height:40px;
+	font-family:"微软雅黑";
+	font-weight:500;
+	font-size:18px}	
+.gl_list_con{
+	float:left;
+	width:630px;
+	margin-top:5px}
+.gl_list_con ul{
+	float:left}
+.gl_list_con ul li{
+	float:left;
+	width:300px;
+	height:100px;
+	margin:0 15px 20px 0;
+	overflow:hidden}
+.gl_list_con ul li .tit{
+	float:right;
+	width:145px;
+	font-size:14px;}
+.gl_list_con ul li .tit a{
+	float:left;
+	width:145px;
+	max-height:44px;
+	line-height:22px;
+	overflow:hidden}
+.gl_list_con ul li .tit a:hover{
+	color:#f60;
+	text-decoration:underline}
+.gl_list_con ul li .txt{
+	float:right;
+	color:#999;
+	width:145px;
+	max-height:40px;
+	line-height:20px;
+	margin-top:10px;
+	overflow:hidden}
+.atc_rig{
+	float:right;
+	width:280px;
+	height:auto}	
+.atc_rig h3{
+	float:left;
+	color:#65b71f;
+	width:280px;
+	font-family:"微软雅黑";
+	font-size:18px;
+	font-weight:500}
+.atc_rig dl{
+	float:left;
+	width:280px;
+	margin-top:10px}
+.atc_rig dl dt{
+	float:left;
+	width:280px;
+	height:24px}
+.atc_rig dl dt span{
+	float:left;
+	color:#777;
+	width:60px;
+	height:24px;
+	line-height:24px;}
+.atc_rig dl dt a{
+	float:left;
+	color:#65b71f;
+	width:220px;
+	height:24px;
+	line-height:24px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis}
+.atc_rig dl dd{
+	float:left;
+	color:#888;
+	width:258px;
+	height:auto;
+	padding:10px;
+	margin-top:5px;
+	position:relative;
+	border:1px solid #e5e5e5}
+.atc_rig dl dd s{
+	display:block;
+	width:13px;
+	height:8px;
+	position:absolute;
+	top:-8px;
+	left:10px;
+	background:url(../images/jt_up_bg.png) left no-repeat}
+.atc_rig dl dd .hf{
+	float:left;
+	width:258px;}
+.atc_rig dl dd .tit{
+	float:left;
+	color:#65b71f;
+	width:258px;
+	height:24px;
+	line-height:24px;
+	font-weight:bold;
+	margin-top:5px}
+.atc_rig dl dd .txt{
+	float:left;
+	width:258px;
+	line-height:20px;}
+/*右侧内容*/
+.con_rig{
+	float:right;
+	width:240px;
+	height:auto;
+	overflow:hidden}
+.st_rig{
+	float:left;
+	width:240px;
+	height:auto}
+.user_con{
+	float:left;
+	width:240px;
+	margin-bottom:10px}
+.user_con a{
+	width:117px;
+	height:38px;
+	line-height:38px;
+	text-align:center;
+	font-family:"微软雅黑";
+	font-size:14px;
+	color:#fff;
+	background:url(../images/body_bg.png) no-repeat}
+.user_con a.register{
+	float:left;
+	background-position:0 -366px}
+.user_con a:hover.register{
+	color:#fff;
+	float:left;
+	background-position:0 -327px}
+.user_con a.login{
+	float:right;
+	background-position:-119px -366px}
+.user_con a:hover.login{
+	color:#fff;
+	float:right;
+	background-position:-119px -327px}

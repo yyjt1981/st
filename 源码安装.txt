@@ -1,0 +1,26 @@
+源码安装：
+ 
+1.首先还原数据库，数据库备份文件在程序根目录下的【数据库】这个文件夹，用phpmyadmin或者是navicat数据库管理软件还原进去，这个一般不多说了，自己可以联系自己的主机商提供相应的教程或者服务；
+ 
+2.修改数据库配置文件
+ 
+打data/common.inc.php、newtravel\application\config\database.php
+这2个文件，按照下列要求修改保存
+ 
+打开文件之后，找到下列代码替换
+ 
+$cfg_dbname = 'root';
+$cfg_dbuser = 'root';
+$cfg_dbpwd = 'root';
+ 
+注意：改成您的数据库名称，root改成您的数据库用户名；root改成您的数据库密码
+ 
+3.登陆后台
+ 
+后台登陆地址http://您的域名/newtravel/login/
+ 
+
+注意：程序支持apache下的伪静态规则，如果是iis版本请使用rewrite3这个伪静态规则配置，不会的可以百度一下rewrite3的配置图文教程，鉴于程序的复杂性，不建议虚拟主机安装使用。
+
+—————————————————
+商业源码网：http://www.zzcodes.net

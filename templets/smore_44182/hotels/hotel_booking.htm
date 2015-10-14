@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{sline:field.title/}预订-{sline:global.cfg_webname/}</title>
+<meta name="author" content="{sline:global.cfg_webname/}" />
+{sline:php}Helper_Archive::getCss('base.css');{/sline:php}
+{sline:php}Helper_Archive::getScript('jquery-1.8.3.min.js,common.js,jquery.validate.js,hotel.booking.js,book.js');{/sline:php}
+<script language="javascript" type="text/javascript" src="{sline:global.cfg_templets_skin/}/js/DatePicker/WdatePicker.js"></script>
+</head>
+
+<body>
+	{sline:include file='public/header.htm'/}
+  
+  <!-- 中间内容开始 -->
+  <div class="big">
+  	<div class="width_1210">
+    	<!-- 面包屑and滚动订单开始 -->
+    	<div class="top_first">
+      		<div class="crumbs">当前位置：<a href="{sline:global.cfg_basehost/}">{sline:global.cfg_indexname/}</a> &gt; <a href="{sline:global.cfg_cmsurl/}/spots/">{sline:global.typename/}</a>预订酒店</div>
+        {sline:include file='public/scroll_order.htm'/}
+      </div>
+      <!-- 面包屑and滚动订单结束 -->
+
+      <div class="order_con">
+      	<div class="order_handle">
+          <div class="order_zt"><label>酒店编号：{sline:field.series/}</label><span>{sline:if var='_djsupport'}(支持订金){/sline:if}</span></div>
+          <div class="order_cd">感谢您对 {sline:global.cfg_webname/} 的支持与信任！</div>
+        </div>
+        <div class="jindu"></div>
+        <form id="dingfrm" action="?dopost=savebooking" method="post">
+        <div class="or_show or_bg_1">
+          <h3>订单详细</h3>
+          <dl>
+            <dt>产品名称：</dt>
+            <dd>{sline:field.title/}</dd>
+          </dl>
+          <dl>
+            <dt>房间类型：</dt>
+            <dd>{sline:field.roomname/}</dd>
+          </dl>
+          
+          <!--<dl>
+            <dt>产品价格：</dt>
+            <dd><span class="w_xt">价格：<span class="color_f">&yen;{sline:field.price/}元</span>&nbsp;&nbsp;起</span></dd>
+          </dl>
+          <dl>
+            <dt>产品数量：</dt>
+            <dd>
+              <span class="w_xt"><input type="text" class="text" name="dingnum" id="dingnum" value="1" />&nbsp;&nbsp;张</span>
+           
+            </dd>
+          </dl>
+          <dl>
+            <dt>使用日期：</dt>
+            <dd><input type="text" class="date_txt" name="usedate" id="usedate" value="{sline:field.usedate/}" readonly /></dd>
+          </dl>-->
+           <dl>
+            <dt>入住时间：</dt>
+            <dd>
+            	<table width="720" border="0" cellspacing="0" cellpadding="0" id="table_ding_list">
+                {sline:vlist name='roomdinginfo'}
+                  <tr class="u_info_list" id="book_[field:usedate/]" data-dingdate="[field:usedate/]" data-dingprice="[field:singleprice/]" >
+                    <td width="120" height="40">[field:usedate/]</td>
+                    <td width="200" height="40"><input type="text" class="time_text d_num required" onblur="roomnumChange(this)" rel="[field:totalprice/]" value="[field:dingnum/]" />间</td>
+                    <td width="100" height="40" class="d_price">&yen;[field:totalprice/]元</td>
+                    <td height="40"><a class="h_del" onclick="deltr(this)" href="javascript:;">删除</a></td>
+                  </tr>
+                {/sline:vlist}
+               
+              </table>
+              <table width="720" border="0" cellspacing="0" cellpadding="0">
+                 <tr>
+                	<td width="720" height="40" colspan="4"><a class="add" href="javascript:;">添加</a></td>
+                </tr>
+              </table>
+            </dd>
+          </dl>
+        </div>
+        <div class="or_show or_bg_2">
+          <h3>优惠信息</h3>
+          {sline:if var='_has_jifentprice'}
+            <dl>
+              <dt>积分可抵现金：</dt>
+              <dd>{sline:field.jifentprice/}</dd>
+            </dl>
+          {/sline:if}
+          {sline:if var='_has_jifenbook'}
+          <dl>
+          	<dt>购买送积分：</dt>
+            <dd>{sline:field.jifenbook/}</dd>
+          </dl>
+          {/sline:if}
+          {sline:if var='_has_jifencomment'}
+          <dl>
+          	<dt>评论送积分：</dt>
+            <dd>{sline:field.jifencomment/}</dd>
+          </dl>
+          {/sline:if}
+        </div>
+        <div class="or_show or_bg_3">
+          <h3>联系人资料</h3>
+          <dl>
+            <dt>联 系 人：</dt>
+            <dd><input type="text" class="data_text" name="linkman" id="linkman" value="{sline:field.linkman/}" /></dd>
+          </dl>
+          <dl>
+            <dt>电话号码：</dt>
+            <dd><input type="text" class="data_text" name="linktel" id="linktel" value="{sline:field.linktel/}" /></dd>
+          </dl>
+          <dl>
+            <dt>常用邮箱：</dt>
+            <dd><input type="text" class="data_text" name="linkemail" id="linkemail" value="{sline:field.linkemail/}" /></dd>
+          </dl>
+          <dl>
+            <dt>QQ号码：</dt>
+            <dd><input type="text" class="data_text" name="linkqq" id="linkqq" value="" /></dd>
+          </dl>
+        </div>
+
+        <div class="order_price">
+          <ul>
+            <li class="li_1">订单总金额：&yen;<span class="totalprice">{sline:field.price/}</span>元</li>
+            {sline:if var='_djsupport'}
+              <li class="li_2"><strong>支付订金：<b>&yen;{sline:field.dingjin/}</b>元</strong><span>(支持订金订单，付款时仅需在线支付订金报名即可，剩余金额签约付款)</span></li>
+            {/sline:if}
+            <li class="li_3"><input type="submit" name="" value="提交订单" /></li>
+          </ul>
+        </div>
+        <!--隐藏域-->
+        <input type="hidden" name="jifentprice" value="{sline:field.jifentprice/}"/>
+        <input type="hidden" name="jifenbook" value="{sline:field.jifenbook/}"/>
+        <input type="hidden" name="jifencomment" value="{sline:field.jifencomment/}"/>
+        <input type="hidden" name="dingjin" value="{sline:field.dingjin/}"/>
+        <input type="hidden" name="productautoid" id="productautoid" value="{sline:field.productid/}"/>
+        <input type="hidden" name="price" id="price" value="{sline:field.price/}"/>
+        <input type="hidden" name="childprice" value="0"/>
+        <input type="hidden" name="productaid" value="{sline:field.aid/}"/>
+        <input type="hidden" name="webid" value="{sline:field.webid/}"/>
+        <input type="hidden" name="productname" id="productname" value="{sline:field.title/}"/>
+        <input type="hidden" name="suitid" id="suitid" value="{sline:global.roomid/}"/>
+        
+        <input type="hidden" name="udate" id="udate" value=""/>
+        <input type="hidden" name="dnum" id="dnum" value=""/>
+        <input type="hidden" name="dprice" id="dprice" value=""/>
+        <input type="hidden" name="paytype" value="{sline:field.paytype/}"/>
+        
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <!-- 中间内容结束 -->
+  
+  {sline:include file='public/help.htm'/}
+  
+  {sline:include file='public/footer.htm'/}
+
+  
+ 
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+.sr_order{
+	float:left;
+	width:1210px;
+	height:auto}
+.or_head{
+	float:left;
+	width:1210px;
+	height:969px;}
+.or_body{
+	float:left;
+	width:1210px;
+	height:auto;
+	background:url(../images/or_body_bg.gif) left repeat-y}	
+.dz_first,.dz_second{
+	float:left;
+	width:1010px;
+	margin-left:108px}	
+.bor_bom .dz_nr_con{
+	border-bottom:1px solid #b4895b}	
+.dz_nr_con{
+	float:left;
+	color:#555;
+	width:916px;
+	height:auto;
+	margin-left:46px;
+	font-family:"微软雅黑";
+	font-size:14px;
+	padding-bottom:20px;
+	border-right:1px solid #b4895b;
+	border-left:1px solid #b4895b;
+	background:#fff}	
+.dz_nr_con table th{
+	font-weight:500;
+	padding-right:20px}
+.dz_nr_con table th .f60{
+	color:#f60;
+	float:right;
+	margin:3px 0 0 5px}
+.dz_nr_con .order_txt{
+	width:200px;
+	height:24px;
+	line-height:24px;
+	margin-right:10px;
+	border:1px solid #dcdcdc }
+.dz_nr_con .order_txt2{
+	width:400px;
+	height:24px;
+	line-height:24px;
+	margin-right:10px;
+	border:1px solid #dcdcdc }
+.dz_nr_con td a.active{
+	float:left;
+	color:#fff;
+	height:24px;
+	line-height:24px;
+	padding:0 10px;
+	margin-right:10px;
+	border:0;
+	background:#ff8c00}
+.dz_nr_con td a{
+	float:left;
+	color:#555;
+	height:22px;
+	line-height:22px;
+	padding:0 10px;
+	margin-right:10px;
+	border:1px solid #dcdcdc}
+.dz_nr_con td textarea{
+	width:500px;
+	height:120px;
+	border:1px solid #dcdcdc}
+.dz_nr_con th .tj_order_btn{
+	color:#fff;
+	display:block;
+	width:190px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	background:#e9442e;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-ms-border-radius:3px;
+	-webkit-border-radius:3px;}	
+.or_foot{
+	float:left;
+	width:1210px;
+	height:183px}

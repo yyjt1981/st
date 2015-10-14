@@ -1,0 +1,551 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{sline:global.cfg_indextitle/}</title>
+    <meta name="keywords" content="{sline:global.cfg_keywords/}" />
+    <meta name="author" content="{sline:global.cfg_webname/}" />
+    <meta name="description" content="{sline:global.cfg_description/}" />
+    {sline:global.indexcode/}
+    {sline:php}GetCss('base.css,index4.css,list2.css,base.css','2014.03');{/sline:php}
+    {sline:php}GetScript('jquery-1.4.2.min.js,common.js,index.js,ks-switch.pack.js','2014.03');{/sline:php}
+    <script language="javascript" src="/templets/smore/js/DatePicker/WdatePicker.js"></script>
+</head>
+<script>
+$(function($){
+	$("#switchBox").switchTab();
+	$("#switchBox2").switchTab();
+	$("#switchBox3").switchTab();
+	$("#switchBox4").switchTab();
+	$("#switchBox dt").find("span").last().addClass("bg_none")
+});
+</script>
+<body>
+	{sline:include file='public/header.htm'/}
+  
+  <!-- 中间内容 -->
+  <div class="big">
+  	<div class="width_1210">
+    
+    	<!-- 热门目的地开始 -->
+    	<div class="top_first">
+          <div class="hot_mdd">
+        	<span>热门目的地：</span>
+            {sline:getdest flag='hot' row='6'}
+            <a href="[field:url/]">[field:title/]</a>
+            {/sline:getdest}
+            </div>
+            {sline:include file='public/scroll_order.htm'/}
+      	 </div>
+      <!-- 热门目的地结束 -->
+           
+    </div>
+  </div>
+  <!-- 中间内容 -->
+  
+  <!--中间产品内容开始-->
+  <div class="big">
+  	<div class="width_1210">
+    	<div class="con_left">
+      
+      	<!--首页搜索焦点开始-->
+        <div class="st_left">
+        	<div class="st_search_l">
+          	<div class="zh_search">
+            	<dl id="switchBox">
+              	<dt>
+                  <span>酒店</span>
+                  <span>门票</span>
+                  <span>旅游</span>
+                  <span>租车</span>
+                  <span>火车</span>
+                </dt>
+                <dd>
+                <form action="/hotels/search.php" method="post">
+                  <ul class="nr_ul">
+                    <li>
+                      <label>目的城市</label>
+                      <input type="text" class="text md" name="dest_keyword" id="destination" />
+                    </li>
+                    <li>
+                      <label>入住时间</label>
+                      <input type="text" class="text rz" name="rz_time" id="rz_time" />
+                    </li>
+                    <li>
+                      <label>酒店星级</label>
+                      <div class='diy_select'>
+                        <input type="hidden" name="rankid" class='diy_select_input'/>
+                        <div class="diy_select_txt">全部</div>
+                        <div class="diy_select_btn"></div>
+                        <ul class="diy_select_list">
+                         {sline:gethotelguide flag='rank'}
+                         <li rel="[field:aid/]">[field:title/]</li>
+                       {/sline:gethotelguide}
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <label>酒店名称</label>
+                      <input type="text" class="jd_name" name="hotelname" id="jd_name" />
+                    </li>
+                  </ul>
+                  <div class="cp_cx"><button type="submit">酒店查询</button></div>
+                  </form>
+                </dd>
+                <dd>
+                  <form action="/spots/search.php" method="post">
+                	<ul class="nr_ul">
+                    {sline:attrgrouplist typeid='5' row='2'}
+                    <li>
+                      <label>{sline:field.groupname/}</label>
+                      <div class='diy_select'>
+                        <input type="hidden" name="attrid[]" class='diy_select_input'/>
+                        <div class="diy_select_txt">全部</div>
+                        <div class="diy_select_btn"></div>
+                        <ul class="diy_select_list">
+                         {sline:getattrbygroup typeid='5'}
+                          <li rel="[field:id/]">[field:attrname/]</li>
+                         {/sline:getattrbygroup}
+                        </ul>
+                      </div>
+                    </li>
+                    {/sline:attrgrouplist}
+                    <li>
+                      <label>价格区间</label>
+                      <div class='diy_select'>
+                        <input type="hidden" name="priceid" class='diy_select_input'/>
+                        <div class="diy_select_txt">全部</div>
+                        <div class="diy_select_btn"></div>
+                        <ul class="diy_select_list">
+                         {sline:getspotguide flag='price'}
+              	       <li rel="[field:aid/]">[field:title/]</li>
+                     {/sline:getspotguide}
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <label>景点名称</label>
+                      <input type="text" class="jd_name" name="spotname" id="jd_name" />
+                    </li>
+                  </ul>
+                  <div class="cp_cx"><button type="submit">门票查询</button></div>
+                  </form>
+                </dd>
+                <dd>
+                <form action="/lines/search.php" method="post">
+                	<ul class="nr_ul">
+                    <li>
+                      <label>出行天数</label>
+                      <div class='diy_select'>
+                        <input type="hidden" name="day" class='diy_select_input'/>
+                        <div class="diy_select_txt">全部</div>
+                        <div class="diy_select_btn"></div>
+                        <ul class="diy_select_list">
+                          {sline:getlineguide flag='day'}
+                            <li rel="[field:id/]">[field:title/]</li>
+                          {/sline:getlineguide}
+                        </ul>
+                      </div>
+                    </li>
+                     {sline:attrgrouplist typeid='1' row='1'}
+                    <li>
+                      <label>{sline:field.groupname/}</label>
+                      <div class='diy_select'>
+                        <input type="hidden" name="attrid[]" class='diy_select_input'/>
+                        <div class="diy_select_txt">全部</div>
+                        <div class="diy_select_btn"></div>
+                        <ul class="diy_select_list">
+                         {sline:getattrbygroup typeid='1'}
+                          <li rel="[field:id/]">[field:attrname/]</li>
+                         {/sline:getattrbygroup}
+                        </ul>
+                      </div>
+                    </li>
+                    {/sline:attrgrouplist}
+                    <li>
+                      <label>价格区间</label>
+                      <div class='diy_select'>
+                        <input type="hidden" name="priceid" class='diy_select_input'/>
+                        <div class="diy_select_txt">全部</div>
+                        <div class="diy_select_btn"></div>
+                        <ul class="diy_select_list">
+                         {sline:getlineguide flag='price'}
+                          <li rel="[field:aid/]">[field:title/]</li>
+                         {/sline:getlineguide}
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <label>目的地</label>
+                      <input type="text" class="jd_name" name="dest_keyword" id="jd_name" />
+                    </li>
+                  </ul>
+                  <div class="cp_cx"><button type="submit">线路查询</button></div>
+                  </form>
+                </dd>
+                <dd>
+                <form method="post" action="/cars/search.php">
+                	<ul class="nr_ul">
+                    <li>
+                      <label>租车类型</label>
+                      <div class='diy_select'>
+                        <input type="hidden" name="attrid" class='diy_select_input'/>
+                        <div class="diy_select_txt">全部</div>
+                        <div class="diy_select_btn"></div>
+                        <ul class="diy_select_list">
+                       {sline:getattrbygroup groupid='1' typeid='3'}
+                          <li rel="[field:id/]">[field:attrname/]</li>
+                       {/sline:getattrbygroup}
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <label>车型</label>
+                      <div class='diy_select'>
+                        <input type="hidden" name="carkindid" class='diy_select_input'/>
+                        <div class="diy_select_txt">全部</div>
+                        <div class="diy_select_btn"></div>
+                        <ul class="diy_select_list">
+                            {sline:getcarguidelist flag="stylelist"}
+                           <li rel="[field:id/]">[field:title/]</li>
+                          {/sline:getcarguidelist}
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <label>价格区间</label>
+                      <div class='diy_select'>
+                        <input type="hidden" name="priceid" class='diy_select_input'/>
+                        <div class="diy_select_txt">全部</div>
+                        <div class="diy_select_btn"></div>
+                        <ul class="diy_select_list">
+                          {sline:getcarguidelist flag='pricerange'}
+                            <li rel="[field:aid/]">[field:title/]</li>
+                        {/sline:getcarguidelist}
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <label>租车城市</label>
+                      <input type="text" class="jd_name" name="startplace" id="jd_name" />
+                    </li>
+                  </ul>
+                  <div class="cp_cx"><button type="submit">租车查询</button></div>
+                  </form>
+                </dd>
+                <dd>
+                5
+                </dd>
+              </dl>
+            </div>
+            
+            <script>
+			 $("#rz_time").click(function(){
+               WdatePicker({onpicked:function(){},skin:'whyGreen',minDate:'%y-%M-%d'}) 
+            })
+			</script>
+            
+          </div><!--搜索结束-->
+          <div class="scrolltab">
+            <span id="sLeftBtnA" class="sLeftBtnABan"></span>
+            <span id="sRightBtnA" class="sRightBtnA"></span>
+            <ul class="ulBigPic">
+            {sline:rollingAd name='IndexRollingAd'}
+              <li class="liSelected">
+                <span class="sPic">
+                  <i class="iBigPic"><a href="[field:linkurl/]" target="_blank" title="[field:linktext/]"><img alt="[field:linktext/]" width="862" height="420" src="[field:picurl/]" /></a></i>
+                </span>
+              </li>
+             {/sline:rollingAd}
+             
+            </ul>
+            <div class="dSmallPicBox">
+              <div class="dSmallPic">
+                <ul class="ulSmallPic" style="width:2646px;left:0px" rel="stop">
+                {sline:rollingAd name='IndexRollingAd'}
+                  <li class="liSelected">
+                    <s></s>
+                    <span class="sPic"><img alt="[field:linktext/]" src="[field:picurl/]" width="75" height="50" /></span>
+                    <span class="sTitle">[field:linktext/]</span>
+                  </li>
+                 {/sline:rollingAd}  
+                </ul>
+              </div>
+            </div>
+          </div><!--滚动焦点图片结束-->
+        </div>
+        <!--首页搜索焦点结束-->
+      	
+        <!--团购列表开始-->
+        <div class="tuan_con">
+        	<div class="tuan_bt"><s></s><h3>天天特价</h3><a class="more" href="/tuan/search.php">更多</a></div>
+          <ul>
+           {sline:gettuanlist flag="new" row="4"}
+           <li  [field:global.autoindex runphp='yes'] if(@me%4==0) @me='class="mr_0"'; else @me='';[/field:global.autoindex]>
+            	<div class="tuan_ico"><span>[field:discount/]</span>折</div>
+            	<a class="fl" href="[field:url/]"><img class="fl" src="[field:lit240/]" width="223" height="163" alt="[field:title/]" title="[field:title/]" /></a>
+              <p class="p1"><a href="[field:url/]">[field:title/]</a></p>
+              <p class="p2"><span>优惠价：<i>&yen;</i><strong>[field:ourprice/]</strong></span><s>原价：&yen;[field:sellprice/]</s></p>
+            </li>
+            {/sline:gettuanlist}
+          	
+          </ul>
+        </div>
+        <!--团购列表结束-->
+        
+        <!--线路产品分类列表开始-->
+        <div class="line_list_con">
+        	<dl id="switchBox2">
+            <dt class="list_bt">
+            	<s></s><h3>旅游线路</h3>
+                {sline:middlenavlist flag='line'} 
+            	<span>{sline:field.kindname/}</span>
+              {/sline:middlenavlist}
+              <a class="more" href="/lines/search.php" target="_blank">更多</a>
+            </dt>
+           {sline:middlenavlist flag='line'} 
+            <dd>
+              <div class="menu_left">
+                <div class="line_menu_txt">
+                {sline:getdest item='line' row='20'}
+                  <a href="[field:url/]" title="[field:title/]" target="_blank">[field:title/]</a>
+                {/sline:getdest}
+                </div>
+                {sline:field.middlead/}
+              </div>
+              
+              <div class="list_rig">
+                <ul>
+                 {sline:getlinelist type="mdd" flag="recommend" row="5" }
+                  <li>
+                    <a class="fl" href="[field:url/]" target="_blank"><img class="fl" src="[field:lit160/]" width="80" height="60" alt="[field:title/]" title="[field:title/]" /></a>
+                    <div class="con_txt">
+                      <p class="p1"><a href="[field:url/]" target="_blank">[field:title/][field:tuijianimg/][field:tejiaimg/][field:zhidingimg/][field:lineicon function=Helper_Archive::getLineIcon(@me)/]</a></p>
+                      <p class="p2">推荐理由:[field:sellpoint/]</p>
+                      <p class="p3"><label class="wid_1">满意度：<span class="color_f60">[field:satisfyscore/]</span></label><label class="wid_1">订单：已成交 <span class="color_f60">[field:sellnum/]</span> 单</label><label class="wid_2">出发班期：<span class="color_f60">[field:startdate/]</span></label></p>
+                    </div>
+                    <div class="price">
+                      <p class="p1">[field:price2/]</p>
+                      <p class="p2">[field:jifentprice/]</p>
+                    </div>
+                  </li>
+                 {/sline:getlinelist}
+                 
+                </ul>
+              </div>
+            </dd>
+            {/sline:middlenavlist}
+          </dl>
+          
+        </div>
+        <!--线路产品分类列表结束-->
+        
+        <!--推荐酒店开始-->
+        <div class="hotel_con">
+        	<dl id="switchBox3">
+            <dt class="hotel_bt">
+              <s></s><h3>酒店推荐</h3>
+             {sline:middlenavlist flag='hotel'} 
+              	<span>{sline:field.kindname/}</span>
+             {/sline:middlenavlist}
+              <a class="more" href="/hotel/search.php" target="_blank">更多</a>
+            </dt>
+             {sline:middlenavlist flag='hotel'} 
+            <dd>
+            	<div class="hotel_left">{sline:field.leftad/}</div>
+              <ul class="hotel_list">
+              {sline:gethotellist type='mdd' flag='recommend'}
+              	<li [field:global.autoindex runphp='yes'] if(@me%4==0) @me='class="mr_0"'; else @me='';[/field:global.autoindex]>
+                	<a class="fl" href="[field:url/]" target="_blank"><img class="fl" src="[field:lit160/]" width="175" height="117" alt="[field:title/]" title="[field:title/]" /></a>
+                  <p class="p1"></p>
+                  <p class="p2">&yen;[field:price/]</p>
+                  <p class="p3"><a href="[field:url/]" target="_blank">[field:title/]</a></p>
+                </li>
+              {/sline:gethotellist}
+              </ul>
+            </dd>
+             {/sline:middlenavlist} 
+           
+          </dl>
+        </div>
+        <!--推荐酒店结束-->
+        
+        <!--推荐门票开始-->
+        <div class="ticket_con">
+        	<dl id="switchBox4">
+            <dt class="ticket_bt">
+              <s></s><h3>门票推荐</h3>
+              {sline:middlenavlist flag='spot'} 
+              	<span>{sline:field.kindname/}门票</span>
+             {/sline:middlenavlist}
+              <a class="more" href="#">更多</a>
+            </dt>
+            {sline:middlenavlist flag='spot'}  
+            <dd>
+            	<div class="ticket_left">{sline:field.leftad/}</div>
+              <ul class="ticket_list">
+              {sline:getspotlist type='mdd' flag='recommend' row='8'}
+              	<li [field:global.autoindex runphp='yes'] if(@me%4==0) @me='class="mr_0"'; else @me='';[/field:global.autoindex]>
+                	<a class="fl" href="[field:url/]" target="_blank"><img class="fl" src="[field:lit160/]" width="175" height="117" alt="[field:title/]" title="[field:title/]" /></a>
+                  <p class="p1"></p>
+                  <p class="p2">[field:price/]</p>
+                  <p class="p3"><a href="[field:url/]" target="_blank">[field:title/]</a></p>
+                </li>
+              {/sline:getspotlist}
+              </ul>
+            </dd>
+            {/sline:middlenavlist}
+          </dl>
+        </div>
+        <!--推荐门票结束-->
+        
+        <!--相册展示开始-->
+        <div class="photo_con">
+        	<div class="photo_left">
+          	<h3>美丽相册</h3>
+            {sline:getphotolist flag='recommend' row='2'}
+            <div class="pic"><a class="fl" href="[field:url/]" target="_blank"><img class="fl" src="[field:lit240/]" width="231" height="150" alt="[field:title/]" title="[field:title/]" /></a><p><a href="[field:url/]" target="_blank">[field:title/]</a></p></div>
+            {/sline:getphotolist}
+          </div>
+          <div class="photo_center">
+           {sline:getphotolist flag='recommend' row='1' limit='2'}
+          	<div class="pic n1"><a class="fl" href="[field:url/]" target="_blank"><img class="fl" src="[field:lit240/]" width="316" height="220" alt="[field:title/]" title="[field:title/]" /></a><p><a href="[field:url/]" target="_blank">[field:title/]</a></p></div>
+           {/sline:getphotolist}
+           {sline:getphotolist flag='recommend' row='2' limit='3'}
+            <div class="pic n2"><a class="fl" href="[field:url/]" target="_blank"><img class="fl" src="[field:lit160/]" width="157" height="109" alt="[field:title/]" title="[field:title/]" /></a><p><a href="[field:url/]" target="_blank">[field:title/]</a></p></div>
+           {/sline:getphotolist} 
+           {sline:getphotolist flag='recommend' row='3' limit='5'}
+            <div class="pic n3"><a class="fl" href="[field:url/]"><img class="fl" src="[field:lit160/]" width="157" height="118" alt="[field:title/]" title="[field:title/]" /></a><p><a href="[field:url/]" target="_blank">青城山</a></p></div>
+           {/sline:getphotolist}
+          </div>
+           
+          <div class="photo_rig">
+          {sline:getphotolist flag='recommend' row='2' limit='8'}
+          	<div class="pic"><a class="fl" href="[field:url/]" target="_blank"><img class="fl" src="[field:lit160/]" width="250" height="169" alt="[field:title/]" title="[field:title/]" /></a><p><a href="[field:url/]" target="_blank">[field:title/]</a></p></div>
+          {/sline:getphotolist} 
+          </div>
+          <script>
+						$(document).ready(function() {
+							$(".pic").mouseenter(function(){
+								$(this).find("img").css("opacity","1")
+								})
+							$(".pic").mouseout(function(){
+								$(this).find("img").css("opacity","0.9")
+								})
+							})
+					</script>
+        </div>
+        <!--相册展示结束-->
+        
+        <!--攻略游记开始-->
+        <div class="article_con">
+        	<div class="atc_left">
+          	<!--攻略-->
+          	<div class="gl_con">
+            	<h3>旅游资讯</h3>
+              <dl>
+               {sline:getarclist flag='recommend' haspic='1' row='1' limit='0'}
+              	<dt><a class="fl" href="[field:url/]" target="_blank"><img class="fl" src="[field:lit240/]" width="280" height="190" alt="[field:title/]" title="[field:title/]" /></a><p><a href="[field:url/]" target="_blank">[field:title/]</a></p></dt>
+               {/sline:getarclist} 
+               {sline:getarclist flag='recommend' row='8' limit='0'}
+                <dd><a href="[field:url/]" target="_blank">[field:title/]</a></dd>
+               {/sline:getarclist} 
+              </dl>
+            </div>
+            <!--游记-->
+          	<div class="yj_con">
+            	<h3>精彩游记</h3>
+              <div class="gl_list_con">
+                <ul>
+                {sline:getarclist flag='recommend' haspic='1' row='4' limit='10'}
+                  <li class="txt_img_list">
+                    <a class="fl" href="[field:url/]" target="_blank"><img class="fl" src="[field:lit160/]" width="145" height="100" alt="[field:title/]" title="[field:title/]"></a>
+                    <p class="tit"><a href="[field:url/]" target="_blank">[field:title/]</a></p>
+                    <p class="txt">[field:content function="cutstr_html(strip_tags(@me),30)"/]</p>
+                  </li>
+                {/sline:getarclist}  
+                </ul>
+              </div>
+            </div>
+          </div>
+        	<div class="atc_rig">
+          	<h3>问答咨询</h3>
+            {sline:getquestion row='3'} 
+            <dl>
+            	<dt><span>网友咨询：</span><a href="[field:producturl/]" target="_blank" title="[field:productname/]">[field:productname/]</a></dt>
+              <dd>
+              	<s></s>
+              	<p class="txt">[field:content/]</p>
+                <div class="hf">
+                	<p class="tit">客服回复</p>
+                  <p class="txt">[field:replycontent/]</p>
+                </div>
+              </dd>
+            </dl>
+           {/sline:getquestion}
+          </div>
+        </div>
+        <!--攻略游记开始-->
+
+      </div>
+      <div class="con_rig">
+      	
+        <!--实用工具-->
+        <div class="tools">
+        	<h3>实用小工具</h3>
+          <ul>
+          	<li>
+            	<a class="fl" href="#">
+              	<img src="{sline:global.cfg_templets_skin/}/images/tools_jp.gif" alt="机票预订" title="机票预订" />
+                <p>机票预订</p>
+              </a>
+            </li>
+            <li>
+            	<a class="fl" href="#">
+              	<img src="{sline:global.cfg_templets_skin/}/images/tools_hc.gif" alt="机票预订" title="机票预订" />
+                <p>火车时刻</p>
+              </a>
+            </li>
+            <li>
+            	<a class="fl" href="#">
+              	<img src="{sline:global.cfg_templets_skin/}/images/tools_tq.gif" alt="机票预订" title="机票预订" />
+                <p>天气预报</p>
+              </a>
+            </li>
+            <li>
+            	<a class="fl" href="#">
+              	<img src="{sline:global.cfg_templets_skin/}/images/tools_map.gif" alt="机票预订" title="机票预订" />
+                <p>电子地图</p>
+              </a>
+            </li>
+            <li>
+            	<a class="fl" href="#">
+              	<img src="{sline:global.cfg_templets_skin/}/images/tools_dj.gif" alt="机票预订" title="机票预订" />
+                <p>低价机票</p>
+              </a>
+            </li>
+            <li>
+            	<a class="fl" href="#">
+              	<img src="{sline:global.cfg_templets_skin/}/images/tools_bk.gif" alt="机票预订" title="机票预订" />
+                <p>旅游百科</p>
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+        
+        {sline:getrightcontent pagename='index'/}
+    </div>
+  </div>
+  <!--中间产品内容结束-->
+  
+  <!--帮助流程开始-->
+  {sline:include file='public/help.htm'/}
+
+{sline:include file='public/footer.htm'/}
+
+{sline:include file='public/flink.htm'/}
+
+
+</body>
+</html>
