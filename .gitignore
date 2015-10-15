@@ -45,3 +45,7 @@ Temporary Items
 
 #sessions files
 sess_*
+
+
+#html files
+*.html
