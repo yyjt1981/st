@@ -1,0 +1,1 @@
+<li id="current_[field:id/]"><a href="javascript:;"><img src="[field:pic/]" onClick="window.open('/photos/show_[field:global.aid/]_[field:id/].html','_self')"  rel="[field:global.step/]" /></a></li>

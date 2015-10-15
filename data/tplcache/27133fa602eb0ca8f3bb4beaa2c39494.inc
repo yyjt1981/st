@@ -1,0 +1,1 @@
+<dd><a class="a_mdd" href="/raiders/search.php?dest_id=[field:destid/]" target="_blank">[field:destname/]</a><a class="a_title" href="[field:url/]" target="_blank">[field:title/]</a></dd>

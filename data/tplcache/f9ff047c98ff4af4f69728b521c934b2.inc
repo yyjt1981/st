@@ -1,0 +1,1 @@
+<dt><a class="fl" href="[field:url/]" target="_blank"><img class="fl" src="[field:lit240/]" width="240" height="156" alt="[field:title/]" /></a><span></span><a class="img_title" href="[field:url/]" target="_blank">[field:title/]</a></dt>

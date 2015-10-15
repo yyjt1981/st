@@ -45,6 +45,3 @@ Temporary Items
 
 #sessions files
 sess_*
-
-#cache files
-*.inc
