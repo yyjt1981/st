@@ -1,0 +1,103 @@
+/*焦点图*/
+.focus_img{
+	float:left;
+	width:100%;
+	min-width:1210px;
+	background:#fff;
+	height:420px;
+	position:relative;
+	z-index:999;
+	overflow:hidden}
+.focus_img .focus {
+	width:1210px;
+	padding-top:390px;
+	text-align:center;
+	margin:0 auto}
+.focus_img .focus a {
+	text-decoration:none;
+	z-index:3;
+	width:14px;
+	height:14px;
+	position:relative;
+	display:inline-block;
+	overflow:hidden;
+	zoom:1;
+	margin:0 2px}
+.focus_img .focus a .bg-m {
+	z-index:4;
+	color:#FFF;
+	line-height:40px;
+	font-size:40px;
+	position:absolute;
+	left:2px;
+	top:6px;
+	cursor:pointer;
+	display:none}
+.focus_img .focus a .bg-b {
+	color:#fff;
+	background:#f0f0f0;
+	position:absolute;
+	display:block;
+	left:0;
+	top:0;
+	cursor:pointer;
+	width:12px;
+	height:12px;
+	line-height:12px;
+	text-align:center;
+	border-radius:50%;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;}
+.focus_img .focus a .inner {
+	background:#37c249;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:9;
+	opacity:0;
+	display:none;
+	width:12px;
+	height:12px;
+	line-height:12px;
+	text-align:center;
+	border-radius:50%;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;}
+.focus_img .focus a.on .inner,.focus_img .focus a:hover .inner {
+	cursor:pointer;
+	display:block;
+	border:0;
+	color:#fff;
+	background:#37c249;
+	-webkit-transition:opacity .3s ease-in-out;
+	-ms-transition:opacity .3s ease-in-out;
+	transition:opacity .3s ease-in-out;
+	opacity:1}
+.focus_img .focus .hover .inner {
+	display:block}
+.focus_img .banners,.focus_img .banner {
+	width:1920px;
+	height:420px;
+	overflow:hidden;
+	position:absolute;
+	left:50%;
+	margin-left:-960px}
+.focus_img .banner .info h3,.focus_img .banner .info p {
+	display:none}
+.jcBox{
+	width:1210px;
+	margin:0 auto;
+	position:relative;
+	z-index:9999}
+.jCarouselLite{
+	position:absolute;
+	right:0;
+	top:0;
+	width:270px;
+	height:420px;
+	overflow:hidden}
+.jCarouselLite li{
+	float:left;
+	width:270px;
+	height:140px;
+	/* margin-top:4px; */}
