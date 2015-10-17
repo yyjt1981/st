@@ -1,1 +1,0 @@
-<li>[field:chinesename/]</li>
