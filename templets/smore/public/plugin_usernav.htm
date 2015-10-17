@@ -1,9 +1,9 @@
 {sline:plugincheck identify='cfg_usernav_open'}
     <div class="global_nav">
     <div class="kj_tit">夏令营快捷导航</div>
-    <div class="mc">
+    <div class="mc" style="display:none">
     {sline:slidenavlist}
-     <div class="tall">
+     <div class="tall" style="display:none">
                 <span class="tit_bt">
                   <s></s>
                   <h3>
@@ -34,7 +34,7 @@
     </div>
     </div>
     <script>
-/*        $(document).ready(function(e) {
+        $(document).ready(function(e) {
             $(".global_nav").mouseover(function(){
                 $(this).children(".mc").show()
                 $(this).children().children(".tall").show()
@@ -43,7 +43,7 @@
                 $(this).children(".mc").hide()
                 $(this).children().children(".tall").hide()
             })
-        });*/
+        });
         $(".global_nav div .tall").hover(function(e){
                     $(this).siblings().removeClass("hover").find(".gl_nav_con").hide();
                     $(this).addClass("hover");
