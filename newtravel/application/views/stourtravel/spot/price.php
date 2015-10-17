@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>门票价格范围分类-思途CMS3.0</title>
+    <title>门票价格范围分类</title>
     {template 'stourtravel/public/public_js'}
     {php echo Common::getCss('style.css,base.css,base2.css,jqtransform.css'); }
 </head>

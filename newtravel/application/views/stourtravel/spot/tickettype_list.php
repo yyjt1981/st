@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>门票类型管理-思途CMS3.0</title>
+    <title>门票类型管理</title>
     {template 'stourtravel/public/public_js'}
     {php echo Common::getCss('style.css,base.css'); }
 </head>

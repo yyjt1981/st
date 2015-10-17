@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>{$configinfo['cfg_webname']}-思途CMS3.0</title>
+<title>{$configinfo['cfg_webname']}</title>
  {template 'stourtravel/public/public_js'}
  {php echo Common::getScript('artDialog/lib/sea.js'); }
  {php echo Common::getCss('index.css,base.css'); }

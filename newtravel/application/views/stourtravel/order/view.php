@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>订单查看--思途CMS3.0</title>
+    <title>订单查看-</title>
     {template 'stourtravel/public/public_js'}
     {php echo Common::getCss('style.css,base.css'); }
 

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>模块管理--思途CMS3.0</title>
+<title>模块管理-</title>
     {template 'stourtravel/public/public_js'}
     {php echo Common::getCss('style.css,base.css'); }
     {php echo Common::getScript('ks-switch.pack.js,jquery.jqtransform.js,jqueryui/jquery-ui.min.js');}

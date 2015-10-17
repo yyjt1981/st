@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>添加站点-思途CMS3.0</title>
+<title>添加站点</title>
     {template 'stourtravel/public/public_js'}
     {php echo Common::getCss('style.css,base.css'); }
 </head>

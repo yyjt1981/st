@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>文件浏览器-思途CMS3.0</title>
+    <title>文件浏览器</title>
     {template 'stourtravel/public/public_js'}
     {php echo Common::getCss('style.css,base.css,base2.css,plist.css'); }
     {php echo Common::getScript("jquery.upload.js"); }
