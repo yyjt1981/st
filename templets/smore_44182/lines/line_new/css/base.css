@@ -362,13 +362,13 @@ img{
 	height:40px;
 	line-height:40px}
 .menu .global_nav{
+	width: 220px;
 	float:left;
 	position:relative;
 	z-index:999999999;
 	background:#ff9600}
 .menu .global_nav .mc{
-	border:1px solid #fd6a15;
-	border-top:0}	
+	border-top:0}
 .menu .global_nav .kj_tit{
 	color:#fff;
 	width:200px;
@@ -382,10 +382,8 @@ img{
 	position:relative;
 	background:#fff;
 	border-top:1px solid #fff;
-	border-bottom:1px dotted #ddd}
-.menu .global_nav .hover{
-	border-top:1px solid #fd6a15;
-	border-bottom:1px solid #fd6a15}
+	border-bottom:1px dotted #ddd;
+}
 .menu .global_nav .tit_bt{
 	display:block}
 .menu .global_nav .tall .tit_bt s{
@@ -2376,6 +2374,13 @@ img{
 }
 .bk_load div{
     text-align:center;
+}
+
+.index-menu {
+	margin-left: 30px;
+	margin-right: -10px;
+	display: inline-block;
+	word-break: break-all;
 }
 
 
