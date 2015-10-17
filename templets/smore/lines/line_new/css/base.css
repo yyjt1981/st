@@ -1546,7 +1546,12 @@ img{
 	float:right;
 	width:240px;
 	height:420px;
-	margin-bottom:10px;}
+	margin-bottom:10px;
+	border-top:2px solid #ff7e00;
+	border-right:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	border-left:1px solid #ddd
+}
 .rig_list h3{
 	color:#333;
 	float:left;
@@ -1556,12 +1561,12 @@ img{
 	font-size:16px;
 	font-weight:500;
 	font-family:"微软雅黑"}
-.rig_list h3 s{
+/*.rig_list h3 s{
 	float:right;
 	width:90px;
 	height:10px;
 	margin-top:12px;
-	border-top:1px solid #e5e5e5}
+	border-top:1px solid #e5e5e5}*/
 .rig_list dl{
 	float:left;
 	width:240px;}
@@ -1629,7 +1634,8 @@ img{
 	border-top:2px solid #ff7e00;
 	border-right:1px solid #ddd;
 	border-bottom:1px solid #ddd;
-	border-left:1px solid #ddd}
+	border-left:1px solid #ddd;
+}
 .now_book h3{
 	color:#ff7e00;
 	float:left;
