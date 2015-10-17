@@ -339,13 +339,14 @@ img{
 	height:40px;
 	line-height:40px}
 .menu .global_nav{
+	width: 220px;
 	float:left;
 	position:relative;
 	z-index:999999999;
 	background:#ff9600}
 .menu .global_nav .mc{
-	border:1px solid #fd6a15;
-	border-top:0}	
+	border-top:0
+}
 .menu .global_nav .kj_tit{
 	color:#fff;
 	width:200px;
@@ -359,10 +360,8 @@ img{
 	position:relative;
 	background:#fff;
 	border-top:1px solid #fff;
-	border-bottom:1px dotted #ddd}
-.menu .global_nav .hover{
-	border-top:1px solid #fd6a15;
-	border-bottom:1px solid #fd6a15}
+	border-bottom:1px dotted #ddd
+}
 .menu .global_nav .tit_bt{
 	display:block}
 .menu .global_nav .tall .tit_bt s{
@@ -374,9 +373,9 @@ img{
 .menu .global_nav .hover .tit_bt s{
 	background:url(../images/m_n_ico.png) no-repeat -11px 0}
 .menu .global_nav .tall .tit_bt h3{
-	margin-left:45px;}
+	margin-left:45px;
+}
 .menu .global_nav .hover .tit_bt h3{
-	margin-right:-1px;
 	margin-left:45px;
 	background:#fff;
 	position:relative;
@@ -384,7 +383,7 @@ img{
 .menu .global_nav .tit_bt h3 a{
 	color:#666;
 	display:block;
-	font-weight:500}	
+	font-weight:500}
 .menu .global_nav .gl_nav_con{
 	position:absolute;
 	left:198px;
@@ -396,7 +395,7 @@ img{
 	background:#fff}
 .menu .global_nav .subitem dl{
 	float:left;
-	margin:10px}	
+	margin:10px}
 .menu .global_nav .subitem dl dt{
 	float:left;
 	color:#f60;
@@ -404,10 +403,10 @@ img{
 	height:24px;
 	line-height:24px;
 	font-weight:600;
-	overflow:hidden}	
+	overflow:hidden}
 .menu .global_nav .subitem dl dd{
 	float:left;
-	width:650px}	
+	width:650px}
 .menu .global_nav .subitem dl dd a{
 	float:left;
 	color:#999;
@@ -430,7 +429,7 @@ img{
 	position:relative;
 	background:url(../images/dh_bg.gif) right no-repeat}
 .menu .main_nav_list a.bnone{
-	background:none}	
+	background:none}
 .menu .main_nav_list a:hover{
 	color:#fff}
 .menu .main_nav_list a.active{
@@ -446,7 +445,7 @@ img{
 .menu .main_nav_list a s.ico_hot{
 	background:url(../images/hot_ico.gif) left no-repeat}
 .menu .main_nav_list a s.ico_new{
-	background:url(../images/new_ico.gif) left no-repeat}	
+	background:url(../images/new_ico.gif) left no-repeat}
 .skip{
 	float:right}
 .skip s{
@@ -459,7 +458,7 @@ img{
 	border:1px solid #e5e5e5}
 #dos_vip{
 	height:auto;
-	border-top:2px solid #f60}	
+	border-top:2px solid #f60}
 #dos_vip .dis_list{
 	height:auto}
 .dos_pic{
@@ -653,8 +652,8 @@ img{
 	border:1px solid #D4D4D4;
 	color:#666;
 	padding:3px 7px 4px;
-	text-decoration: none; 
-	background:#FFF; 
+	text-decoration: none;
+	background:#FFF;
 	overflow:hidden}
 .main_mod_page a.current{
 	background:none repeat scroll 0 0 #FFEDE1;
@@ -741,9 +740,9 @@ img{
 	width:14px;
 	height:8px;
 	left:46px;
-	top:-8px;	
+	top:-8px;
 	background:url(../images/thus_bg.png) left no-repeat}
-	
+
 .show_lm_con{
 	float:left;
 	width:960px;
@@ -807,7 +806,7 @@ img{
 	width:896px;
 	height:auto;
 	padding:10px;
-	margin:10px 0; 
+	margin:10px 0;
 	border:1px solid #e5e5e5;
 	box-shadow:1px 1px 1px #fcfcfc,-1px -1px 1px #fcfcfc}
 .head_pic_left{
@@ -815,7 +814,7 @@ img{
 	width:50px;
 	height:50px;
 	padding:1px;
-	border:1px solid #e5e5e5}	
+	border:1px solid #e5e5e5}
 .body_con_rig{
 	float:left;
 	width:832px;
@@ -832,7 +831,7 @@ img{
 .body_con_rig dl{
 	float:left;
 	color:#666;
-	width:832px}	
+	width:832px}
 .body_con_rig dl dt{
 	float:left;
 	width:832px;
@@ -886,7 +885,7 @@ img{
 	height:80px;
 	margin:10px 0;
 	border:1px solid #e5e5e5;
-	box-shadow:1px 1px 1px #fcfcfc,-1px -1px 1px #fcfcfc}	
+	box-shadow:1px 1px 1px #fcfcfc,-1px -1px 1px #fcfcfc}
 .dp_sm_con ul{
 	width:916px}
 .dp_sm_con ul .li_1{
@@ -914,7 +913,7 @@ img{
 	color:#f50;
 	margin-right:5px;
 	font-size:14px;
-	font-weight:bold}	
+	font-weight:bold}
 .dp_sm_con ul .li_2 .p2{
 	margin-top:10px}
 .dp_sm_con ul .li_3{
@@ -1064,11 +1063,11 @@ img{
 	border-bottom:1px solid #e5e5e5;
 	background:url(../images/ico_order.png) no-repeat}
 .or_bg_1 h3{
-	background-position:0 8px;}	
+	background-position:0 8px;}
 .or_bg_2 h3{
-	background-position:0 -55px;}	
+	background-position:0 -55px;}
 .or_bg_3 h3{
-	background-position:0 -27px;}	
+	background-position:0 -27px;}
 .or_show dl{
 	float:left;
 	color:#666;
@@ -1089,7 +1088,7 @@ img{
 	line-height:24px;
 	text-align:center;
 	margin-right:10px;
-	border:1px solid #bfbfbf}	
+	border:1px solid #bfbfbf}
 .or_show dl dd .time_text{
 	color:#ec0b00;
 	width:50px;
@@ -1097,7 +1096,7 @@ img{
 	line-height:24px;
 	text-align:center;
 	margin:0 10px;
-	border:1px solid #bfbfbf}	
+	border:1px solid #bfbfbf}
 .or_show dl dd .add{
 	color:#fff;
 	display:block;
@@ -1122,14 +1121,14 @@ img{
 	height:24px;
 	line-height:24px;
 	border:1px solid #bfbfbf;
-	background:url(../images/text_box_bg.png) no-repeat right -40px}	
+	background:url(../images/text_box_bg.png) no-repeat right -40px}
 .or_show dl dd .data_text{
 	color:#666;
 	width:150px;
 	height:24px;
 	line-height:24px;
 	font-size:12px;
-	border:1px solid #bfbfbf}	
+	border:1px solid #bfbfbf}
 .or_show dl dd .color_f{
 	color:#ec0b00}
 .order_price{
@@ -1194,7 +1193,7 @@ img{
 .hot_pro{
 	float:left;
 	width:240px;
-	margin-bottom:10px}	
+	margin-bottom:10px}
 .hot_pro h3{
 	float:left;
 	color:#fff;
@@ -1218,7 +1217,7 @@ img{
 	margin:10px 10px 0;
 	border-bottom:1px dashed #e5e5e5}
 .side_plb_list .bor_bot_0{
-	border-bottom:0}	
+	border-bottom:0}
 .dl_list dt{
 	float:left;
 	width:218px;
@@ -1414,7 +1413,7 @@ img{
 .h_side_list,.l_side_list{
 	float:left;
 	width:240px;
-	margin-bottom:10px}	
+	margin-bottom:10px}
 .h_side_list h3,.l_side_list h3{
 	float:left;
 	color:#ff7e00;
@@ -1844,7 +1843,7 @@ img{
 .car_atc{
 	float:left;
 	width:240px;
-	margin-bottom:10px}	
+	margin-bottom:10px}
 .car_atc h3{
 	float:left;
 	color:#fff;
@@ -2038,7 +2037,7 @@ img{
 	font-size:16px;
 	font-weight:500;
 	font-family:"微软雅黑"}
-/*右侧目的地*/	
+/*右侧目的地*/
 .yc_menu{
 	float:left;
 	width:240px;
@@ -2048,7 +2047,7 @@ img{
 	float:left;
 	width:240px;
 	height:35px;
-	background:#ff7200}	
+	background:#ff7200}
 .mmd_option h3{
 	float:left;
 	color:#fff;
@@ -2056,7 +2055,7 @@ img{
 	height:35px;
 	line-height:35px;
 	font-weight:500;
-	text-align:center}	
+	text-align:center}
 .mmd_option .diy_select{
 	float:left;
 	height:35px;
@@ -2114,7 +2113,7 @@ img{
 	padding:5px 0;
 	border-bottom:1px solid #e5e5e5}
 .yc_menu_list dl.bor_bom_0{
-	border-bottom:0}	
+	border-bottom:0}
 .yc_menu_list dl dt{
 	float:left;
 	width:218px;
@@ -2399,6 +2398,13 @@ img{
 }
 .bk_load div{
     text-align:center;
+}
+
+.index-menu {
+	margin-left: 30px;
+	margin-right: -10px;
+	display: inline-block;
+	word-break: break-all;
 }
 
 
