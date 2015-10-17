@@ -1,1 +1,0 @@
-<a href="[field:attrid function=getSearchUrl(@me,'attrid')/]"  data-field="attrid" data-value="[field:attrid/]">[field:title/]</a>

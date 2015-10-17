@@ -1,1 +1,0 @@
-<a href="javascript:;" data="[field:id/]" class="[field:id runphp='yes'] if(@me==$GLOBALS['dest_id']) @me="active"; else @me="";[/field:id]" data="[field:id/]">[field:kindname/]</a>

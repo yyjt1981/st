@@ -1,1 +1,0 @@
-<li><a href="/raiders/[field:global.destpy/]-[field:attrid/]" target="_blank">[field:attrname/]</a><span>([field:attrnum/])</span></li>

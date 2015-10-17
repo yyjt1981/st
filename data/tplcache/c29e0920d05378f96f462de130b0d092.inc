@@ -1,1 +1,0 @@
-<a href="[field:aid function=getSearchUrl(@me,'rankid')/]" data-field="rankid" data-value="[field:aid/]">[field:title/]</a>

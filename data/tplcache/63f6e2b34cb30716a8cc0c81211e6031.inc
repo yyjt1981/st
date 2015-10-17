@@ -1,1 +1,0 @@
-<a href="[field:id function=getSearchUrl(@me,'dest_id')/]" data-field="destid" data-value="[field:id/]" >[field:kindname/]</a>
