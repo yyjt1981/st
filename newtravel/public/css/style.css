@@ -1129,7 +1129,7 @@
     padding-top:20px;
 }
 
-.nor-attr-list tr{ height:30px;cursor:}
+.nor-attr-list tr{ height:30px;cursor:pointer}
 .nor-attr-list tr td input{ border: 1px solid #dcdcdc;height: 22px; line-height: 22px}
 .nor-attr-list img{cursor: pointer}
 .nor-attr-list th{
@@ -1862,7 +1862,11 @@
     width:460px;
     height:100px;
     line-height:22px;
-    border:1px solid #dcdcdc}
+    border:1px solid #dcdcdc
+}
+.index-menu {
+	margin
+}
 
 
 

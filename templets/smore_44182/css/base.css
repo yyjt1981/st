@@ -525,7 +525,7 @@ img{
 .dis_list dl dt span{
 	float:left;
 	width:75px;
-	height:15px;
+	height:0px;
 	margin-top:5px;
 	background:url(../images/body_bg.png) no-repeat -925px 0}
 .dis_list dl dt span s{
