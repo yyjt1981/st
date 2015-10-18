@@ -20,7 +20,7 @@ class Controller_Destination extends Stourweb_Controller{
 		{
 		  $typeid=$this->params['typeid'];
 		  $typeid=empty($typeid)?0:$typeid;
-          $position = $typeid==0 ? '全局目的地':$this->name_arr[$typeid].'目的地';
+          $position = $typeid==0 ? '夏令营种类':$this->name_arr[$typeid].'目的地';
 		  $this->assign('typeid',$typeid);
           $this->assign('position',$position);
 		  $this->display('stourtravel/destination/destination');

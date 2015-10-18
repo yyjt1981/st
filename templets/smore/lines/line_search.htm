@@ -18,7 +18,7 @@
   	<div class="width_1210">
     	<!-- 面包屑and滚动订单开始 -->
     	<div class="top_first">
-      	<div class="crumbs">当前位置：<a href="{sline:global.cfg_basehost/}">{sline:global.cfg_indexname/}</a> &gt; <a href="{sline:global.cfg_cmsurl/}/lines/"></a>{sline:field.pkname/}</div>
+      	<div class="crumbs">当前位置：<a href="{sline:global.cfg_basehost/}">{sline:global.cfg_indexname/}</a> <a href="{sline:global.cfg_cmsurl/}/lines/"></a>{sline:field.pkname/}</div>
         {sline:include file='public/scroll_order.htm'/}
        
       </div>
@@ -29,13 +29,13 @@
       
       	<!--顶部介绍开始-->
         <div class="line_top_menu">
-          <h1><span>{sline:field.nav_title/}</span></h1>
-          <div class="serve_menu">
-           <a href="{sline:global.dest_url/}">目的地</a>
-            <a href="{sline:global.hotel_url/}">酒店</a>
-            <a href="{sline:global.raider_url/}">攻略</a>
-            <a href="{sline:global.photo_url/}">相册</a>
-          </div>
+          <!--<h1><span>{sline:field.nav_title/}</span></h1>-->
+          <!--<div class="serve_menu">-->
+           <!--<a href="{sline:global.dest_url/}">目的地</a>-->
+            <!--<a href="{sline:global.hotel_url/}">酒店</a>-->
+            <!--<a href="{sline:global.raider_url/}">攻略</a>-->
+            <!--<a href="{sline:global.photo_url/}">相册</a>-->
+          <!--</div>-->
         </div>
         <!--顶部介绍结束-->
         
@@ -59,7 +59,8 @@
          
         </div>
         <div class="serach_menu">
-        	<div class="search_bt"><span>{sline:field.searchname/}</span>  线路筛选</div>
+            <!--<div class="search_bt"><span>{sline:field.searchname/}</span>  线路筛选</div>-->
+        	<div class="search_bt"><span>{sline:field.searchname/}</span>  产品筛选</div>
             {sline:plugincheck identify='cfg_startcity_open'}
             <dl>
                 <dt>出发地：</dt>

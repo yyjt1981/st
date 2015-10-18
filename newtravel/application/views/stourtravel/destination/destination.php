@@ -327,7 +327,7 @@ Ext.onReady(
                 },
                 {
                     xtype: 'treecolumn',   //有展开按钮的指定为treecolumn
-                    text: '<span class="grid_column_text">目的地</span>'+"{php echo Common::getIco('help',133);}",
+                    text: '<span class="grid_column_text">种类</span>'+"{php echo Common::getIco('help',133);}",
                     dataIndex: 'kindname',
                     id: 'dest_name',
                     locked: false,

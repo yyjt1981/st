@@ -83,7 +83,7 @@ return array(
 	   ),
 	   //分类设置
 	    'kind'=>array(
-						  array('name'=>'线路分类','url'=>'ssmall_kindlist.php?typeid=1','subpage'=>'linekind'),
+						  array('name'=>'行程分类','url'=>'ssmall_kindlist.php?typeid=1','subpage'=>'linekind'),
 						  array('name'=>'酒店分类','url'=>'ssmall_kindlist.php?typeid=2','subpage'=>'hotelkind'),
 						  array('name'=>'租车分类','url'=>'ssmall_kindlist.php?typeid=3','subpage'=>'carkind'),
 						  array('name'=>'文章分类','url'=>'ssmall_kindlist.php?typeid=4','subpage'=>'articlekind'),
