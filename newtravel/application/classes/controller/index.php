@@ -97,6 +97,7 @@ class Controller_Index extends Stourweb_Controller
             $model = ORM::factory('search');
             $model->webid = $line->webid;
             $model->aid = $line->aid;
+            $model->channelname = '线路';
             $model->typeid = 1;
             $model->title = $line->linename;
             $model->description = '';
@@ -111,6 +112,7 @@ class Controller_Index extends Stourweb_Controller
             $model = ORM::factory('search');
             $model->webid = $tuan->webid;
             $model->aid = $tuan->aid;
+            $model->channelname = '团购';
             $model->typeid = 13;
             $model->title = $tuan->title;
             $model->description = $tuan->description;
@@ -125,6 +127,7 @@ class Controller_Index extends Stourweb_Controller
             $model = ORM::factory('search');
             $model->webid = $article->webid;
             $model->aid = $article->aid;
+            $model->channelname = '游记';
             $model->typeid = 4;
             $model->title = $article->articlename;
             $model->description = $article->description;

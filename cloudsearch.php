@@ -162,7 +162,7 @@ function getLeftNav($where,$typeid)
 		array('typeid'=>1,'channelname'=>'线路'),
 //		array('typeid'=>2,'channelname'=>'酒店'),
 //		array('typeid'=>3,'channelname'=>'车辆'),
-		array('typeid'=>4,'channelname'=>'攻略'),
+		array('typeid'=>4,'channelname'=>'游记'),
 //		array('typeid'=>5,'channelname'=>'门票'),
 //		array('typeid'=>6,'channelname'=>'相册'),
 //		array('typeid'=>8,'channelname'=>'签证'),
