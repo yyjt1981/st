@@ -1,5 +1,7 @@
 <?php defined('SYSPATH') or die('No direct script access.');
-class Controller_Index extends Stourweb_Controller{
+
+class Controller_Index extends Stourweb_Controller
+{
 
     public function before()
     {
@@ -7,12 +9,13 @@ class Controller_Index extends Stourweb_Controller{
         $this->assign('cmsurl', URL::site());
 
     }
+
     //后台首页(框架)
     public function action_index()
     {
         //$config = Common::getConfig('menu.产品');
         $configinfo = ORM::factory('sysconfig')->getConfig(0);
-        $this->assign('configinfo',$configinfo);
+        $this->assign('configinfo', $configinfo);
 
         $this->display('stourtravel/index');
     }
@@ -22,6 +25,7 @@ class Controller_Index extends Stourweb_Controller{
     {
         $this->display('stourtravel/index_home');
     }
+
     //set_base
     public function action_base()
     {
@@ -33,7 +37,7 @@ class Controller_Index extends Stourweb_Controller{
     {
 
         $menu = Common::getConfig('menu_sub');
-        $this->assign('menu',$menu);
+        $this->assign('menu', $menu);
 
         $this->display('stourtravel/index_new');
     }
@@ -44,34 +48,29 @@ class Controller_Index extends Stourweb_Controller{
 
         echo json_encode($article);
     }
+
     /*
      * 删除缓存
      * */
     public function action_ajax_clearcache()
     {
-        $dir = array(SLINEDATA.'/tplcache',SLINEDATA.'/dest',APPPATH.'/cache/tplcache/stourtravel');
+        $dir = array(SLINEDATA . '/tplcache', SLINEDATA . '/dest', APPPATH . '/cache/tplcache/stourtravel');
         //先删除目录下的文件：
-        foreach($dir as $v)
-        {
-           self::delDirFile($v);
+        foreach ($dir as $v) {
+            self::delDirFile($v);
         }
         echo 'ok';
     }
 
     public function delDirFile($dir)
     {
-        $dh=opendir($dir);
-        while ($file=readdir($dh))
-        {
-            if($file!="." && $file!="..")
-            {
-                $fullpath=$dir."/".$file;
-                if(!is_dir($fullpath))
-                {
+        $dh = opendir($dir);
+        while ($file = readdir($dh)) {
+            if ($file != "." && $file != "..") {
+                $fullpath = $dir . "/" . $file;
+                if (!is_dir($fullpath)) {
                     unlink($fullpath);
-                }
-                else
-                {
+                } else {
                     self::delDirFile($fullpath);
                 }
 
@@ -91,18 +90,21 @@ class Controller_Index extends Stourweb_Controller{
     //同步search表
     public function sync_search()
     {
-        $list=ORM::factory('line')->where('ishidden','=',0)->find_all()->as_array();
-        $searchItem = new Search();
-        foreach($list as $item){
-
-//            $searchItem->webid = $row['webid'];
-//            $searchItem->typeid = 1;
-//            $searchItem->aid = $row['aid'];
-//            $searchItem->title = $row['linename'];
-//            $searchItem->description = '';
-//            $searchItem->litpic = $row['linepic'];
-//            $searchItem->shownum = $row['shownum'];
-//            $searchItem->addSearchItem();
+        $line_list = ORM::factory('line')->where('ishidden', '=', 0)->find_all();
+        $model = ORM::factory('search');
+        foreach ($line_list as $line) {
+//            $model = ORM::factory('search');
+//            $model = ORM::factory('search');
+//            $model =  new Model_Search();
+//            $model->webid = $line->webid;
+//            $model->aid = $line->aid;
+//            $model->typeid = 1;
+//            $model->title = $line->linename;
+//            $model->description = '';
+//            $model->litpic = $line->linepic;
+//            $model->shownum = $line->shownum;
+//            $model->save();
+//            Search::addSearchItem($webid, $typeid, $aid, $title, $description, $litpic, $shownum);
         }
 
 //        global $dsql;
@@ -113,14 +115,14 @@ class Controller_Index extends Stourweb_Controller{
 
 //        $searchItem = new Search();
 //        foreach ($arr as $row){
-//            $searchItem->webid = $row['webid'];
-//            $searchItem->typeid = 1;
-//            $searchItem->aid = $row['aid'];
-//            $searchItem->title = $row['linename'];
-//            $searchItem->description = '';
-//            $searchItem->litpic = $row['linepic'];
-//            $searchItem->shownum = $row['shownum'];
-//            $searchItem->addSearchItem();
+//            $webid = $row['webid'];
+//            $typeid = 1;
+//            $aid = $row['aid'];
+//            $title = $row['linename'];
+//            $description = '';
+//            $litpic = $row['linepic'];
+//            $shownum = $row['shownum'];
+//            $addSearchItem();
 //        }
 
     }
@@ -131,7 +133,7 @@ class Controller_Index extends Stourweb_Controller{
     public function makeHtml()
     {
 
-        include(PUBLICPATH.'/vendor/httpdown.class.php');
+        include(PUBLICPATH . '/vendor/httpdown.class.php');
         $storage = array(
             '/',
             '/lines/',
@@ -144,13 +146,11 @@ class Controller_Index extends Stourweb_Controller{
             '/destination/'
         );
         $http = new HttpDown();//实例化下载类
-        foreach($storage as $value)
-        {
-            $url = $GLOBALS['cfg_basehost'].$value.'index.php?genpage=1';
-            $savepath = BASEPATH.$value.'index.html';
+        foreach ($storage as $value) {
+            $url = $GLOBALS['cfg_basehost'] . $value . 'index.php?genpage=1';
+            $savepath = BASEPATH . $value . 'index.html';
             $http->OpenUrl($url);
             $http->SaveToBin($savepath);
-
 
 
         }
