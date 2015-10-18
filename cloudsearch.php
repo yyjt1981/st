@@ -160,12 +160,12 @@ function getLeftNav($where,$typeid)
 
 	 $arr = array(
 		array('typeid'=>1,'channelname'=>'线路'),
-		array('typeid'=>2,'channelname'=>'酒店'),
-		array('typeid'=>3,'channelname'=>'车辆'),
+//		array('typeid'=>2,'channelname'=>'酒店'),
+//		array('typeid'=>3,'channelname'=>'车辆'),
 		array('typeid'=>4,'channelname'=>'攻略'),
-		array('typeid'=>5,'channelname'=>'门票'),
-		array('typeid'=>6,'channelname'=>'相册'),
-		array('typeid'=>8,'channelname'=>'签证'),
+//		array('typeid'=>5,'channelname'=>'门票'),
+//		array('typeid'=>6,'channelname'=>'相册'),
+//		array('typeid'=>8,'channelname'=>'签证'),
 		array('typeid'=>13,'channelname'=>'团购')
 		
 	 );
@@ -212,8 +212,6 @@ function addSearchkey($keyword)
         $insertsql = "insert into #@__search_keyword(keyword,keynumber,addtime) values('$keyword',1,'$time')";
 		$dsql->ExecuteNoneQuery($insertsql);	
 	}
-	
-	
 }
 
 

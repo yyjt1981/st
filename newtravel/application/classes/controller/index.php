@@ -84,8 +84,47 @@ class Controller_Index extends Stourweb_Controller{
     public function action_ajax_makehtml()
     {
         $this->makeHtml();
+        $this->sync_search();
         echo 'ok';
     }
+
+    //同步search表
+    public function sync_search()
+    {
+        $list=ORM::factory('line')->where('ishidden','=',0)->find_all()->as_array();
+        $searchItem = new Search();
+        foreach($list as $item){
+
+//            $searchItem->webid = $row['webid'];
+//            $searchItem->typeid = 1;
+//            $searchItem->aid = $row['aid'];
+//            $searchItem->title = $row['linename'];
+//            $searchItem->description = '';
+//            $searchItem->litpic = $row['linepic'];
+//            $searchItem->shownum = $row['shownum'];
+//            $searchItem->addSearchItem();
+        }
+
+//        global $dsql;
+//
+//        // 产品同步
+//        $sql = "select * from  #@__line where ishidden = 0";
+//        $arr = $dsql->getAll($sql);
+
+//        $searchItem = new Search();
+//        foreach ($arr as $row){
+//            $searchItem->webid = $row['webid'];
+//            $searchItem->typeid = 1;
+//            $searchItem->aid = $row['aid'];
+//            $searchItem->title = $row['linename'];
+//            $searchItem->description = '';
+//            $searchItem->litpic = $row['linepic'];
+//            $searchItem->shownum = $row['shownum'];
+//            $searchItem->addSearchItem();
+//        }
+
+    }
+
     /*
      * 生成HMTL
      * */
