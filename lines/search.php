@@ -301,7 +301,7 @@ function getCurkind($id)
 	if(is_array($pname))
 	{
         $pinyin = $pname['pinyin'] ? $pname['pinyin'] : $pname['id'];
-		$str .= ' &raquo; <a href="' . $GLOBALS['cfg_cmsurl'] . '/lines/'.$pinyin.'/" rel="nofollow">' . $pname['kindname'] . '线路</a>';
+		$str .= ' &raquo; <a href="' . $GLOBALS['cfg_cmsurl'] . '/lines/'.$pinyin.'/" rel="nofollow">' . $pname['kindname'] . '</a>';
 	}
 	else
 	{
@@ -326,7 +326,7 @@ function getParKind($id)
 	if(is_array($pname))
 	{
 	
-		$str = ' &raquo; <a href="' . $GLOBALS['cfg_cmsurl'] . '/lines/'.$pinyin.'/" rel="nofollow">' . $pname['kindname'] . '线路</a>';
+		$str = ' &raquo; <a href="' . $GLOBALS['cfg_cmsurl'] . '/lines/'.$pinyin.'/" rel="nofollow">' . $pname['kindname'] . '</a>';
 	}
 	else
 	{
