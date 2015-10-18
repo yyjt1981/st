@@ -227,7 +227,7 @@ class Uploader
             {
                 if(!file_exists($fontType))
                 {
-                    echo " fonttype not exist";
+                    //echo " fonttype not exist";
                     return;
                 }
             }

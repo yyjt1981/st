@@ -3,7 +3,7 @@ return array (
   'watermark' => 
   array (
     'photo_markon' => '1',
-    'photo_marktype' => 'text',
+    'photo_marktype' => 'img',
     'photo_waterpos' => '9',
     'photo_marktext' => '夏令王国',
     'photo_fontsize' => '16',
