@@ -378,7 +378,7 @@ class Controller_Uploader extends Stourweb_Controller{
             {
                 if(!file_exists($fontType))
                 {
-                    echo " fonttype not exist";
+                    //echo " fonttype not exist";
                     return;
                 }
             }
