@@ -88,43 +88,23 @@ class Controller_Index extends Stourweb_Controller
     }
 
     //同步search表
+    //TODO： 同步攻略，团购
     public function sync_search()
     {
         $line_list = ORM::factory('line')->where('ishidden', '=', 0)->find_all();
-        $model = ORM::factory('search');
+        DB::query(Database::DELETE, 'delete from sline_search')->execute();
+
         foreach ($line_list as $line) {
-//            $model = ORM::factory('search');
-//            $model = ORM::factory('search');
-//            $model =  new Model_Search();
-//            $model->webid = $line->webid;
-//            $model->aid = $line->aid;
-//            $model->typeid = 1;
-//            $model->title = $line->linename;
-//            $model->description = '';
-//            $model->litpic = $line->linepic;
-//            $model->shownum = $line->shownum;
-//            $model->save();
-//            Search::addSearchItem($webid, $typeid, $aid, $title, $description, $litpic, $shownum);
+            $model = ORM::factory('search');
+            $model->webid = $line->webid;
+            $model->aid = $line->aid;
+            $model->typeid = 1;
+            $model->title = $line->linename;
+            $model->description = '';
+            $model->litpic = $line->linepic;
+            $model->shownum = $line->shownum;
+            $model->save();
         }
-
-//        global $dsql;
-//
-//        // 产品同步
-//        $sql = "select * from  #@__line where ishidden = 0";
-//        $arr = $dsql->getAll($sql);
-
-//        $searchItem = new Search();
-//        foreach ($arr as $row){
-//            $webid = $row['webid'];
-//            $typeid = 1;
-//            $aid = $row['aid'];
-//            $title = $row['linename'];
-//            $description = '';
-//            $litpic = $row['linepic'];
-//            $shownum = $row['shownum'];
-//            $addSearchItem();
-//        }
-
     }
 
     /*
