@@ -5,9 +5,9 @@ return array(
 
     'product'=>array(
         'line'=>array('name'=>'线路','url'=>'line/line/parentkey/product/itemid/1','itemid'=>'1','ico'=>'chindren-ico-46.png'),
-        'hotel'=>array('name'=>'酒店','url'=>'hotel/hotel/parentkey/product/itemid/2','itemid'=>'2','ico'=>'chindren-ico-18.png'),
+//        'hotel'=>array('name'=>'酒店','url'=>'hotel/hotel/parentkey/product/itemid/2','itemid'=>'2','ico'=>'chindren-ico-18.png'),
         'car'=>array('name'=>'租车','url'=>'car/car/parentkey/product/itemid/3','itemid'=>'3','ico'=>'chindren-ico-58.png'),
-        'spot'=>array('name'=>'门票','url'=>'spot/spot/parentkey/product/itemid/4','itemid'=>'4','ico'=>'chindren-ico-21.png'),
+//        'spot'=>array('name'=>'门票','url'=>'spot/spot/parentkey/product/itemid/4','itemid'=>'4','ico'=>'chindren-ico-21.png'),
         'visa'=>array('name'=>'签证','url'=>'visa/visa/parentkey/product/itemid/5','itemid'=>'5','ico'=>'chindren-ico-27.png'),
         'tuan'=>array('name'=>'团购','url'=>'tuan/tuan/parentkey/product/itemid/6','itemid'=>'6','ico'=>'chindren-ico-36.png'),
 
@@ -25,13 +25,13 @@ return array(
     ),
     'order'=>array(
         'lineorder'=>array('name'=>'线路订单','url'=>'order/index/parentkey/order/itemid/1/typeid/1','itemid'=>'1','ico'=>'chindren-ico-46.png'),
-        'hotelorder'=>array('name'=>'酒店订单','url'=>'order/index/parentkey/order/itemid/2/typeid/2','itemid'=>'2','ico'=>'chindren-ico-18.png'),
+//        'hotelorder'=>array('name'=>'酒店订单','url'=>'order/index/parentkey/order/itemid/2/typeid/2','itemid'=>'2','ico'=>'chindren-ico-18.png'),
         'carorder'=>array('name'=>'租车订单','url'=>'order/index/parentkey/order/itemid/3/typeid/3','itemid'=>'3','ico'=>'chindren-ico-58.png'),
         'spotorder'=>array('name'=>'门票订单','url'=>'order/index/parentkey/order/itemid/5/typeid/5','itemid'=>'5','ico'=>'chindren-ico-21.png'),
         'visaorder'=>array('name'=>'签证订单','url'=>'order/index/parentkey/order/itemid/8/typeid/8','itemid'=>'8','ico'=>'chindren-ico-27.png'),
         'tuanorder'=>array('name'=>'团购订单','url'=>'order/index/parentkey/order/itemid/13/typeid/13','itemid'=>'13','ico'=>'chindren-ico-36.png'),
-        'dzorder'=>array('name'=>'定制订单','url'=>'order/dz/parentkey/order/itemid/14/','itemid'=>'14','ico'=>'chindren-ico-48.png'),
-        'xyorder'=>array('name'=>'协议订单','url'=>'order/xy/parentkey/order/itemid/15/','itemid'=>'15','ico'=>'chindren-ico-61.png'),
+//        'dzorder'=>array('name'=>'定制订单','url'=>'order/dz/parentkey/order/itemid/14/','itemid'=>'14','ico'=>'chindren-ico-48.png'),
+//        'xyorder'=>array('name'=>'协议订单','url'=>'order/xy/parentkey/order/itemid/15/','itemid'=>'15','ico'=>'chindren-ico-61.png'),
 
     ),
     'basic'=>array(
@@ -149,7 +149,7 @@ return array(
         'water'=>array('name'=>'水印设置','url'=>'config/watermark/parentkey/system/itemid/2','itemid'=>'2','ico'=>'chindren-ico-33.png'),
         'nophoto'=>array('name'=>'无图设置','url'=>'config/nopic/parentkey/system/itemid/3','itemid'=>'3','ico'=>'chindren-ico-43.png'),
         'pay'=>array('name'=>'支付设置','url'=>'config/payset/parentkey/system/itemid/4','itemid'=>'4','ico'=>'chindren-ico-52.png'),
-        'thirdpart'=>array('name'=>'第三方登陆','url'=>'config/thirdpart/parentkey/system/itemid/5','itemid'=>'5','ico'=>'chindren-ico-29.png'),
+//        'thirdpart'=>array('name'=>'第三方登陆','url'=>'config/thirdpart/parentkey/system/itemid/5','itemid'=>'5','ico'=>'chindren-ico-29.png'),
         'weibo'=>array('name'=>'微信微博','url'=>'config/wx/parentkey/system/itemid/6','itemid'=>'6','ico'=>'chindren-ico-38.png'),
         'tongji'=>array('name'=>'统计代码','url'=>'config/tongji/parentkey/system/itemid/7','itemid'=>'7','ico'=>'chindren-ico-34.png'),
         'robots'=>array('name'=>'robots','url'=>'config/robots/parentkey/system/itemid/8','itemid'=>'8','ico'=>'chindren-ico-60.png'),
@@ -161,7 +161,7 @@ return array(
 
         'msg'=>array('name'=>'短信平台','url'=>'sms/index/parentkey/application/itemid/8','itemid'=>'8','ico'=>'chindren-ico-42.png'),
         'user'=>array('name'=>'用户管理','url'=>'user/list/parentkey/application/itemid/7','itemid'=>'7','ico'=>'chindren-ico-62.png'),
-        'contact'=>array('name'=>'交流论坛','url'=>'app/other/parentkey/application/itemid/2/type/contract','itemid'=>'2','ico'=>'chindren-ico-09.png')
+//        'contact'=>array('name'=>'交流论坛','url'=>'app/other/parentkey/application/itemid/2/type/contract','itemid'=>'2','ico'=>'chindren-ico-09.png')
         /*'questionback'=>array('name'=>'问题反馈','url'=>'app/other/parentkey/application/itemid/5/type/problem','itemid'=>'5','ico'=>'chindren-ico-42.png'),*/
        /* 'plugin'=>array('name'=>'扩展应用','url'=>'app/topusernav/parentkey/application/itemid/6','itemid'=>'6','ico'=>'chindren-ico-20.png'),*/
 
