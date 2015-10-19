@@ -4,18 +4,18 @@
 return array(
 
     'product'=>array(
-        'line'=>array('name'=>'线路','url'=>'line/line/parentkey/product/itemid/1','itemid'=>'1','ico'=>'chindren-ico-46.png'),
-        'hotel'=>array('name'=>'酒店','url'=>'hotel/hotel/parentkey/product/itemid/2','itemid'=>'2','ico'=>'chindren-ico-18.png'),
-        'car'=>array('name'=>'租车','url'=>'car/car/parentkey/product/itemid/3','itemid'=>'3','ico'=>'chindren-ico-58.png'),
-        'spot'=>array('name'=>'门票','url'=>'spot/spot/parentkey/product/itemid/4','itemid'=>'4','ico'=>'chindren-ico-21.png'),
-        'visa'=>array('name'=>'签证','url'=>'visa/visa/parentkey/product/itemid/5','itemid'=>'5','ico'=>'chindren-ico-27.png'),
+        'line'=>array('name'=>'产品','url'=>'line/line/parentkey/product/itemid/1','itemid'=>'1','ico'=>'chindren-ico-46.png'),
+//        'hotel'=>array('name'=>'酒店','url'=>'hotel/hotel/parentkey/product/itemid/2','itemid'=>'2','ico'=>'chindren-ico-18.png'),
+//        'car'=>array('name'=>'租车','url'=>'car/car/parentkey/product/itemid/3','itemid'=>'3','ico'=>'chindren-ico-58.png'),
+//        'spot'=>array('name'=>'门票','url'=>'spot/spot/parentkey/product/itemid/4','itemid'=>'4','ico'=>'chindren-ico-21.png'),
+//        'visa'=>array('name'=>'签证','url'=>'visa/visa/parentkey/product/itemid/5','itemid'=>'5','ico'=>'chindren-ico-27.png'),
         'tuan'=>array('name'=>'团购','url'=>'tuan/tuan/parentkey/product/itemid/6','itemid'=>'6','ico'=>'chindren-ico-36.png'),
 
 
     ),
     'article'=>array(
         'article'=>array('name'=>'文章','url'=>'article/article/parentkey/article/itemid/1','itemid'=>'1','ico'=>'chindren-ico-40.png'),
-        'spot2'=>array('name'=>'景点','url'=>'spot/spot/parentkey/article/itemid/2','itemid'=>'2','ico'=>'chindren-ico-17.png'),
+//        'spot2'=>array('name'=>'景点','url'=>'spot/spot/parentkey/article/itemid/2','itemid'=>'2','ico'=>'chindren-ico-17.png'),
         'photo'=>array('name'=>'相册','url'=>'photo/photo/parentkey/article/itemid/3','itemid'=>'3','ico'=>'chindren-ico-47.png'),
         'question'=>array('name'=>'问答','url'=>'question/index/parentkey/article/itemid/4','itemid'=>'4','ico'=>'chindren-ico-41.png'),
         'pinlun'=>array('name'=>'评论','url'=>'comment/index/parentkey/article/itemid/5','itemid'=>'5','ico'=>'chindren-ico-07.png'),
@@ -25,10 +25,10 @@ return array(
     ),
     'order'=>array(
         'lineorder'=>array('name'=>'线路订单','url'=>'order/index/parentkey/order/itemid/1/typeid/1','itemid'=>'1','ico'=>'chindren-ico-46.png'),
-        'hotelorder'=>array('name'=>'酒店订单','url'=>'order/index/parentkey/order/itemid/2/typeid/2','itemid'=>'2','ico'=>'chindren-ico-18.png'),
-        'carorder'=>array('name'=>'租车订单','url'=>'order/index/parentkey/order/itemid/3/typeid/3','itemid'=>'3','ico'=>'chindren-ico-58.png'),
-        'spotorder'=>array('name'=>'门票订单','url'=>'order/index/parentkey/order/itemid/5/typeid/5','itemid'=>'5','ico'=>'chindren-ico-21.png'),
-        'visaorder'=>array('name'=>'签证订单','url'=>'order/index/parentkey/order/itemid/8/typeid/8','itemid'=>'8','ico'=>'chindren-ico-27.png'),
+//        'hotelorder'=>array('name'=>'酒店订单','url'=>'order/index/parentkey/order/itemid/2/typeid/2','itemid'=>'2','ico'=>'chindren-ico-18.png'),
+//        'carorder'=>array('name'=>'租车订单','url'=>'order/index/parentkey/order/itemid/3/typeid/3','itemid'=>'3','ico'=>'chindren-ico-58.png'),
+//        'spotorder'=>array('name'=>'门票订单','url'=>'order/index/parentkey/order/itemid/5/typeid/5','itemid'=>'5','ico'=>'chindren-ico-21.png'),
+//        'visaorder'=>array('name'=>'签证订单','url'=>'order/index/parentkey/order/itemid/8/typeid/8','itemid'=>'8','ico'=>'chindren-ico-27.png'),
         'tuanorder'=>array('name'=>'团购订单','url'=>'order/index/parentkey/order/itemid/13/typeid/13','itemid'=>'13','ico'=>'chindren-ico-36.png'),
         'dzorder'=>array('name'=>'定制订单','url'=>'order/dz/parentkey/order/itemid/14/','itemid'=>'14','ico'=>'chindren-ico-48.png'),
         'xyorder'=>array('name'=>'协议订单','url'=>'order/xy/parentkey/order/itemid/15/','itemid'=>'15','ico'=>'chindren-ico-61.png'),
