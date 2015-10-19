@@ -91,7 +91,7 @@ function lib_getcommentlist(&$ctag,&$refObj)
 
 		$row['productname'] = $row['typeid']!='4' && $row['typeid']!='6'  ? getOrderName2($row['articleid'],$row['typeid'],'',$row['id']) : '';
 
-		$row['sellnum'] = getSellNum($row['productautoid']);//销售数量
+		$row['sellnum'] = getSellNum($row['articleid']);//销售数量
         foreach($ctp->CTags as $tagid=>$ctag)
         {
 			if($ctag->GetName()=='array')
