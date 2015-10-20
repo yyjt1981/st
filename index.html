@@ -2,18 +2,44 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>夏令营</title>
-    <meta name="keywords" content="夏令营" />
-    <meta name="author" content="夏令营" />
-    <meta name="description" content="夏令营" />
+    <title>夏令王国</title>
+    <meta name="keywords" content="夏令营, 游学, 冬令营, 亲子游" />
+    <meta name="author" content="夏令王国" />
+    <meta name="description" content="夏令营 | 国际游学 | 冬令营 | 亲子游" />
     
-    <link href="/templets/smore/css/base.css?v=2014.03" rel="stylesheet" media="screen" type="text/css" />
-<link href="/templets/smore/css/index2.css?v=2014.03" rel="stylesheet" media="screen" type="text/css" />
+    <link href="/templets/orange/css/base.css?v=2014.03" rel="stylesheet" media="screen" type="text/css" />
+<link href="/templets/orange/css/index2.css?v=2014.03" rel="stylesheet" media="screen" type="text/css" />
+<link href="/templets/smore/css/lb.css?v=2014.03" rel="stylesheet" media="screen" type="text/css" />
 
-    <script type="text/javascript" language="javascript" src="/templets/smore/js/jquery-1.4.2.min.js?v=2014.03"></script>
+    <script type="text/javascript" language="javascript" src="/templets/smore/js/jquery-1.8.3.min.js?v=2014.03"></script>
 <script type="text/javascript" language="javascript" src="/templets/smore/js/common.js?v=2014.03"></script>
+<script type="text/javascript" language="javascript" src="/templets/smore/js/slideTabs.js?v=2014.03"></script>
 <script type="text/javascript" language="javascript" src="/templets/smore/js/jquery.foucs.js?v=2014.03"></script>
+<script type="text/javascript" language="javascript" src="/templets/smore/js/fcous.js?v=2014.03"></script>
 <script type="text/javascript" language="javascript" src="/templets/smore/js/lazy.js?v=2014.03"></script>
+<script type="text/javascript" language="javascript" src="/templets/smore/js/jquery-extend.js?v=2014.03"></script>
+<script type="text/javascript" language="javascript" src="/templets/smore/js/MSClass.js?v=2014.03"></script>
+
+
+    <style>
+
+
+    </style>
+    <script>
+    var isindextop=1;
+    $(function(){
+        //滑动门切换
+        $('.sidleTabs-cj').switchTab({trigger: "mouseovers"});
+        //图片hover效果
+        $('.li-top .img').hover(function(){
+            $(this).children('.txt').animate({bottom:'0'})
+        },function(){
+            $(this).children('.txt').animate({bottom:'-70px'})
+        })
+
+    })
+
+    </script>
 
 </head>
 
@@ -25,7 +51,7 @@
       <li class="fr">
         <span id="_userLogin" class="fl"></span>
 
-        <a class="fl" rel="nofollow" href="javascript:void(0);" onClick="ST.Util.addFavourite()">收藏本站</a>
+        <a class="fl" rel="nofollow" href="javascript:void(0);" onClick="window.external.addFavorite('http://www.xly.com','夏令王国')">收藏本站</a>
 
           <a class="fl" rel="nofollow" href="/servers/index_2.html">联系我们</a>
           <a class="wb_ico fl" href="http://user.qzone.qq.com/278869155/main" target="_blank">官方微博</a>
@@ -34,23 +60,11 @@
                   <a class="web_nav_ico" href="javascript:;"><s></s>网站导航</a>
                   <div class="w_nav_map">
                       
-                       <a href="http://www.xly.com/lines/">线路</a>
+                       <a href="http://www.xly.com/lines/qinzixing/">亲子行</a>
                       
-                       <a href="http://www.xly.com/visa/">签证</a>
+                       <a href="http://www.xly.com/lines/guojiyouxueying/">国际游学</a>
                       
-                       <a href="http://www.xly.com/destination/">目的地</a>
-                      
-                       <a href="http://www.xly.com/hotels/">酒店预订</a>
-                      
-                       <a href="http://www.xly.com/cars/">租车</a>
-                      
-                       <a href="http://www.xly.com/raiders/">攻略</a>
-                      
-                       <a href="http://www.xly.com/spots/">景点</a>
-                      
-                       <a href="http://www.xly.com/customize/">私人定制</a>
-                      
-                       <a href="http://www.xly.com/photos/">相册</a>
+                       <a href="http://www.xly.com/lines/donglingying/">开心冬令营</a>
                       
                        <a href="http://www.xly.com/tuan/">团购</a>
                       
@@ -66,22 +80,26 @@
   <div class="big">
     <div class="top_1210">
     	<div class="top_mt">
-        <div class="logo"><img src="/uploads/main/allimg/20140922/20140922154520.jpg" alt="旅游1987" title="旅游1987" class="fl"/></div>
+        <div class="logo">
+              <a href="http://www.xly.com">
+                  <img src="/uploads/main/allimg/20151018/20151018213213.png" alt="夏令王国" title="夏令王国" class="fl"/>
+              </a>
+          </div>
         <div class="all_search">
           <div class="top_search">
-            <s><img class="fl" src="/templets/smore_02197/images/search_ico.png" /></s>
+            <s><img class="fl" src="/templets/orange/images/search_ico.png" /></s>
             <input class="s_txt g_search" type="text" name="" value="请输入关键词" datadef="请输入关键词" />
            
             <input class="s_btn cloud_search" type="button" name="" value="搜&nbsp;索" />
             <div class="searcg_hot">
               <span>热门搜索：</span>
-              <a href="/cloudsearch.php?keyword=成都">成都</a><a href="/cloudsearch.php?keyword=黑锐网">黑锐网</a><a href="/cloudsearch.php?keyword=九寨沟">九寨沟</a>
+              <a href="/cloudsearch.php?keyword=亲子">亲子</a><a href="/cloudsearch.php?keyword=游学">游学</a><a href="/cloudsearch.php?keyword=夏令营">夏令营</a><a href="/cloudsearch.php?keyword=冬令营">冬令营</a>
             
             </div>
           </div>
           <div class="h_phone_num">
             <span>24小时客服电话：</span>
-            <p>010-8825925</p>
+            <p>0571-8825925</p>
           </div>
         </div>
       </div>
@@ -91,97 +109,74 @@
 
  <!-- 导航开始 -->
   <div class="nav">
-  	 
-      <div class="menu">
+
+      
+       <div class="menu">
      <div class="global_nav">
-    <div class="kj_tit">旅游产品快捷导航</div>
+    <div class="kj_tit">夏令营快捷导航</div>
     <div class="mc" style="display:none">
     <div class="tall" style="display:none">
                 <span class="tit_bt">
                   <s></s>
                   <h3>
-                      <a class="title_bt" href="javascript:;">出境游目的地</a>
+                      <a class="title_bt" href="/lines/guoneiying/"><font color="#339900">国内营</font></a>
                   </h3>
+                  <span>
+                    <text class="index-menu"><a href="/lines/qinzixing/" target="_blank" ><font color="#3399FF">亲子行</font></a></text><text class="index-menu"><a href="/lines/xinzhiying/" target="_blank" ><font color="#3399FF">心智营</font></a></text><text class="index-menu"><a href="/lines/junshiying" target="_blank" ><font color="#3399FF">军事营</font></a></text><text class="index-menu"><a href="/lines/guoneiyouxueying/" target="_blank" ><font color="#3399FF">游学营</font></a></text>
+                  </span>
                 </span>
-        <div class="gl_nav_con" style="display:none">
+<!--        <div class="gl_nav_con" >
             <div class="subitem">
                 <dl>
-                        <dt><a href="/lines/search_3466_0_0_0.html" target="_blank" >南亚</a></dt>
+                        <dt><a href="/lines/qinzixing/" target="_blank" ><font color="#3399FF">亲子行</font></a></dt>
                         <dd>
-                             <a href="/lines/search_3485_0_0_0.html" target="_blank" >马尔代夫</a> <a href="/lines/search_3489_0_0_0.html" target="_blank" >尼泊尔</a> <a href="/lines/search_3487_0_0_0.html" target="_blank" >印度</a> <a href="/lines/search_3484_0_0_0.html" target="_blank" >斯里兰卡</a>
+                            
                         </dd>
                     </dl><dl>
-                        <dt><a href="/lines/search_3284_0_0_0.html" target="_blank" >欧洲</a></dt>
+                        <dt><a href="/lines/xinzhiying/" target="_blank" ><font color="#3399FF">心智营</font></a></dt>
                         <dd>
-                             <a href="/lines/search_3320_0_0_0.html" target="_blank" >法国</a> <a href="/lines/search_3861_0_0_0.html" target="_blank" >瑞士</a> <a href="/lines/search_3860_0_0_0.html" target="_blank" >意大利</a> <a href="/lines/search_3862_0_0_0.html" target="_blank" >英国</a> <a href="/lines/search_3863_0_0_0.html" target="_blank" >爱尔兰</a> <a href="/lines/search_3668_0_0_0.html" target="_blank" >希腊</a> <a href="/lines/search_3859_0_0_0.html" target="_blank" >德国</a> <a href="/lines/search_3302_0_0_0.html" target="_blank" >俄罗斯</a> <a href="/lines/search_3300_0_0_0.html" target="_blank" >奥地利</a> <a href="/lines/search_3306_0_0_0.html" target="_blank" >荷兰</a> <a href="/lines/search_3669_0_0_0.html" target="_blank" >西班牙</a> <a href="/lines/search_3295_0_0_0.html" target="_blank" >葡萄牙</a> <a href="/lines/search_3917_0_0_0.html" target="_blank" >北欧</a> <a href="/lines/search_3296_0_0_0.html" target="_blank" >捷克</a>
+                            
                         </dd>
                     </dl><dl>
-                        <dt><a href="/lines/search_3159_0_0_0.html" target="_blank" >美洲</a></dt>
+                        <dt><a href="/lines/junshiying" target="_blank" ><font color="#3399FF">军事营</font></a></dt>
                         <dd>
-                             <a href="/lines/search_3168_0_0_0.html" target="_blank" >美国</a> <a href="/lines/search_3169_0_0_0.html" target="_blank" >加拿大</a> <a href="/lines/search_3670_0_0_0.html" target="_blank" >夏威夷</a> <a href="/lines/search_3671_0_0_0.html" target="_blank" >关岛</a>
+                            
                         </dd>
                     </dl><dl>
-                        <dt><a href="/lines/search_3566_0_0_0.html" target="_blank" >中东非洲</a></dt>
+                        <dt><a href="/lines/guoneiyouxueying/" target="_blank" ><font color="#3399FF">游学营</font></a></dt>
                         <dd>
-                             <a href="/lines/search_3675_0_0_0.html" target="_blank" >迪拜</a> <a href="/lines/search_3677_0_0_0.html" target="_blank" >肯尼亚</a> <a href="/lines/search_3680_0_0_0.html" target="_blank" >塞舌尔</a> <a href="/lines/search_3673_0_0_0.html" target="_blank" >埃及</a> <a href="/lines/search_3679_0_0_0.html" target="_blank" >毛里求斯</a> <a href="/lines/search_3676_0_0_0.html" target="_blank" >土耳其</a> <a href="/lines/search_3674_0_0_0.html" target="_blank" >南非</a>
-                        </dd>
-                    </dl><dl>
-                        <dt><a href="http:///lines/search_3565_0_0_0.html" target="_blank" >澳洲</a></dt>
-                        <dd>
-                             <a href="/lines/search_3663_0_0_0.html" target="_blank" >澳大利亚</a> <a href="/lines/search_3903_0_0_0.html" target="_blank" >新西兰</a> <a href="/lines/search_3904_0_0_0.html" target="_blank" >斐济</a> <a href="/lines/search_3939_0_0_0.html" target="_blank" >大溪地</a>
-                        </dd>
-                    </dl><dl>
-                        <dt><a href="/lines/search_3564_0_0_0.html" target="_blank" >韩国</a></dt>
-                        <dd>
-                             <a href="/lines/search_3659_0_0_0.html" target="_blank" >首尔</a> <a href="/lines/search_3658_0_0_0.html" target="_blank" >济州岛</a>
-                        </dd>
-                    </dl><dl>
-                        <dt><a href="/lines/search_3463_0_0_0.html" target="_blank" >东南亚</a></dt>
-                        <dd>
-                             <a href="/lines/search_3471_0_0_0.html" target="_blank" >新马泰</a> <a href="/lines/search_3477_0_0_0.html" target="_blank" >新加坡</a> <a href="/lines/search_3476_0_0_0.html" target="_blank" >马来西亚</a> <a href="/lines/search_3652_0_0_0.html" target="_blank" >沙巴</a> <a href="/lines/search_3475_0_0_0.html" target="_blank" >泰国</a> <a href="/lines/search_3651_0_0_0.html" target="_blank" >巴厘岛</a> <a href="/lines/search_3650_0_0_0.html" target="_blank" >普吉岛</a> <a href="/lines/search_3472_0_0_0.html" target="_blank" >越南</a> <a href="/lines/search_3803_0_0_0.html" target="_blank" >下龙湾</a> <a href="/lines/search_3942_0_0_0.html" target="_blank" >曼谷</a> <a href="/lines/search_3473_0_0_0.html" target="_blank" >柬埔寨</a> <a href="/lines/search_3943_0_0_0.html" target="_blank" >吉隆坡</a>
-                        </dd>
-                    </dl><dl>
-                        <dt><a href="/lines/search_3569_0_0_0.html" target="_blank" >港澳</a></dt>
-                        <dd>
-                             <a href="/lines/search_3661_0_0_0.html" target="_blank" >港一地</a> <a href="/lines/search_3662_0_0_0.html" target="_blank" >澳一地</a> <a href="/lines/search_4017_0_0_0.html" target="_blank" >港澳连游</a>
-                        </dd>
-                    </dl><dl>
-                        <dt><a href="/lines/search_3563_0_0_0.html" target="_blank" >日本</a></dt>
-                        <dd>
-                             <a href="/lines/search_3653_0_0_0.html" target="_blank" >北海道</a> <a href="/lines/search_3654_0_0_0.html" target="_blank" >东京</a> <a href="/lines/search_3656_0_0_0.html" target="_blank" >冲绳</a> <a href="/lines/search_3655_0_0_0.html" target="_blank" >大阪</a>
+                            
                         </dd>
                     </dl>
 
             </div>
-        </div>
+        </div>-->
     </div><div class="tall" style="display:none">
                 <span class="tit_bt">
                   <s></s>
                   <h3>
-                      <a class="title_bt" href="javascript:;">自助游目的地</a>
+                      <a class="title_bt" href="/lines/guojiyouxueying/"><font color="#339900">国际营 · 游学营</font></a>
                   </h3>
+                  <span>
+                    <text class="index-menu"><a href="/lines/jianada/" target="_blank" ><font color="#3399FF">加拿大</font></a></text><text class="index-menu"><a href="/lines/meiguo/" target="_blank" ><font color="#3399FF">美国</font></a></text>
+                  </span>
                 </span>
-        <div class="gl_nav_con" style="display:none">
+<!--        <div class="gl_nav_con" >
             <div class="subitem">
                 <dl>
-                        <dt><a href="/lines/search_3569_0_0_0.html" target="_blank" >出境热门</a></dt>
+                        <dt><a href="/lines/jianada/" target="_blank" ><font color="#3399FF">加拿大</font></a></dt>
                         <dd>
-                             <a href="/lines/search_3569_0_0_0.html" target="_blank" >港澳</a> <a href="/lines/search_3477_0_0_0.html" target="_blank" >新加坡</a> <a href="/lines/search_3563_0_0_0.html" target="_blank" >日本</a> <a href="/lines/search_3564_0_0_0.html" target="_blank" >韩国</a> <a href="/lines/search_3168_0_0_0.html" target="_blank" >美国</a> <a href="/lines/search_3169_0_0_0.html" target="_blank" >加拿大</a>
+                            
                         </dd>
                     </dl><dl>
-                        <dt><a href="/lines/search_3485_0_0_0.html" target="_blank" >度假海岛</a></dt>
+                        <dt><a href="/lines/meiguo/" target="_blank" ><font color="#3399FF">美国</font></a></dt>
                         <dd>
-                             <a href="/lines/search_3485_0_0_0.html" target="_blank" >马尔代夫</a> <a href="/lines/search_3679_0_0_0.html" target="_blank" >毛里求斯</a> <a href="/lines/search_3904_0_0_0.html" target="_blank" >斐济</a> <a href="/lines/search_3680_0_0_0.html" target="_blank" >塞舌尔</a> <a href="/lines/search_3650_0_0_0.html" target="_blank" >普吉岛</a> <a href="/lines/search_3651_0_0_0.html" target="_blank" >巴厘岛</a> <a href="/lines/search_3409_0_0_0.html" target="_blank" >夏威夷</a> <a href="/lines/search_3690_0_0_0.html" target="_blank" >塞班</a>
-                        </dd>
-                    </dl><dl>
-                        <dt><a href="http:///lines/search_3661_0_0_0.html" target="_blank" >都市购物</a></dt>
-                        <dd>
-                             <a href="/lines/search_3661_0_0_0.html" target="_blank" >香港</a> <a href="/lines/search_3659_0_0_0.html" target="_blank" >首尔</a> <a href="/lines/search_3706_0_0_0.html" target="_blank" >迪拜</a> <a href="/lines/search_3654_0_0_0.html" target="_blank" >东京</a> <a href="/lines/search_3943_0_0_0.html" target="_blank" >吉隆坡</a>
+                            
                         </dd>
                     </dl>
 
             </div>
-        </div>
+        </div>-->
     </div>
 
     </div>
@@ -215,53 +210,23 @@
      <div class="main_nav_list">
       <a href="http://www.xly.com/">首页</a>
       
-        <a href="http://www.xly.com/lines/"
-         title="旅游线路">
+        <a href="http://www.xly.com/lines/qinzixing/"
+         title="国内营·亲子行">
          <s class="ico_hot"></s>
-       线路</a>
+       亲子行</a>
       
-        <a href="http://www.xly.com/visa/"
-         title="全球签证">
+        <a href="http://www.xly.com/lines/guojiyouxueying/"
+         title="国际营·游学">
          
-       签证</a>
+       国际游学</a>
       
-        <a href="http://www.xly.com/destination/"
-         title="旅游目的地">
-         
-       目的地</a>
-      
-        <a href="http://www.xly.com/hotels/"
-         title="酒店">
-         <s class="ico_hot"></s>
-       酒店预订</a>
-      
-        <a href="http://www.xly.com/cars/"
-         title="旅游租车">
-         
-       租车</a>
-      
-        <a href="http://www.xly.com/raiders/"
-         title="旅游攻略">
-         
-       攻略</a>
-      
-        <a href="http://www.xly.com/spots/"
-         title="旅游景点">
-         <s class="ico_hot"></s>
-       景点</a>
-      
-        <a href="http://www.xly.com/customize/"
-         title="customize">
+        <a href="http://www.xly.com/lines/donglingying/"
+         title="开心冬令营">
          <s class="ico_new"></s>
-       私人定制</a>
-      
-        <a href="http://www.xly.com/photos/"
-         title="旅游相册">
-         
-       相册</a>
+       开心冬令营</a>
       
         <a href="http://www.xly.com/tuan/"
-         title="黑锐网站长分享圈子">
+         title="夏令营团购">
          
        团购</a>
       
@@ -280,7 +245,7 @@
   $(function(){
       
 	  //导航的选中状态
-		 $(".nav .menu a").each(function(){
+		 $(".nav .menu  a").each(function(){
 								var url= window.location.href;
 
 
@@ -382,579 +347,133 @@
   
  
 
-  
-  <!-- 中间内容 -->
-  <div class="big">
-  	<div class="width_1210">
-    
-    	<!-- 热门目的地开始 -->
-    	<div class="top_first">
-      	<div class="hot_mdd">
-        	<span>热门目的地：</span>
-            <a href="http://www.xly.com/guonelvyou/">国内旅游</a><a href="http://www.xly.com/chujinglvyou/">出境旅游</a><a href="http://www.xly.com/yazhou/">亚洲</a><a href="http://www.xly.com/ouzhou/">欧洲</a><a href="http://www.xly.com/4215/">自定义</a><a href="http://www.xly.com/meizhou/">美洲</a>
+
+
+<!--滚动焦点图开始-->
+<div class="focus_img">
+    <div id="_banners" class="banners">
+        <div class="banner">
+            <a target="_blank" href="http://bbs.52jscn.com"><img width="1920" height="420" alt="" src="/uploads/main/allimg/20150105/20150105213603.jpg"></a>
+        </div><div class="banner">
+            <a target="_blank" href="http://www.baidu.com"><img width="1920" height="420" alt="" src="/uploads/main/allimg/20150109/20150109034202.jpg"></a>
+        </div><div class="banner">
+            <a target="_blank" href="http://www.baidu.com"><img width="1920" height="420" alt="" src="/uploads/main/allimg/20150109/20150109034204.jpg"></a>
         </div>
-             <div class="scrollDiv" id="s1">
-          <ul>
-           <li><span>18963***</span>2小时前预订了<a href="/lines/show_8.html" target="_blank">连云港三天两晚游记(黑锐网套餐测试)</a></li><li><span>18963***</span>7分钟前预订了<a href="/lines/show_8.html" target="_blank">连云港三天两晚游记(黑锐网套餐测试)</a></li><li><span>18963***</span>2小时前预订了<a href="/lines/show_8.html" target="_blank">连云港三天两晚游记(黑锐网套餐测试)</a></li>
-           <li><span>18963***</span>1小时前评论了<a href="/lines/show_8.html" target="_blank">连云港三天两晚游记</a></li><li><span>18963***</span>2小时前评论了<a href="/lines/show_8.html" target="_blank">连云港三天两晚游记</a></li><li><span>18963***</span>1小时前评论了<a href="/lines/show_8.html" target="_blank">连云港三天两晚游记</a></li>
-            <li><span>夏令营</span>3小时前发表了<a href="/raiders/show_6.html">黑锐网</a></li><li><span>夏令营</span>21分钟前发表了<a href="/raiders/show_5.html">黑锐网</a></li><li><span>夏令营</span>24分钟前发表了<a href="/raiders/show_4.html">黑锐网</a></li>
-            
-          </ul>
-</div><!--scrollDiv end-->
-<script type="text/javascript">
-function AutoScroll(obj){
-  $(obj).find("ul:first").animate({
-	marginTop:"-25px"
-  },500,function(){
-	$(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
-  });
-}
-$(document).ready(function(){
-  setInterval('AutoScroll("#s1")',3000);
-});
-</script>
-      </div>
-      <!-- 热门目的地结束 -->
-           
     </div>
-  </div>
-  <!-- 中间内容 -->
-  
+
+    <div id="_focus" class="focus">
+        <a data-index="0" href="javascript:void(0);" ><span class="bg-b"></span><span class="inner"></span></a>
+        <a data-index="1" href="javascript:void(0);" ><span class="bg-b"></span><span class="inner"></span></a>
+        <a data-index="2" href="javascript:void(0);" ><span class="bg-b"></span><span class="inner"></span></a>
+    </div>
+</div>
+<!--滚动焦点图结束-->
+
   <!--中间产品内容开始-->
   <div class="big">
   	<div class="width_1210">
     	<div class="con_left">
-      	<!-- 大图展示产品开始 -->
-      	<div class="st_left">
-          <!-- 代码 开始 -->
-          <div id="main">
-            <div id="index_b_hero">
-              <div class="hero-wrap">
-                <ul class="heros clearfix">
-                    <li class="hero">
-                        <a href="http://bbs.52jscn.com" target="_blank" title="大理，好久不见"><img src="/uploads/main/allimg/20150105/20150105213603.jpg" class="thumb" alt="大理，好久不见" /></a>
-                        <div class="tishi"><a href="http://bbs.52jscn.com" target="_blank">大理，好久不见</a></div>
-                    </li><li class="hero">
-                        <a href="http://bbs.52jscn.com" target="_blank" title="大理，好久不见"><img src="/uploads/main/allimg/20150109/20150109034202.jpg" class="thumb" alt="大理，好久不见" /></a>
-                        <div class="tishi"><a href="http://bbs.52jscn.com" target="_blank">大理，好久不见</a></div>
-                    </li>
-                </ul>
-              </div>
-              <div class="helper">
-                <a href="javascript:;" class="prev icon-arrow-a-left"></a>
-                <a href="javascript:;" class="next icon-arrow-a-right"></a>
-              </div>
-            </div>
-          </div>
-          <script type="text/javascript">
-              $(function(){
 
-                  if($('.hero').length>1)
-                  {
-                      $.foucs({ direction: 'right' });
-                  }
-                  else
-                  {
-                      $('.hero').css('left',0);
-                  }
-              })
-
-
-          </script>
-          <!-- 代码 结束 -->
-            <div class="gl_top">
-                <a class="fl" href="/tuan/show_1.html" target="_blank"><img class="fl"  src="/uploads/main/litimg/20150106/20150106232430.jpg" width="368" height="228" alt="黑锐网" /></a>
-                <div class="ct_ico">团购</div>
-                <div class="tg"><a class="title" href="黑锐网">[团购]黑锐网</a><a class="ct_btn" href="/tuan/show_1.html">参团</a></div>
-            </div>
-            <div class="gl_b1">
-                <a class="fl" href="/raiders/show_2.html" target="_blank"><img class="fl" src="/uploads/main/litimg/20150108/20150108020755.jpg" width="183" height="150" alt="黑锐网" /></a>
-                <div class="gl_ico">攻略</div>
-                <div class="title"><a href="/raiders/show_2.html" target="_blank">[攻略]黑锐网</a></div>
-            </div>
-            <div class="gl_b2">
-                <a class="fl" href="/raiders/show_3.html" target="_blank"><img class="fl" src="/uploads/main/lit240/20150108/20150108021556.jpg" width="183" height="150" alt="黑锐网" /></a>
-                <div class="gl_ico">攻略</div>
-                <div class="title"><a href="/raiders/show_3.html" target="_blank">[攻略]黑锐网</a></div>
-            </div>
-        </div>
-        <!-- 大图展示产品结束 -->
-        <!--线路产品分类列表开始-->
         <div class="line_list_con">
-        	<div class="list_bt"><s></s><h3>国内旅游旅游线路</h3><a href="/lines/guonelvyou/" target="_blank">更多</a></div>
+        	<div class="list_bt"><s></s><h3>国内营 · 亲子行</h3><a href="/lines/qinzixing/" target="_blank">更多</a></div>
         	<div class="menu_left">
             <div class="line_menu_txt">
                 
             </div>
             <div class="line_menu_pic">
-                <a href='http://#' style="margin-bottom:10px;" class="fl clearfix"><img src="http://demo.52jscn.com/uploads/main/allimg/20150109/20150109025659.gif" alt="" width="190" height="401" /></a>
+                <a href='http://#' style="margin-bottom:10px;" class="fl clearfix"><img src="http://www.xly.com/uploads/main/allimg/20150109/20150109025659.gif" alt="" width="190" height="401" /></a>
             </div>
           </div>
-          
+
           <div class="list_rig">
           	<ul>
-                <li>
-                    <a class="fl" href="http://hz.st.com/lines/show_5.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]555" title="[深圳出发]555" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="http://hz.st.com/lines/show_5.html" target="_blank"><span style="color:#006699">[深圳出发]555</span><img src="/uploads/main/allimg/20150106/20150106044825.jpg" height="15"></a></p>
-                      <p class="p2">推荐理由：555</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">100%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="http://hz.st.com/lines/show_4.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]333" title="[深圳出发]333" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="http://hz.st.com/lines/show_4.html" target="_blank"><span style="">[深圳出发]333</span><img src="/uploads/main/allimg/20150106/20150106044825.jpg" height="15"></a></p>
-                      <p class="p2">推荐理由：333</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">97%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="http://hz.st.com/lines/show_1.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]111111" title="[深圳出发]111111" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="http://hz.st.com/lines/show_1.html" target="_blank"><span style="">[深圳出发]111111</span><img src="/uploads/main/allimg/20150106/20150106044825.jpg" height="15"></a></p>
-                      <p class="p2">推荐理由：11111</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">94%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="/lines/show_9.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]黑锐网出境旅游" title="[深圳出发]黑锐网出境旅游" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="/lines/show_9.html" target="_blank"><span style="">[深圳出发]黑锐网出境旅游</span></a></p>
-                      <p class="p2">推荐理由：黑锐网出境旅游</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">93%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="/lines/show_8.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]连云港三天两晚游记" title="[深圳出发]连云港三天两晚游记" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="/lines/show_8.html" target="_blank"><span style="">[深圳出发]连云港三天两晚游记</span></a></p>
-                      <p class="p2">推荐理由：连云港三天两晚游记</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">74%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">3</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">10-16、10-17、10-18、10-19、10-20、10-21、10-22、10-23、10-24日,</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>&yen;</span><strong>350</strong><i>起</i></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li>
+                
 
             </ul>
           </div>
           
 
-          
+
         </div><div class="line_list_con">
-        	<div class="list_bt"><s></s><h3>出境旅游旅游线路</h3><a href="/lines/chujinglvyou/" target="_blank">更多</a></div>
+        	<div class="list_bt"><s></s><h3>国内营 · 心智营</h3><a href="/lines/xinzhiying/" target="_blank">更多</a></div>
         	<div class="menu_left">
             <div class="line_menu_txt">
                 
             </div>
             <div class="line_menu_pic">
-                <a href='http://#' style="margin-bottom:10px;" class="fl clearfix"><img src="http://demo.52jscn.com/uploads/main/allimg/20150109/20150109032442.jpg" alt="" width="190" height="401" /></a>
+                <a href='http://#' style="margin-bottom:10px;" class="fl clearfix"><img src="http://www.xly.com/uploads/main/allimg/20150109/20150109032442.jpg" alt="" width="190" height="401" /></a>
             </div>
           </div>
-          
+
           <div class="list_rig">
           	<ul>
-                <li>
-                    <a class="fl" href="http://hz.st.com/lines/show_5.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]555" title="[深圳出发]555" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="http://hz.st.com/lines/show_5.html" target="_blank"><span style="color:#006699">[深圳出发]555</span><img src="/uploads/main/allimg/20150106/20150106044825.jpg" height="15"></a></p>
-                      <p class="p2">推荐理由：555</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">92%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="http://hz.st.com/lines/show_4.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]333" title="[深圳出发]333" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="http://hz.st.com/lines/show_4.html" target="_blank"><span style="">[深圳出发]333</span><img src="/uploads/main/allimg/20150106/20150106044825.jpg" height="15"></a></p>
-                      <p class="p2">推荐理由：333</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">94%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="/lines/show_10.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]黑锐网欧洲旅游测试" title="[深圳出发]黑锐网欧洲旅游测试" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="/lines/show_10.html" target="_blank"><span style="">[深圳出发]黑锐网欧洲旅游测试</span></a></p>
-                      <p class="p2">推荐理由：黑锐网欧洲旅游测试</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">94%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="/lines/show_9.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]黑锐网出境旅游" title="[深圳出发]黑锐网出境旅游" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="/lines/show_9.html" target="_blank"><span style="">[深圳出发]黑锐网出境旅游</span></a></p>
-                      <p class="p2">推荐理由：黑锐网出境旅游</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">100%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="/lines/show_8.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]连云港三天两晚游记" title="[深圳出发]连云港三天两晚游记" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="/lines/show_8.html" target="_blank"><span style="">[深圳出发]连云港三天两晚游记</span></a></p>
-                      <p class="p2">推荐理由：连云港三天两晚游记</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">74%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">3</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">10-16、10-17、10-18、10-19、10-20、10-21、10-22、10-23、10-24日,</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>&yen;</span><strong>350</strong><i>起</i></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li>
+                
 
             </ul>
           </div>
           
 
-          
+
         </div><div class="line_list_con">
-        	<div class="list_bt"><s></s><h3>亚洲旅游线路</h3><a href="/lines/yazhou/" target="_blank">更多</a></div>
+        	<div class="list_bt"><s></s><h3>国内营 · 军事营</h3><a href="/lines/junshiying/" target="_blank">更多</a></div>
         	<div class="menu_left">
             <div class="line_menu_txt">
                 
             </div>
             <div class="line_menu_pic">
-                <a href='http://#' style="margin-bottom:10px;" class="fl clearfix"><img src="http://demo.52jscn.com/uploads/main/allimg/20150109/20150109034202.jpg" alt="" width="190" height="401" /></a>
+                <a href='http://#' style="margin-bottom:10px;" class="fl clearfix"><img src="http://www.xly.com/uploads/main/allimg/20150109/20150109034202.jpg" alt="" width="190" height="401" /></a>
             </div>
           </div>
-          
+
           <div class="list_rig">
           	<ul>
-                <li>
-                    <a class="fl" href="http://hz.st.com/lines/show_4.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]333" title="[深圳出发]333" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="http://hz.st.com/lines/show_4.html" target="_blank"><span style="">[深圳出发]333</span><img src="/uploads/main/allimg/20150106/20150106044825.jpg" height="15"></a></p>
-                      <p class="p2">推荐理由：333</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">100%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="/lines/show_11.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]黑锐网欧洲旅游测试" title="[深圳出发]黑锐网欧洲旅游测试" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="/lines/show_11.html" target="_blank"><span style="">[深圳出发]黑锐网欧洲旅游测试</span></a></p>
-                      <p class="p2">推荐理由：黑锐网欧洲旅游测试</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">94%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="/lines/show_10.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]黑锐网欧洲旅游测试" title="[深圳出发]黑锐网欧洲旅游测试" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="/lines/show_10.html" target="_blank"><span style="">[深圳出发]黑锐网欧洲旅游测试</span></a></p>
-                      <p class="p2">推荐理由：黑锐网欧洲旅游测试</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">96%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="/lines/show_9.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]黑锐网出境旅游" title="[深圳出发]黑锐网出境旅游" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="/lines/show_9.html" target="_blank"><span style="">[深圳出发]黑锐网出境旅游</span></a></p>
-                      <p class="p2">推荐理由：黑锐网出境旅游</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">100%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="/lines/show_7.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]大连三天两晚游记" title="[深圳出发]大连三天两晚游记" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="/lines/show_7.html" target="_blank"><span style="">[深圳出发]大连三天两晚游记</span></a></p>
-                      <p class="p2">推荐理由：大连三天两晚游记</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">100%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li>
+                
 
             </ul>
           </div>
           
 
-          
+
         </div><div class="line_list_con">
-        	<div class="list_bt"><s></s><h3>欧洲旅游线路</h3><a href="/lines/ouzhou/" target="_blank">更多</a></div>
+        	<div class="list_bt"><s></s><h3>国内营 · 游学营</h3><a href="/lines/guoneiyouxueying/" target="_blank">更多</a></div>
         	<div class="menu_left">
             <div class="line_menu_txt">
                 
             </div>
             <div class="line_menu_pic">
-                <a href='http://#' style="margin-bottom:10px;" class="fl clearfix"><img src="http://demo.52jscn.com/uploads/main/allimg/20150109/20150109034854.jpg" alt="" width="190" height="401" /></a>
+                <a href='http://#' style="margin-bottom:10px;" class="fl clearfix"><img src="http://www.xly.com/uploads/main/allimg/20150109/20150109034854.jpg" alt="" width="190" height="401" /></a>
             </div>
           </div>
-          
+
           <div class="list_rig">
           	<ul>
-                <li>
-                    <a class="fl" href="http://hz.st.com/lines/show_4.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]333" title="[深圳出发]333" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="http://hz.st.com/lines/show_4.html" target="_blank"><span style="">[深圳出发]333</span><img src="/uploads/main/allimg/20150106/20150106044825.jpg" height="15"></a></p>
-                      <p class="p2">推荐理由：333</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">97%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="/lines/show_11.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]黑锐网欧洲旅游测试" title="[深圳出发]黑锐网欧洲旅游测试" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="/lines/show_11.html" target="_blank"><span style="">[深圳出发]黑锐网欧洲旅游测试</span></a></p>
-                      <p class="p2">推荐理由：黑锐网欧洲旅游测试</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">99%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="/lines/show_10.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]黑锐网欧洲旅游测试" title="[深圳出发]黑锐网欧洲旅游测试" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="/lines/show_10.html" target="_blank"><span style="">[深圳出发]黑锐网欧洲旅游测试</span></a></p>
-                      <p class="p2">推荐理由：黑锐网欧洲旅游测试</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">95%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="/lines/show_9.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]黑锐网出境旅游" title="[深圳出发]黑锐网出境旅游" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="/lines/show_9.html" target="_blank"><span style="">[深圳出发]黑锐网出境旅游</span></a></p>
-                      <p class="p2">推荐理由：黑锐网出境旅游</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">99%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="/lines/show_7.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]大连三天两晚游记" title="[深圳出发]大连三天两晚游记" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="/lines/show_7.html" target="_blank"><span style="">[深圳出发]大连三天两晚游记</span></a></p>
-                      <p class="p2">推荐理由：大连三天两晚游记</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">98%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li>
+                
 
             </ul>
           </div>
           
 
-          
+
         </div><div class="line_list_con">
-        	<div class="list_bt"><s></s><h3>自定义旅游线路</h3><a href="/lines/4215/" target="_blank">更多</a></div>
+        	<div class="list_bt"><s></s><h3>国际营 · 游学营</h3><a href="/lines/guojiyouxueying/" target="_blank">更多</a></div>
         	<div class="menu_left">
             <div class="line_menu_txt">
                 
             </div>
             <div class="line_menu_pic">
-                <a href='http://#' style="margin-bottom:10px;" class="fl clearfix"><img src="http://demo.52jscn.com/uploads/main/allimg/20150109/20150109034956.jpg" alt="" width="190" height="401" /></a>
+                <a href='http://#' style="margin-bottom:10px;" class="fl clearfix"><img src="http://www.xly.com/uploads/main/allimg/20150109/20150109034956.jpg" alt="" width="190" height="401" /></a>
             </div>
           </div>
-          
+
           <div class="list_rig">
           	<ul>
-                <li>
-                    <a class="fl" href="http://hz.st.com/lines/show_5.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]555" title="[深圳出发]555" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="http://hz.st.com/lines/show_5.html" target="_blank"><span style="color:#006699">[深圳出发]555</span><img src="/uploads/main/allimg/20150106/20150106044825.jpg" height="15"></a></p>
-                      <p class="p2">推荐理由：555</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">96%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="http://hz.st.com/lines/show_4.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]333" title="[深圳出发]333" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="http://hz.st.com/lines/show_4.html" target="_blank"><span style="">[深圳出发]333</span><img src="/uploads/main/allimg/20150106/20150106044825.jpg" height="15"></a></p>
-                      <p class="p2">推荐理由：333</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">97%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="/lines/show_11.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]黑锐网欧洲旅游测试" title="[深圳出发]黑锐网欧洲旅游测试" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="/lines/show_11.html" target="_blank"><span style="">[深圳出发]黑锐网欧洲旅游测试</span></a></p>
-                      <p class="p2">推荐理由：黑锐网欧洲旅游测试</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">97%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="/lines/show_10.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]黑锐网欧洲旅游测试" title="[深圳出发]黑锐网欧洲旅游测试" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="/lines/show_10.html" target="_blank"><span style="">[深圳出发]黑锐网欧洲旅游测试</span></a></p>
-                      <p class="p2">推荐理由：黑锐网欧洲旅游测试</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">97%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li><li>
-                    <a class="fl" href="/lines/show_9.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="[深圳出发]黑锐网出境旅游" title="[深圳出发]黑锐网出境旅游" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="/lines/show_9.html" target="_blank"><span style="">[深圳出发]黑锐网出境旅游</span></a></p>
-                      <p class="p2">推荐理由：黑锐网出境旅游</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">92%</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">0</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">电询</span></label>
-                      </p>
-                    </div>
-                    <div class="price">
-                        <p class="p1"><span>电询</span></p>
-                      <p class="p2">无</p>
-                    </div>
-                  </li>
+                
 
             </ul>
           </div>
           
 
-          
+
         </div>
         <!--线路产品分类列表结束-->
         
@@ -963,25 +482,25 @@ $(document).ready(function(){
 
         
         <!--团购列表开始-->
-        <div class="tuan_con">
+        <!--<div class="tuan_con">
         	<div class="tuan_bt"><s></s><h3>团购优惠</h3><a href="/tuan/" target="_blank">更多</a></div>
           <ul>
             <li>
             	<div class="tuan_ico"><span>7.5</span>折</div>
-            	<a class="fl" href="/tuan/show_1.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/lit240/20150106/20150106232430.jpg" width="223" height="163" alt="黑锐网" title="黑锐网" /></a>
-              <p class="p1"><a href="/tuan/show_1.html" target="_blank">黑锐网</a></p>
+            	<a class="fl" href="/tuan/show_1.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/lit240/20150106/20150106232430.jpg" width="223" height="163" alt="英国游学15天" title="英国游学15天" /></a>
+              <p class="p1"><a href="/tuan/show_1.html" target="_blank">英国游学15天</a></p>
               <p class="p2"><span>优惠价：<i>&yen;</i><strong>1500</strong></span><s>原价：&yen;2000</s></p>
             </li>
 
           </ul>
-        </div>
+        </div>-->
         <!--团购列表结束-->
 
             <!--攻略游记开始-->
             <div class="gl_con">
                 <div class="gl_bt"><s></s><h3>攻略游记</h3><a href="/raiders/" target="_blank">更多</a></div>
                 <ul class="gl_ul_top">
-                    <li ><a class="fl" href="/raiders/show_2.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/litimg/20150108/20150108020755.jpg" width="310" height="215" alt="黑锐网" /></a><p><a href="/raiders/show_2.html" target="_blank">黑锐网</a></p></li><li ><a class="fl" href="/raiders/show_3.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/litimg/20150108/20150108021556.jpg" width="310" height="215" alt="黑锐网" /></a><p><a href="/raiders/show_3.html" target="_blank">黑锐网</a></p></li><li class="mr_0"><a class="fl" href="/raiders/show_6.html" target="_blank"><img class="fl lazyimg" src="" data-original="/uploads/main/litimg/20150109/20150109003911.jpg" width="310" height="215" alt="黑锐网" /></a><p><a href="/raiders/show_6.html" target="_blank">黑锐网</a></p></li>
+                    
                 </ul>
                 <div class="gl_list_con">
                     <ul>
@@ -989,133 +508,96 @@ $(document).ready(function(){
                         
                     </ul>
                 </div>
-                <div class="hot_gl">
-                    <div class="hot_tit"><s></s><h3>精彩游记</h3><i></i></div>
-                    <ul>
-                        
-                    </ul>
-                    <dl class="hot_link">
-                        <dt>热门攻略：</dt>
-                        <dd>
-                            <a href="/raiders/guonelvyou/" target="_blank">国内旅游旅游</a><a href="/raiders/chujinglvyou/" target="_blank">出境旅游旅游</a><a href="/raiders/yazhou/" target="_blank">亚洲旅游</a><a href="/raiders/ouzhou/" target="_blank">欧洲旅游</a><a href="/raiders/4215/" target="_blank">自定义旅游</a><a href="/raiders/meizhou/" target="_blank">美洲旅游</a><a href="/raiders/dayangzhou/" target="_blank">大洋洲旅游</a><a href="/raiders/gangaotai/" target="_blank">港澳台旅游</a><a href="/raiders/zhongdongfeizhou/" target="_blank">中东非洲旅游</a><a href="/raiders/cece/" target="_blank">测试测试旅游</a>
-
-                        </dd>
-                    </dl>
-                </div>
             </div>
             <!--攻略游记结束-->
 
       </div>
       <div class="con_rig">
-           <div class="rig_list">
-      <h3>最新旅游攻略(图文)<s></s></h3>
-      <dl>
-        <dt><a class="fl" href="/raiders/show_6.html" target="_blank"><img class="fl" src="/uploads/main/lit240/20150109/20150109003911.jpg" width="240" height="156" alt="黑锐网" /></a><span></span><a class="img_title" href="/raiders/show_6.html" target="_blank">黑锐网</a></dt>
-        <dd><a class="a_mdd" href="/raiders/search.php?dest_id=4219" target="_blank">中东非洲</a><a class="a_title" href="/raiders/show_5.html" target="_blank">黑锐网</a></dd><dd><a class="a_mdd" href="/raiders/search.php?dest_id=4219" target="_blank"></a><a class="a_title" href="/raiders/show_4.html" target="_blank">黑锐网</a></dd><dd><a class="a_mdd" href="/raiders/search.php?dest_id=4219" target="_blank">中东非洲</a><a class="a_title" href="/raiders/show_3.html" target="_blank">黑锐网</a></dd><dd><a class="a_mdd" href="/raiders/search.php?dest_id=36" target="_blank">国内旅游</a><a class="a_title" href="/raiders/show_2.html" target="_blank">黑锐网</a></dd><dd><a class="a_mdd" href="/raiders/search.php?dest_id=37" target="_blank">出境旅游</a><a class="a_title" href="/raiders/show_1.html" target="_blank">黑锐网</a></dd>
-      </dl>
-    </div><!--热卖线路产品开始-->
-    <div class="hot_pro">
-      <h3>热卖产品</h3>
-      <div class="side_plb_list line_hot_list">
-         <dl class="dl_list">
-            	<dt><a class="fl" href="/lines/show_2.html" target="_blank"><img class="fl" src="/uploads/main/lit240/20150106/20150106131519.jpg" width="218" height="130" alt="[深圳出发]<清迈4晚5日自助游>天津直飞" /></a></dt>
-              <dd class="dd1"><a href="/lines/show_2.html" target="_blank">[深圳出发]<清迈4晚5日自助游>天津直飞</a></dd>
-            </dl><dl class="dl_list">
-            	<dt><a class="fl" href="/lines/show_1.html" target="_blank"><img class="fl" src="/uploads/main/adimg/20140128/20140128115836.jpg" width="218" height="130" alt="[深圳出发]<青岛烟台威海蓬莱大连四晚五天游>天天发团 大连散团" /></a></dt>
-              <dd class="dd1"><a href="/lines/show_1.html" target="_blank">[深圳出发]<青岛烟台威海蓬莱大连四晚五天游>天天发团 大连散团</a></dd>
-            </dl> 
-      </div>
-        <script language="javascript">
-         $(function(){
-		     $(".line_hot_list").find('.dl_list').last().addClass('bor_bot_0');
-		 })
-      </script>
-    </div>
-    <!--热卖线路产品结束--><!--热卖酒店产品开始-->
-      <div class="hot_pro">
-      <h3>热卖产品(酒店)</h3>
-      <div class="side_plb_list hotel_hot_list">
-         <dl class="dl_list">
-            	<dt><a class="fl" href="/hotels/show_1.html" target="_blank"><img class="fl" src="/uploads/main/lit240/20150108/20150108021324.jpg" width="218" height="130" alt="民族宾馆" /></a></dt>
-              <dd class="dd1"><a href="/hotels/show_1.html" target="_blank">民族宾馆</a></dd>
-            </dl><dl class="dl_list">
-            	<dt><a class="fl" href="/hotels/show_2.html" target="_blank"><img class="fl" src="/uploads/main/adimg/20140128/20140128115836.jpg" width="218" height="130" alt="黑锐网宾馆测试" /></a></dt>
-              <dd class="dd1"><a href="/hotels/show_2.html" target="_blank">黑锐网宾馆测试</a></dd>
-            </dl> 
-      </div>
-        <script language="javascript">
-         $(function(){
-		     $(".hotel_hot_list").find('.dl_list').last().addClass('bor_bot_0');
-		 })
-        </script>
-    </div>
-    <!--热卖酒店产品结束--> <!--推荐景点开始-->
-    <div class="rig_side_list">
-      <h3>推荐景点</h3>
-      <div class="list_all">
-        <dl>
-            <dt><a class="fl" href="/spots/show_2.html" target="_blank"><img class="fl" src="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="黑锐网景点介绍" /></a></dt>
-            <dd><a href="/spots/show_2.html" target="_blank">黑锐网景点介绍</a></dd>
-            <dd>优惠价：电询</dd>
-          </dl><dl>
-            <dt><a class="fl" href="/spots/show_4.html" target="_blank"><img class="fl" src="/uploads/main/adimg/20140128/20140128115836.jpg" width="80" height="60" alt="黑锐网景点介绍" /></a></dt>
-            <dd><a href="/spots/show_4.html" target="_blank">黑锐网景点介绍</a></dd>
-            <dd>优惠价：电询</dd>
-          </dl><dl>
-            <dt><a class="fl" href="/spots/show_1.html" target="_blank"><img class="fl" src="/uploads/main/litimg/20150108/20150108020924.jpg" width="80" height="60" alt="黑锐网景点介绍" /></a></dt>
-            <dd><a href="/spots/show_1.html" target="_blank">黑锐网景点介绍</a></dd>
-            <dd>优惠价：电询</dd>
-          </dl><dl>
-            <dt><a class="fl" href="/spots/show_3.html" target="_blank"><img class="fl" src="/uploads/main/litimg/20150109/20150109003151.jpg" width="80" height="60" alt="黑锐网景点介绍" /></a></dt>
-            <dd><a href="/spots/show_3.html" target="_blank">黑锐网景点介绍</a></dd>
-            <dd>优惠价：电询</dd>
-          </dl>
-       
-      </div>
-    </div>
-    <!--推荐景点结束--> <!--预定动态开始-->
+          <!--边栏满意度开始-->
+        <div class="dos">
+          <div class="dos_pic">
+            <p>客户满意度</p>
+            <span><s style=" width:100%"></s></span>
+          </div>
+          <div class="peo_data">已为<span>3008374</span>位客户提供旅游服务！</div>
+          <div class="fl"><img src="/templets/orange/images/serve_pic.png" alt="" title="" /></div>
+          <div class="dis_list">
+            <dl>
+                <dt>
+                    <b>18963***</b>
+                    <strong>满意度：</strong>
+                    <span class="comment_star" data-score="5"></span>
+                </dt>
+                <dd>Good</dd>
+              </dl><dl>
+                <dt>
+                    <b>18963***</b>
+                    <strong>满意度：</strong>
+                    <span class="comment_star" data-score="5"></span>
+                </dt>
+                <dd>锻炼了孩子</dd>
+              </dl><dl>
+                <dt>
+                    <b>18963***</b>
+                    <strong>满意度：</strong>
+                    <span class="comment_star" data-score="5"></span>
+                </dt>
+                <dd>还想再去一次</dd>
+              </dl>
+            
+          </div>
+        </div>
+        <!--边栏满意度结束-->
+      <script language="javascript">
+	    $(function(){
+		   //评分星级显示
+		   var FilesArray=['./raty/jquery.raty.min.js']
+			   Loader.loadFileList(FilesArray,function(){
+				  
+				   $('.comment_star').raty({
+					  size:6,
+					  path:siteUrl+'templets/smore/js/raty/img/',
+					  readOnly : true,
+					  width:100,
+					  hints: ['极差','不好','一般','很好','非常好'],
+					  score:function(){
+						return $(this).attr('data-score');
+					  }
+					  
+					   
+			
+				  });
+				  
+		   
+			  });
+		  
+		})
+	  </script> <!--预定动态开始-->
       <div class="now_book">
       <h3>预订动态</h3>
       <div class="book_con">
         <dl>
-            <dt><span class="name">用户&nbsp;&nbsp;18963***</span><span class="time">1小时前</span>预定了</dt>
+            <dt><span class="name">用户  18963***</span><span class="time">3小时前</span>预定了</dt>
             <dd><a href="/lines/show_8.html" target="_blank">连云港三天两晚游记(黑锐网套餐测试)</a></dd>
           </dl><dl>
-            <dt><span class="name">用户&nbsp;&nbsp;18963***</span><span class="time">1小时前</span>预定了</dt>
+            <dt><span class="name">用户  18963***</span><span class="time">2小时前</span>预定了</dt>
             <dd><a href="/lines/show_8.html" target="_blank">连云港三天两晚游记(黑锐网套餐测试)</a></dd>
           </dl><dl>
-            <dt><span class="name">用户&nbsp;&nbsp;18963***</span><span class="time">3小时前</span>预定了</dt>
+            <dt><span class="name">用户  18963***</span><span class="time">46分钟前</span>预定了</dt>
             <dd><a href="/lines/show_8.html" target="_blank">连云港三天两晚游记(黑锐网套餐测试)</a></dd>
           </dl><dl>
-            <dt><span class="name">用户&nbsp;&nbsp;chore</span><span class="time">3小时前</span>预定了</dt>
+            <dt><span class="name">用户  chore</span><span class="time">3小时前</span>预定了</dt>
             <dd><a href="/lines/show_.html" target="_blank">韩国·首尔(季度)</a></dd>
           </dl>
       </div>
     </div>
-    <!--预定动态结束--> <!--租车文章开始-->
-    <div class="side_strategy">
-      <h3>租车信息</h3>
-      <dl>
-        
-      </dl>
-    </div>
-    <!--租车文章结束-->  <!--签证新闻动态开始-->
-    <div class="car_atc">
-      <h3>签证新闻动态</h3>
-      <div class="atc_list">
-        <ul>
-          
-         
-        </ul>
-      </div>
-    </div>
-    <!--签证新闻动态开始-->  <!--产品好评开始-->
-      <div class="hot_pro">
+    <!--预定动态结束-->  <!--产品好评开始-->
+      <div class="now_book">
       <h3>好评产品排行</h3>
       <div class="side_plb_list good_list">
        <dl class="pro_ph">
             	<dt><s>1</s><a href="/lines/show_8.html" target="_blank">连云港三天两晚游记</a></dt>
-              <dd><span>好评度：</span><b><s style=" width:98%"></s></b>已售：15</dd>
+              <dd><span>好评度：</span><b><s style=" width:100%"></s></b>已售：13</dd>
             </dl>
        <script language="javascript">
          $(function(){
@@ -1125,34 +607,31 @@ $(document).ready(function(){
        
       </div>
     </div>
-    <!--产品好评结束-->   <!--客户评论开始-->
-    <div class="discuss">
-      <h3>客户评论</h3>
-      <div class="dis_list">
-         <dl>
-                <dt><b>18963***</b><strong>满意度：</strong><span class="comment_star" data-score="4"></span></dt>
-                <dd>黑锐网测试一下</dd>
-              </dl><dl>
-                <dt><b>18963***</b><strong>满意度：</strong><span class="comment_star" data-score="4.9"></span></dt>
-                <dd>黑锐网测试一下</dd>
-              </dl><dl>
-                <dt><b>18963***</b><strong>满意度：</strong><span class="comment_star" data-score="2.1"></span></dt>
-                <dd>黑锐网测试一下黑锐网测试一下黑锐网测试一下黑锐网测试一下黑锐网测试一下黑锐网测试一下黑锐网测试一下黑锐网测试一下黑锐网测试一下黑锐网测试一下</dd>
-              </dl>
-       
+    <!--产品好评结束--><!--热卖线路产品开始-->
+    <div class="now_book">
+      <h3>热卖产品</h3>
+      <div class="side_plb_list line_hot_list">
+         <dl class="dl_list">
+            	<dt><a class="fl" href="/lines/show_2.html" target="_blank"><img class="fl" src="/uploads/main/lit240/20150106/20150106131519.jpg" width="218" height="130" alt="[深圳出发]<清迈4晚5日自助游>天津直飞" /></a></dt>
+              <dd class="dd1"><a href="/lines/show_2.html" target="_blank">[深圳出发]<清迈4晚5日自助游>天津直飞</a></dd>
+            </dl><dl class="dl_list">
+            	<dt><a class="fl" href="/lines/show_9.html" target="_blank"><img class="fl" src="/uploads/main/adimg/20140128/20140128115836.jpg" width="218" height="130" alt="[深圳出发]黑锐网出境旅游" /></a></dt>
+              <dd class="dd1"><a href="/lines/show_9.html" target="_blank">[深圳出发]黑锐网出境旅游</a></dd>
+            </dl> 
       </div>
+        <script language="javascript">
+         $(function(){
+		     $(".line_hot_list").find('.dl_list').last().addClass('bor_bot_0');
+		 })
+      </script>
     </div>
-    <!--客户评论结束--> <!--签证新闻动态开始-->
-    <div class="car_atc">
-      <h3>签证办理流程</h3>
-      <div class="atc_list">
-        <ul>
-          
-         
-        </ul>
-      </div>
+    <!--热卖线路产品结束--><div class="rig_list">
+      <h3>游记 · 心得(图文)<s></s></h3>
+      <dl>
+        <dt><a class="fl" href="/raiders/show_1.html" target="_blank"><img class="fl" src="/uploads/main/adimg/20140128/20140128115836.jpg" width="240" height="156" alt="英国游学15天爽爆了" /></a><span></span><a class="img_title" href="/raiders/show_1.html" target="_blank">英国游学15天爽爆了</a></dt>
+        
+      </dl>
     </div>
-    <!--签证输程开始-->
       </div>
     </div>
   </div>
@@ -1186,7 +665,7 @@ $(document).ready(function(){
     <div class="width_1210">
       <div class="footer">
         <div class="foot_menu">
-          <a href="/servers/index_1.html" rel="nofollow">关于我们<s>|</s></a><a href="/servers/index_2.html" rel="nofollow">联系我们<s>|</s></a><a href="/servers/index_4.html" rel="nofollow">支付方式<s>|</s></a><a href="/servers/index_7.html" rel="nofollow">法律声明<s>|</s></a><a href="/servers/index_8.html" rel="nofollow">技术支持<s>|</s></a>
+          <a href="/servers/index_1.html" rel="nofollow">关于我们<s>|</s></a><a href="/servers/index_2.html" rel="nofollow">联系我们<s>|</s></a><a href="/servers/index_4.html" rel="nofollow">合作机构<s>|</s></a><a href="/servers/index_7.html" rel="nofollow">法律声明<s>|</s></a><a href="/servers/index_8.html" rel="nofollow">技术支持<s>|</s></a>
          
        
         </div>
@@ -1259,6 +738,25 @@ $(function(){
 	</div>
   <!-- 友情链接结束 -->
 <script>
+
+//    $(function a() {
+//        var bannerSlider = new Slider($('#banner_tabs'), {
+//            time: 5000,
+//            delay: 400,
+//            event: 'hover',
+//            auto: true,
+//            mode: 'fade',
+//            controller: $('#bannerCtrl'),
+//            activeControllerCls: 'active'
+//        });
+//        $('#banner_tabs .flex-prev').click(function() {
+//            bannerSlider.prev()
+//        });
+//        $('#banner_tabs .flex-next').click(function() {
+//            bannerSlider.next()
+//        });
+//    })
+
     $(document).ready(function(e) {
 
         $(".hot_pro").each(function(index, element) {

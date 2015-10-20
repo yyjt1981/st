@@ -1199,23 +1199,26 @@
 
     width:100%;
   }
- .pic-content .cover-div img{
-    border:1px solid #dcdcdc}
-	/*右侧搜索*/
-    .pro-search{
-        float:right;
-        margin-top:7px}
-    .pro-search .sty-txt1{
-        height:20px;
-        color:#aaa;
-        line-height:20px;}
-    .pro-search .sty-btn1{
-        color:#b04b00;
-        height:20px;
-        line-height:20px;
-        margin-left:10px;
-        cursor: pointer;
-        background:url(../images/btn-ico.png) no-repeat 0 0}
+.pic-content .cover-div img{
+    border:1px solid #dcdcdc
+}
+/*右侧搜索*/
+.pro-search{
+	float:right;
+	margin-top: 10px;
+	margin-right: 140px;
+}
+.pro-search .sty-txt1{
+	height:20px;
+	color:#aaa;
+	line-height:20px;}
+.pro-search .sty-btn1{
+	color:#b04b00;
+	height:20px;
+	line-height:20px;
+	margin-left:10px;
+	cursor: pointer;
+	background:url(../images/btn-ico.png) no-repeat 0 0}
 
 .default-btn{
     float:left;

@@ -1,1 +1,0 @@
-<a href="/raiders/[field:pinyin/]/" target="_blank">[field:title/]</a>
