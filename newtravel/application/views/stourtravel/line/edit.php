@@ -78,18 +78,18 @@
                                 <div class="help-ico mt-9 ml-5">{php echo Common::getIco('help',12);}</div>
                             </dd>
                         </dl>
-                        <dl>
-                            <dt>出发地：</dt>
-                            <dd>
-                                <select name="startcity">
-                                    <option value="0">请选择出发地</option>
-                                {loop $startplacelist $place}
-                                    <option value="{$place['id']}" {if $info['startcity']==$place['id']}selected="selected"{/if}>{$place['cityname']}</option>
-                                {/loop}
-                                </select>
-
-                            </dd>
-                        </dl>
+<!--                        <dl>-->
+<!--                            <dt>出发地：</dt>-->
+<!--                            <dd>-->
+<!--                                <select name="startcity">-->
+<!--                                    <option value="0">请选择出发地</option>-->
+<!--                                {loop $startplacelist $place}-->
+<!--                                    <option value="{$place['id']}" {if $info['startcity']==$place['id']}selected="selected"{/if}>{$place['cityname']}</option>-->
+<!--                                {/loop}-->
+<!--                                </select>-->
+<!---->
+<!--                            </dd>-->
+<!--                        </dl>-->
                         <dl>
                             <dt>供应商：</dt>
                             <dd>
