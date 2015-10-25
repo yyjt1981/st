@@ -344,7 +344,7 @@
 					
 				
 					   var height=Ext.dom.Element.getViewportHeight();
-					   this.maxHeight=height-106;
+					   this.maxHeight=height+106;
 					   this.doLayout();
 		            },
 					afterlayout:function(grid)

@@ -296,21 +296,21 @@
         })
 
         //新版检测
-        $.ajax({
-            url: SITEURL+"app/ajax_check_update",
-            dataType: 'json',
-            success: function(data){
-
-                if(data.releasenum!='')
-                {
-                    $("#newversion").show();
-
-                }
-                else
-                {
-                     checkRightV();
-                }
-            }});
+//        $.ajax({
+//            url: SITEURL+"app/ajax_check_update",
+//            dataType: 'json',
+//            success: function(data){
+//
+//                if(data.releasenum!='')
+//                {
+//                    $("#newversion").show();
+//
+//                }
+//                else
+//                {
+//                     checkRightV();
+//                }
+//            }});
 
 
 

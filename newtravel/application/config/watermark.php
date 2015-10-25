@@ -2,7 +2,7 @@
 return array (
   'watermark' => 
   array (
-    'photo_markon' => '1',
+    'photo_markon' => '0',
     'photo_marktype' => 'img',
     'photo_waterpos' => '9',
     'photo_marktext' => '夏令王国',
