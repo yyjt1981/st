@@ -63,7 +63,7 @@
                             </dd>
                         </dl>
                         <dl>
-                            <dt>线路名称：</dt>
+                            <dt>产品名称：</dt>
                             <dd>
                                 <input type="text" name="linename" data-required="true" class="set-text-xh text_700 mt-2" value="{$info['linename']}"/>
                                 <input type="hidden" name="lineid" id="line_id" value="<?php echo $info['id'];   ?>"/>
@@ -71,7 +71,7 @@
                             </dd>
                         </dl>
                         <dl>
-                            <dt>线路卖点：</dt>
+                            <dt>产品卖点：</dt>
                             <dd>
                                 <input type="text" name="sellpoint" value="{$info['sellpoint']}"  class="set-text-xh text_700 mt-2"/>
 
@@ -132,7 +132,7 @@
                             </dd>
                         </dl>
                         <dl>
-                            <dt>旅游天数：</dt>
+                            <dt>行程天数：</dt>
                             <dd>
                                 <input type="text" value="{$info['lineday']}" data-regrex="number" data-required="true" data-msg="必须为数字" id="travel_days" class="set-text-xh text_60 mt-2" name="lineday"/>
                                 <span class="fl ml-10">*天</span>
@@ -155,15 +155,15 @@
                                 <input type="text" value="{$info['storeprice']}" name="storeprice" class="set-text-xh text_60 mt-2"/><span class="fl ml-5">元</span>
                             </dd>
                         </dl>
-                        <dl>
-                            <dt>往返交通:</dt>
-                            <dd>
-                                <input name="transport_pub[]" type="checkbox" class="checkbox" id="Transport1" {if strpos($info['transport'],'1')!==false}checked="checked"{/if} value="1">&nbsp;<label for="Transport1">飞机</label>
-                                <input name="transport_pub[]" type="checkbox" class="checkbox" id="Transport2" {if strpos($info['transport'],'2')!==false}checked="checked"{/if} value="2">&nbsp;<label for="Transport2">汽车</label>
-                                <input name="transport_pub[]" type="checkbox" class="checkbox" id="Transport3" {if strpos($info['transport'],'3')!==false}checked="checked"{/if} value="3">&nbsp;<label for="Transport3">火车</label>
-                                <input name="transport_pub[]" type="checkbox" class="checkbox" id="Transport4" {if strpos($info['transport'],'4')!==false}checked="checked"{/if} value="4">&nbsp;<label for="Transport4">轮船</label>
-                            </dd>
-                        </dl>
+<!--                        <dl>-->
+<!--                            <dt>往返交通:</dt>-->
+<!--                            <dd>-->
+<!--                                <input name="transport_pub[]" type="checkbox" class="checkbox" id="Transport1" {if strpos($info['transport'],'1')!==false}checked="checked"{/if} value="1">&nbsp;<label for="Transport1">飞机</label>-->
+<!--                                <input name="transport_pub[]" type="checkbox" class="checkbox" id="Transport2" {if strpos($info['transport'],'2')!==false}checked="checked"{/if} value="2">&nbsp;<label for="Transport2">汽车</label>-->
+<!--                                <input name="transport_pub[]" type="checkbox" class="checkbox" id="Transport3" {if strpos($info['transport'],'3')!==false}checked="checked"{/if} value="3">&nbsp;<label for="Transport3">火车</label>-->
+<!--                                <input name="transport_pub[]" type="checkbox" class="checkbox" id="Transport4" {if strpos($info['transport'],'4')!==false}checked="checked"{/if} value="4">&nbsp;<label for="Transport4">轮船</label>-->
+<!--                            </dd>-->
+<!--                        </dl>-->
                         <dl>
                             <dt>儿童标准：</dt>
                             <dd>
@@ -227,17 +227,17 @@
                                 </div>
                             </dd>
                         </dl>
-                        <dl>
+ <!--                       <dl>
                             <dt>用餐情况：</dt>
                             <dd>
                             <div class="on-off">
-                              <input type="radio" id="" class="fl mt-8" onclick="togDiner(1)" name="showrepast" value="1" <?php if($info['showrepast']==1||!isset($info['showrepast'])) echo 'checked="checked"';   ?>>
+                              <input type="radio" id="" class="fl mt-8" onclick="togDiner(1)" name="showrepast" value="1" <?php /*if($info['showrepast']==1||!isset($info['showrepast'])) echo 'checked="checked"';   */?>>
                               <label class="fl mr-20 ml-5">显示</label>
-                              <input type="radio" id="" class="fl mt-8" onclick="togDiner(0)" <?php if($info['showrepast']==0&&isset($info['showrepast'])) echo 'checked="checked"';   ?> name="showrepast" value="0">
+                              <input type="radio" id="" class="fl mt-8" onclick="togDiner(0)" <?php /*if($info['showrepast']==0&&isset($info['showrepast'])) echo 'checked="checked"';   */?> name="showrepast" value="0">
                               <label class="fl mr-20 ml-5">隐藏</label>
                             </div>
                             </dd>
-                        </dl>
+                        </dl>-->
                     </div>
                     <div class="content-jieshao-simple" style="<?php  if(empty($info['isstyle'])||$info['isstyle']==2) echo 'display:none'   ?>">
                        <div><textarea name="jieshao" id="simple_jieshao">{$info['jieshao']}</textarea></div>
@@ -578,34 +578,34 @@ function switchBack(columnname)
 										day_content+='<dt>第{day}天：</dt>';
 										day_content+='<dd><input type="text" name="jieshaotitle[{day}]" class="set-text-xh text_700 mt-2"/></dd>';
 									day_content+='</dl>';
-									day_content+='<dl class="jieshao-diner">';
-										day_content+='<dt>用餐情况：</dt>';
-										day_content+='<dd>';
-											day_content+='<span class="fl"><input class="mt-8 mr-3 fl" type="checkbox" name="breakfirsthas[{day}]" value="1"></span>';
-											day_content+='<label style="float:left;cursor:pointer;">早餐</label><span class="fl"><input class="set-text-xh text_177 ml-5 mr-10" type="text" name="breakfirst[{day}]"/></span>';
-											day_content+='<span class="fl"><input class="mt-8 mr-3 fl" type="checkbox" name="lunchhas[{day}]" value="1"></span>';
-											day_content+='<label style="float:left;cursor:pointer;">午餐</label><span class="fl"><input class="set-text-xh text_177 ml-5 mr-10" type="text" name="lunch[{day}]" value=""/></span>';
-											day_content+='<span class="fl"><input class="mt-8 mr-3 fl" type="checkbox" name="supperhas[{day}]" value="1"></span>';
-											day_content+='<label style="float:left;cursor:pointer;">晚餐</label><span class="fl"><input class="set-text-xh text_177 ml-5 mr-10" type="text"name="supper[{day}]"/></span>';
-										day_content+='</dd>';
-									day_content+='</dl>';
-									day_content+='<dl>';
-										day_content+='<dt>住宿情况：</dt>';
-										day_content+='<dd><input type="text" class="set-text-xh text_222 mt-2" name="hotel[{day}]"></dd>';
-									day_content+='</dl>';
-									day_content+='<dl>';
-										day_content+='<dt>交通工具：</dt>';
-										day_content+='<dd>';
-											day_content+='<span class="fl"><input class="fl mt-8" type="checkbox" name="transport[{day}][]" value="2"/></span>';
-											day_content+='<label class="fl ml-5 mr-20" style="cursor:pointer;">汽车</label>';
-											day_content+='<span class="fl"><input class="fl mt-8" type="checkbox" name="transport[{day}][]" value="3"></span>';
-											day_content+='<label class="fl ml-5 mr-20" style="cursor:pointer;">火车</label>';
-											day_content+='<span class="fl"><input class="fl mt-8" type="checkbox"value="1" name="transport[{day}][]"></span>';
-											day_content+='<label class="fl ml-5 mr-20" style="cursor:pointer;">飞机</label>';
-											day_content+='<span class="fl"><input class="fl mt-8" type="checkbox" name="transport[{day}][]" value="4"></span>';
-											day_content+='<label class="fl ml-5 mr-20" style="cursor:pointer;">轮船</label>';
-										day_content+='</dd>';
-									day_content+='</dl>';
+//									day_content+='<dl class="jieshao-diner">';
+//										day_content+='<dt>用餐情况：</dt>';
+//										day_content+='<dd>';
+//											day_content+='<span class="fl"><input class="mt-8 mr-3 fl" type="checkbox" name="breakfirsthas[{day}]" value="1"></span>';
+//											day_content+='<label style="float:left;cursor:pointer;">早餐</label><span class="fl"><input class="set-text-xh text_177 ml-5 mr-10" type="text" name="breakfirst[{day}]"/></span>';
+//											day_content+='<span class="fl"><input class="mt-8 mr-3 fl" type="checkbox" name="lunchhas[{day}]" value="1"></span>';
+//											day_content+='<label style="float:left;cursor:pointer;">午餐</label><span class="fl"><input class="set-text-xh text_177 ml-5 mr-10" type="text" name="lunch[{day}]" value=""/></span>';
+//											day_content+='<span class="fl"><input class="mt-8 mr-3 fl" type="checkbox" name="supperhas[{day}]" value="1"></span>';
+//											day_content+='<label style="float:left;cursor:pointer;">晚餐</label><span class="fl"><input class="set-text-xh text_177 ml-5 mr-10" type="text"name="supper[{day}]"/></span>';
+//										day_content+='</dd>';
+//									day_content+='</dl>';
+//									day_content+='<dl>';
+//										day_content+='<dt>住宿情况：</dt>';
+//										day_content+='<dd><input type="text" class="set-text-xh text_222 mt-2" name="hotel[{day}]"></dd>';
+//									day_content+='</dl>';
+//									day_content+='<dl>';
+//										day_content+='<dt>交通工具：</dt>';
+//										day_content+='<dd>';
+//											day_content+='<span class="fl"><input class="fl mt-8" type="checkbox" name="transport[{day}][]" value="2"/></span>';
+//											day_content+='<label class="fl ml-5 mr-20" style="cursor:pointer;">汽车</label>';
+//											day_content+='<span class="fl"><input class="fl mt-8" type="checkbox" name="transport[{day}][]" value="3"></span>';
+//											day_content+='<label class="fl ml-5 mr-20" style="cursor:pointer;">火车</label>';
+//											day_content+='<span class="fl"><input class="fl mt-8" type="checkbox"value="1" name="transport[{day}][]"></span>';
+//											day_content+='<label class="fl ml-5 mr-20" style="cursor:pointer;">飞机</label>';
+//											day_content+='<span class="fl"><input class="fl mt-8" type="checkbox" name="transport[{day}][]" value="4"></span>';
+//											day_content+='<label class="fl ml-5 mr-20" style="cursor:pointer;">轮船</label>';
+//										day_content+='</dd>';
+//									day_content+='</dl>';
 									day_content+='<div class="xc-con">';
 										day_content+='<h4>行程内容：</h4>';
 										day_content+='<div><textarea name="txtjieshao[{day}]" style=" float:left" id="line_content_{day}"></textarea></div>';
