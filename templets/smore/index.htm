@@ -26,6 +26,18 @@
             $(this).children('.txt').animate({bottom:'-70px'})
         })
 
+        //滚动问答
+        var marquee1 = new Marquee("meql")
+        marquee1.Direction = "top";
+        marquee1.Step = 2;
+       // marquee1.Width = 270;
+       marquee1.Height = 210;
+        marquee1.Timer = 100;
+        marquee1.DelayTime = 0;
+        marquee1.WaitTime = 0;
+        marquee1.ScrollStep = 52;
+        marquee1.Start();
+
     })
 
     </script>

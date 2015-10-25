@@ -2413,138 +2413,61 @@ img{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.now_book2{
+	float:left;
+	width:238px;
+	height: 250px;
+	overflow: hidden;
+	margin-bottom:10px;
+	border-top:2px solid #ff7e00;
+	border-right:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	border-left:1px solid #ddd}
+.now_book2 h3{
+	color:#ff7e00;
+	float:left;
+	width:218px;
+	height:30px;
+	line-height:30px;
+	overflow:hidden;
+	white-space:nowrap;
+	padding:0 10px;
+	font-family:"微软雅黑";
+	font-size:16px;
+	font-weight:500}
+.now_book2 .book_con{
+	float:left;
+	width:218px;
+	margin:0 10px;}
+.now_book2 .book_con dl{
+	float:left;
+	width:218px;
+	margin-bottom:10px}
+.now_book2 .book_con dl dt{
+	float:left;
+	width:218px;
+	height:30px;
+	line-height:30px;
+	overflow:hidden}
+.now_book2 .book_con dl dt .name{
+	color:#0085d5;
+	float:left;
+	width:120px;
+	font-weight:bold}
+.now_book2 .book_con dl dt .time{
+	color:#ff7200;
+	float:left;
+	max-width:60px;
+	font-weight:bold}
+.now_book2 .book_con dl dd{
+	float:left;
+	width:218px;
+	height:auto;
+	line-height:20px;
+	overflow:hidden}
+.now_book2 .book_con dl dd a{
+	color:#888}
+.now_book2 .book_con dl dd a:hover{
+	color:#f60;
+	text-decoration:underline}
 
