@@ -20,13 +20,13 @@ function makeHtml()
 	$storage = array(
 	             '/',
 				 '/lines/',
-				 '/hotels/',
-				 '/cars/',
-				 '/raiders/',
-				 '/spots/',
-				 '/visa/',
+//				 '/hotels/',
+//				 '/cars/',
+//				 '/raiders/',
+//				 '/spots/',
+//				 '/visa/',
 				 '/tuan/',
-				 '/destination/'
+//				 '/destination/'
 				 );
 
 	$http = new HttpDown();//实例化下载类
