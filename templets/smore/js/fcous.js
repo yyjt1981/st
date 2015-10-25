@@ -58,11 +58,19 @@ glume.prototype = {
 
 		var me = this;
 		//点击切换
-		this.$focus.on('click', 'a', function(e) {
+
+		this.$focus.on('mouseenter', 'a', function(e) {
 			e.preventDefault();
-			var index = parseInt($(this).attr('data-index'), 10)
+			var index = parseInt($(this).attr('data-index'), 10) - 1;
 			me.fnSwitch(index);
 		});
+
+		//this.$focus.on('click', 'a', function(e) {
+		//	e.preventDefault();
+		//	var index = parseInt($(this).attr('data-index'), 10)
+		//	me.fnSwitch(index);
+		//});
+
 		this.$adLis.filter(':eq('+ this.crtIndex +')').css('zIndex', 2);
 		this.fnPlay();
 
@@ -73,6 +81,7 @@ glume.prototype = {
 			me.fnPlay();
 		});
 
+
 		if($.browser.msie && $.browser.version < 7) {
 			this.$btns.hover(function() {
 				$(this).addClass('hover');
@@ -82,5 +91,5 @@ glume.prototype = {
 		}
 	}
 };
-var player1 = new glume('_banners', '_focus'); 
+var player1 = new glume('_banners', '_focus');
 })

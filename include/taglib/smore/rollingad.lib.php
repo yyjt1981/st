@@ -28,10 +28,15 @@ function lib_rollingad(&$ctag, &$refObj)
     $ctp->SetNameSpace("field","[","]");
     $ctp->LoadSource($innertext);
     $GLOBALS['step'] = 0;
+    $dataindex = 1;
     while($row = $dsql->GetArray())
     {
+
         $GLOBALS['step']++;
 		$row['picurl']=$GLOBALS['cfg_cmsurl'].$row['picurl'];
+        $row['dataindex'] = $dataindex;
+        $dataindex++;
+
         foreach($ctp->CTags as $tagid=>$ctag)
         {
                 if($ctag->GetName()=='array')
@@ -47,7 +52,6 @@ function lib_rollingad(&$ctag, &$refObj)
         }
 		
         $revalue .= $ctp->GetResult();
-		
     }
   
     
