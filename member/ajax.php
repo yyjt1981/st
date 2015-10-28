@@ -251,7 +251,8 @@ if($dopost == 'unpay')
     $foot = '</table>';
 	$offset=($curpage-1)*$pagesize;
 	if($typeid) $w = "and typeid='{$typeid}'";//添加订单类型判断
-	$arr = $_model->getAll("memberid='$uid' and ispay=0 and status=0 {$w}","addtime desc","$offset,$pagesize");
+	$arr = $_model->getAll("memberid='$uid' and ispay=0 {$w}","addtime desc","$offset,$pagesize");
+//	$arr = $_model->getAll("memberid='$uid' and ispay=0 and status=0 {$w}","addtime desc","$offset,$pagesize");
 	foreach($arr as $row)
 	{
 		$productname = getProductName($row['productautoid'],$row['typeid'],$row['productname']);//预订产品名称
