@@ -620,5 +620,33 @@
 	color:#f60;
 	text-decoration:underline}
 
+.sidleTabs-cj .list_bt{
+	float:left;
+	width:960px;
+	height:40px;
+	line-height:40px;
+	border-bottom:3px solid #ff7200;
+	background:url(../images/index2.png) no-repeat 725px -217px}
+.sidleTabs-cj .list_bt s{
+	float:left;
+	width:37px;
+	height:30px;
+	margin:5px 5px 0;
+	background:url(../images/index2.png) no-repeat 0 -73px}
+.sidleTabs-cj .list_bt h3{
+	float:left;
+	color:#464646;
+	font-size:18px;
+	font-weight:500;
+	font-family:"微软雅黑"}
+.sidleTabs-cj .list_bt a,.tuan_con .tuan_bt a,.gl_con .gl_bt a{
+	height:24px;
+	line-height:24px;
+	font-size:12px;
+	float:right;
+	margin-top:16px;
+	font-family:"微软雅黑";
+	padding-right:10px}
+
 
 
