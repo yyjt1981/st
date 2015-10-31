@@ -25,6 +25,11 @@
     color: #688199;
 }
 
+.fl_new text a:hover{
+    color: #f60;
+    text-decoration: underline
+}
+
 .fl_new text span {
     font-size: 14px;
     margin-left: 30px;
@@ -3400,7 +3405,7 @@ img {
 
 .help_trip {
     padding: 60px 0;
-    border-bottom: 1px solid #688199;
+    border-bottom: 1px solid #ddd;
 }
 
 .wrap {
