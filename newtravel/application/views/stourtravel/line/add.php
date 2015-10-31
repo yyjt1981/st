@@ -168,10 +168,11 @@ $(function(){
                                 </div>
                             </dd>
                         </dl>
-                        <dl>
-                            <dt>标题颜色：</dt>
-                            <dd><input type="text" name="color" class="set-text-xh text_100 mt-2 title-color"/></dd>
-                        </dl>
+                        <hidden name="color" value="#000000"/>
+<!--                        <dl>-->
+<!--                            <dt>标题颜色：</dt>-->
+<!--                            <dd><input type="text" name="color" class="set-text-xh text_100 mt-2 title-color"/></dd>-->
+<!--                        </dl>-->
                         <dl>
                             <dt>图标设置：</dt>
                             <dd> <input type="button" class="btn-sum-xz mt-4" onclick="Product.getIcon(this,'.icon-sel')" value="选择"/><div class="save-value-div mt-2 ml-10 icon-sel">
