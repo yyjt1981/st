@@ -1,0 +1,222 @@
+@charset "utf-8";
+/*首页内容开始*/
+
+.sidleTabs-cj{
+    float:left;
+    width:923px;
+    margin-bottom:25px}
+.tabnav{
+    float:left;
+    width:923px}
+.bor-ys01{
+    border-bottom:2px solid #a17665}
+.bor-ys02{
+    border-bottom:2px solid #4cbf7c}
+.bor-ys03{
+    border-bottom:2px solid #f1767f}
+.bor-ys04{
+    border-bottom:2px solid #407ebf}
+.bor-ys05{
+    border-bottom:2px solid #2aa3ce}
+.bor-ys06{
+    border-bottom:2px solid #8779e9}
+.tabnav em{
+    float:left;
+    width:225px;
+    height:28px;
+    line-height:28px;
+    font-size:18px;
+    font-weight:bold;
+    font-style:normal}
+.btys01{
+    color:#a17665}
+.btys02{
+    color:#4cbf7c}
+.btys03{
+    color:#f1767f}
+.btys04{
+    color:#407ebf}
+.btys05{
+    color:#2aa3ce}
+.btys06{
+    color:#8779e9}
+.tabnav span{
+    float:left;
+    color:#333;
+    height:28px;
+    line-height:28px;
+    padding:0 10px;
+    cursor:pointer;
+    margin-right:10px;
+    font-size:14px}
+.tabnav span.on{color:#fff !important;}
+.tabnav span.on a{
+    color:#fff !important;}
+.bor-ys01 span.on{
+    background:#a17665}
+.bor-ys02 span.on{
+    background:#4cbf7c}
+.bor-ys03 span.on{
+    background:#f1767f}
+.bor-ys04 span.on{
+    background:#407ebf}
+.bor-ys05 span.on{
+    background:#2aa3ce}
+.bor-ys06 span.on{
+    background:#8779e9}
+.tabnav a.more{
+    color:#999;
+    float:right;
+    height:28px;
+    line-height:28px;
+    font-size:12px}
+.tabcon{
+    float:left;
+    width:923px}
+.tabcon .pic{
+    float:left;}
+.tabcon .list-con{
+    float:left;
+    width:713px}
+.tabcon .list-con .li-top{
+    float:left;
+    width:220px;
+    margin:15px 0 0 17px}
+.tabcon .list-con .li-top p{
+    float:left;
+    width:220px}
+.tabcon .list-con .li-top p.img{
+    float:left;
+    width:220px;
+    height:155px;
+    overflow:hidden;
+    position:relative}
+.tabcon .list-con .li-top p .txt{
+    display:block;
+    position:absolute;
+    left:0;
+    bottom:-70px;
+    color:#fff;
+    padding:5px 10px;
+    font-size:14px;
+    z-index:9999;
+    width:200px;
+    height:60px;
+    line-height:21px;
+    overflow:hidden;
+    background:url(../images/aph-bg.png) left top repeat}
+.tabcon .list-con .li-top p.tit a{
+    color:#333;
+    float:left;
+    width:220px;
+    height:20px;
+    line-height:20px;
+    font-size:14px;
+    padding-top:8px;
+    overflow: hidden;}
+.tabcon .list-con .li-top p.num span{
+    height:24px;
+    line-height:24px}
+.tabcon .list-con .li-top p.num .price{
+    color:#f60;
+    float:left}
+.tabcon .list-con .li-top p.num .price b{
+    font-size:18px;
+    font-family:Arial}
+.tabcon .list-con .li-top p.num .cs{
+    color:#f60;
+    float:right}
+.tabcon .list-con .li-bom{
+    float:left;
+    width:694px;
+    margin:17px 0 0 17px;
+    padding-top:10px;
+    border-top:1px solid #ddd}
+.tabcon .list-con .li-bom p{
+    float:left;
+    width:340px;
+    margin-right:14px}
+.tabcon .list-con .li-bom p.mr_0{
+    margin-right:0}
+.tabcon .list-con .li-bom p a{
+    float:left;
+    width:240px;
+    height:24px;
+    line-height:24px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis}
+.tabcon .list-con .li-bom p span{
+    float:right;
+    color:#f60;
+    height:24px;
+    line-height:24px}
+.tabcon .list-con .li-bom p.more{
+    float:left;
+    width:694px;
+    margin-top:10px;
+    padding-top:10px;
+    border-top:1px solid #ddd}
+.tabcon .list-con .li-bom p.more a{
+    color:#333;
+    float:none;
+    display:block;
+    width:150px;
+    height:24px;
+    line-height:24px;
+    font-size:14px;
+    margin:0 auto;
+    text-align:center;
+    background:#e2e2e2;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -webkit-border-radius:5px}
+
+.tabcon .list-con .li-bom{
+    float:left;
+    width:694px;
+    margin:17px 0 0 17px;
+    padding-top:10px;
+    border-top:1px solid #ddd}
+.tabcon .list-con .li-bom p{
+    float:left;
+    width:340px;
+    margin-right:14px}
+.tabcon .list-con .li-bom p.mr_0{
+    margin-right:0}
+.tabcon .list-con .li-bom p a{
+    float:left;
+    width:240px;
+    height:24px;
+    line-height:24px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis}
+.tabcon .list-con .li-bom p span{
+    float:right;
+    color:#f60;
+    height:24px;
+    line-height:24px}
+.tabcon .list-con .li-bom p.more{
+    float:left;
+    width:694px;
+    margin-top:10px;
+    padding-top:10px;
+    border-top:1px solid #ddd}
+.tabcon .list-con .li-bom p.more a{
+    color:#333;
+    float:none;
+    display:block;
+    width:150px;
+    height:24px;
+    line-height:24px;
+    font-size:14px;
+    margin:0 auto;
+    text-align:center;
+    background:#e2e2e2;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -webkit-border-radius:5px}
+

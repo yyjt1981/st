@@ -7,7 +7,7 @@
     <meta name="author" content="{sline:global.cfg_webname/}" />
     <meta name="description" content="{sline:global.cfg_description/}" />
     {sline:global.cfg_indexcode/}
-    {sline:php}GetCss('base.css,index2.css,lb.css','2014.03');{/sline:php}
+    {sline:php}GetCss('base.css,index2.css,lb.css,product.css','2014.03');{/sline:php}
     {sline:php}GetScript('jquery-1.8.3.min.js,common.js,slideTabs.js,jquery.foucs.js,fcous.js,lazy.js,jquery-extend.js,MSClass.js','2014.03');{/sline:php}
 
     <style>
@@ -37,6 +37,9 @@
         marquee1.WaitTime = 0;
         marquee1.ScrollStep = 52;
         marquee1.Start();
+
+        //首页展示图下面的文字展示添加样式
+        $('.addcls:odd').addClass('mr_0');
 
     })
 
@@ -73,70 +76,46 @@
 
         {sline:middlenavlist type="index"}
 
-        <div class="line_list_con">
-        	<div class="list_bt"><s></s><h3>{sline:field.kindname/}</h3><a href="/lines/{sline:field.pinyin/}/" target="_blank">更多</a></div>
-        	<div class="menu_left">
-            <div class="line_menu_txt">
-                {sline:getdest flag='mdd_hot' row='30'}
-                    <a href="[field:url/]" title="[field:title/]" target="_blank">[field:title/]</a>
-                {/sline:getdest}
-            </div>
-            <div class="line_menu_pic">
-                {sline:field.leftad/}
-            </div>
-          </div>
-
-          <div class="list_rig">
-          	<ul>
-                {sline:getlinelist type="mdd" flag="recommend" row="5" }
-                    <li>
-                    <a class="fl" href="[field:url/]" target="_blank"><img class="fl lazyimg" src="" data-original="[field:lit160/]" width="80" height="60" alt="[field:title/]" title="[field:title/]" /></a>
-                    <div class="con_txt">
-                      <p class="p1"><a href="[field:url/]" target="_blank"><span style="[field:color/]">[field:title/]</span>[field:iconlist function=Helper_Archive::getIconList(@me)/]</a></p>
-                      <p class="p2">推荐理由：[field:sellpoint/]</p>
-                      <p class="p3">
-                          <label class="wid_1">满意度：<span class="color_f60">[field:satisfyscore/]</span></label>
-                          <label class="wid_1">订单：已成交 <span class="color_f60">[field:sellnum/]</span> 单</label>
-                          <label class="wid_2">出发班期：<span class="color_f60">[field:startdate/]</span></label>
-                      </p>
+            <div class="sidleTabs-cj" id="ChunBox2">
+                <div class="list_bt"><s></s><h3>{sline:field.kindname/}</h3><a href="/lines/{sline:field.pinyin/}/" target="_blank">更多</a></div>
+                <!--<div class="tabnav bor-ys01">-->
+                    <!--<em class="btys01">{sline:field.kindname/}</em>-->
+                    <!--<a class="more" href="/lines/{sline:field.pinyin/}/">更多&gt;&gt;</a>-->
+                <!--</div>-->
+                <div class="tabcon" style="display: none;">
+                    <div class="pic">
+                        {sline:field.leftad/}
                     </div>
-                    <div class="price">
-                        <p class="p1">[field:price2/]</p>
-                      <p class="p2">[field:jifentprice/]</p>
+                    <div class="list-con">
+                        <ul>
+                            {sline:getlinelist type="mdd" flag="recommend" row="6"}
+                                <li class="li-top">
+                                    <p class="img">
+                                        <a class="fl" href="[field:url/]" target="_blank"><img class="fl lazyimg" src="" data-original="[field:lit160/]" alt="[field:title/]" width="220" height="155" title="[field:title/]"></a>
+                                        <span class="txt" style="bottom: -70px;">推荐理由：[field:sellpoint/]</span>
+                                    </p>
+                                    <p class="tit"><a href="[field:url/]" target="_blank"><span style="[field:color/]">[field:title/]</span>[field:iconlist function=Helper_Archive::getIconList(@me)/]</a></p>
+                                    <p class="num">
+                                        <span class="price">￥<b>4880</b>起</span>
+                                        <span class="cs">已成交<span class="color_f60">[field:sellnum/]</span> 单</label></span>
+                                    </p>
+                                </li>
+                            {/sline:getlinelist}
+
+                            <li class="li-bom">
+                                {sline:getlinelist type="mdd" flag="specical" row="4"}
+                                    <p class="addcls">
+                                        <a href="http://www.jiajiren.cn/lines/show_83.html" target="_blank">[深圳出发]俄罗斯双城浪漫悦动8日之旅</a>
+                                        <span>￥10066起</span>
+                                    </p>
+                                {/sline:getlinelist}
+                            </li>
+                        </ul>
                     </div>
-                  </li>
-               {/sline:getlinelist}
-
-            </ul>
-          </div>
-          {sline:field.middlead/}
-
-
-        </div>
+                </div>
+            </div>
         {/sline:middlenavlist}
         <!--线路产品分类列表结束-->
-        
-
-        
-
-        
-        <!--团购列表开始-->
-        <!--<div class="tuan_con">
-        	<div class="tuan_bt"><s></s><h3>团购优惠</h3><a href="/tuan/" target="_blank">更多</a></div>
-          <ul>
-            {sline:gettuanlist flag="new" row="4"}
-
-            <li>
-            	<div class="tuan_ico"><span>[field:discount/]</span>折</div>
-            	<a class="fl" href="[field:url/]" target="_blank"><img class="fl lazyimg" src="" data-original="[field:lit240/]" width="223" height="163" alt="[field:title/]" title="[field:title/]" /></a>
-              <p class="p1"><a href="[field:url/]" target="_blank">[field:title/]</a></p>
-              <p class="p2"><span>优惠价：<i>&yen;</i><strong>[field:ourprice/]</strong></span><s>原价：&yen;[field:sellprice/]</s></p>
-            </li>
-            {/sline:gettuanlist}
-
-          </ul>
-        </div>-->
-        <!--团购列表结束-->
 
             <!--攻略游记开始-->
             <div class="gl_con">
