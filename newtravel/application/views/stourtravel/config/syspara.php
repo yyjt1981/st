@@ -95,6 +95,11 @@
 
                   </div>
 
+                  <div class="company_name" style="margin-top: 20px;">
+                      <p><span class="fl">公司地址：</span><input type="text" name="cfg_company_name" id="cfg_company_address" class="set-text-xh set-text-bz1" value="{$config['cfg_company_address']}" /></p>
+
+                  </div>
+
 
 
 
