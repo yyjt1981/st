@@ -3,7 +3,7 @@
 
 .sidleTabs-cj{
     float:left;
-    width:923px;
+    width:960px;
     margin-bottom:25px}
 .tabnav{
     float:left;
@@ -72,22 +72,22 @@
     font-size:12px}
 .tabcon{
     float:left;
-    width:923px}
+    width:960px}
 .tabcon .pic{
     float:left;}
 .tabcon .list-con{
     float:left;
-    width:713px}
+    width:760px}
 .tabcon .list-con .li-top{
     float:left;
-    width:220px;
+    width:230px;
     margin:15px 0 0 17px}
 .tabcon .list-con .li-top p{
     float:left;
-    width:220px}
+    width:230px}
 .tabcon .list-con .li-top p.img{
     float:left;
-    width:220px;
+    width:230px;
     height:155px;
     overflow:hidden;
     position:relative}
@@ -128,7 +128,7 @@
     float:right}
 .tabcon .list-con .li-bom{
     float:left;
-    width:694px;
+    width:722px;
     margin:17px 0 0 17px;
     padding-top:10px;
     border-top:1px solid #ddd}
@@ -147,54 +147,6 @@
     white-space:nowrap;
     text-overflow:ellipsis}
 .tabcon .list-con .li-bom p span{
-    float:right;
-    color:#f60;
-    height:24px;
-    line-height:24px}
-.tabcon .list-con .li-bom p.more{
-    float:left;
-    width:694px;
-    margin-top:10px;
-    padding-top:10px;
-    border-top:1px solid #ddd}
-.tabcon .list-con .li-bom p.more a{
-    color:#333;
-    float:none;
-    display:block;
-    width:150px;
-    height:24px;
-    line-height:24px;
-    font-size:14px;
-    margin:0 auto;
-    text-align:center;
-    background:#e2e2e2;
-    border-radius:5px;
-    -moz-border-radius:5px;
-    -ms-border-radius:5px;
-    -webkit-border-radius:5px}
-
-.tabcon .list-con .li-bom{
-    float:left;
-    width:694px;
-    margin:17px 0 0 17px;
-    padding-top:10px;
-    border-top:1px solid #ddd}
-.tabcon .list-con .li-bom p{
-    float:left;
-    width:340px;
-    margin-right:14px}
-.tabcon .list-con .li-bom p.mr_0{
-    margin-right:0}
-.tabcon .list-con .li-bom p a{
-    float:left;
-    width:240px;
-    height:24px;
-    line-height:24px;
-    overflow:hidden;
-    white-space:nowrap;
-    text-overflow:ellipsis}
-.tabcon .list-con .li-bom p span{
-    float:right;
     color:#f60;
     height:24px;
     line-height:24px}
