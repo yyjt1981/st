@@ -91,13 +91,13 @@
                             {sline:getlinelist type="mdd" flag="recommend" row="6"}
                                 <li class="li-top">
                                     <p class="img">
-                                        <a class="fl" href="[field:url/]" target="_blank"><img class="fl lazyimg" src="" data-original="[field:lit160/]" alt="[field:title/]" width="220" height="155" title="[field:title/]"></a>
+                                        <a class="fl" href="[field:url/]" target="_blank"><img class="fl lazyimg" src="" data-original="[field:lit160/]" alt="[field:title/]" width="230" height="170" title="[field:title/]"></a>
                                         <span class="txt" style="bottom: -70px;">推荐理由：[field:sellpoint/]</span>
                                     </p>
                                     <p class="tit"><a href="[field:url/]" target="_blank"><span style="[field:color/]">[field:title/]</span>[field:iconlist function=Helper_Archive::getIconList(@me)/]</a></p>
                                     <p class="num">
-                                        <span class="price">￥<b>4880</b>起</span>
-                                        <span class="cs">已成交<span class="color_f60">[field:sellnum/]</span> 单</label></span>
+                                        <span class="price">价格：[field:price2/]</span>
+                                        <!--<span class="cs">已成交<span class="color_f60">[field:sellnum/]</span> 单</label></span>-->
                                     </p>
                                 </li>
                             {/sline:getlinelist}
@@ -105,8 +105,8 @@
                             <li class="li-bom">
                                 {sline:getlinelist type="mdd" flag="specical" row="4"}
                                     <p class="addcls">
-                                        <a href="http://www.jiajiren.cn/lines/show_83.html" target="_blank">[深圳出发]俄罗斯双城浪漫悦动8日之旅</a>
-                                        <span>￥10066起</span>
+                                        <a href="[field:url/]" target="_blank">[field:title/]</a>
+                                        <span>价格：[field:price2/]</span>
                                     </p>
                                 {/sline:getlinelist}
                             </li>
@@ -126,20 +126,20 @@
                     <li [field:global.autoindex runphp='yes']if(@me%3==0)@me='class="mr_0"';else @me='';[/field:global.autoindex]><a class="fl" href="[field:url/]" target="_blank"><img class="fl lazyimg" src="" data-original="[field:litpic/]" width="310" height="215" alt="[field:title/]" /></a><p><a href="[field:url/]" target="_blank">[field:title/]</a></p></li>
                     {/sline:getarclist}
                 </ul>
-                <div class="gl_list_con">
-                    <ul>
-                        {sline:getarclist flag='recommend' haspic='1' row='2' limit='3'}
-                        <li class="txt_img_list">
-                            <a class="fl" href="[field:url/]" target="_blank"><img class="fl lazyimg" src="" data-original="[field:lit240/]" width="145" height="100" alt="[field:title/]"  /></a>
-                            <p class="tit"><a href="[field:url/]" target="_blank">[field:title/]</a></p>
-                            <p class="txt">[field:content function="cutstr_html(strip_tags(@me),100)"/]</p>
-                        </li>
-                        {/sline:getarclist}
-                        {sline:getarclist flag='recommend' haspic='1' row='4' limit='5'}
-                        <li class="txt_list"><span>.</span><a href="[field:url/]" target="_blank">[field:title/]</a></li>
-                        {/sline:getarclist}
-                    </ul>
-                </div>
+                <!--<div class="gl_list_con">-->
+                    <!--<ul>-->
+                        <!--{sline:getarclist flag='recommend' haspic='1' row='2' limit='3'}-->
+                        <!--<li class="txt_img_list">-->
+                            <!--<a class="fl" href="[field:url/]" target="_blank"><img class="fl lazyimg" src="" data-original="[field:lit240/]" width="145" height="100" alt="[field:title/]"  /></a>-->
+                            <!--<p class="tit"><a href="[field:url/]" target="_blank">[field:title/]</a></p>-->
+                            <!--<p class="txt">[field:content function="cutstr_html(strip_tags(@me),100)"/]</p>-->
+                        <!--</li>-->
+                        <!--{/sline:getarclist}-->
+                        <!--{sline:getarclist flag='recommend' haspic='1' row='4' limit='3'}-->
+                        <!--<li class="txt_list"><span>.</span><a href="[field:url/]" target="_blank">[field:title/]</a></li>-->
+                        <!--{/sline:getarclist}-->
+                    <!--</ul>-->
+                <!--</div>-->
             </div>
             <!--攻略游记结束-->
 
