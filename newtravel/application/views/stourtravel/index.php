@@ -15,7 +15,7 @@
 	<!--顶部-->
 	<div class="header" id="header">
   	<div class="top-page">
-      <div class="logo"><img class="fl" src="{$GLOBALS['cfg_public_url']}images/logo.png" alt="思途CMS3.0" title="思途CMS3.0" /></div>
+      <div class="logo" ><font size="8">夏令王国后台管理</font></div>
       <div class="top-operate">
         <ul class="fl">
           <li class="web-home"><a href="../" target="_blank" ><img src="{$GLOBALS['cfg_public_url']}images/top-operate-01.png" alt="网站首页" title="网站首页" ></a></li>
