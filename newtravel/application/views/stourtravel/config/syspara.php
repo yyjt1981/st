@@ -95,17 +95,14 @@
 
                   </div>
 
-                  <div class="company_name" style="margin-top: 20px;">
-                      <p><span class="fl">公司地址：</span><input type="text" name="cfg_company_address" id="cfg_company_address" class="set-text-xh set-text-bz1" value="{$config['cfg_company_address']}" /></p>
+                  <div class="writing" style="margin-top: 20px;">
+                      <p><span class="fl">公 司 地 址：</span><input type="text" name="cfg_company_address" id="cfg_company_address" class="set-text-xh set-text-bz1" value="{$config['cfg_company_address']}" /></p>
 
                   </div>
-                  <div class="company_name" style="margin-top: 20px;">
-                      <p><span class="fl">邮件地址：</span><input type="text" name="cfg_company_email" id="cfg_company_email" class="set-text-xh set-text-bz1" value="{$config['cfg_company_email']}" /></p>
+                  <div class="writing" style="margin-top: 20px;">
+                      <p><span class="fl">邮 件 地 址：</span><input type="text" name="cfg_company_email" id="cfg_company_email" class="set-text-xh set-text-bz1" value="{$config['cfg_company_email']}" /></p>
 
                   </div>
-
-
-
 
               </div>
 
