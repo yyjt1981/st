@@ -114,6 +114,13 @@
     font-size:14px;
     padding-top:8px;
     overflow: hidden;}
+
+a:hover{
+    color: #f60;
+    text-decoration: underline;
+}
+
+
 .tabcon .list-con .li-top p.num span{
     height:24px;
     line-height:24px}
