@@ -40,30 +40,30 @@ $(function(){
 		$(".categorys").hide();
 		$(".navname").text($(this).text());
 		$("."+nav).show();
-   
+
    })
    //选中第一个
    $(".dest_menu").find('li').first().trigger('click');
   
    //滑动导航指向效果
-   $(".categorys div .item").hover(
-                   function(e){
-						  
-						  $(this).siblings().removeClass("hover").find(".i-mc").hide();
-                
-						  //如果有更多元素
-						  //if($(this).find(".i-mc a").length > 0){
-							 $(this).addClass("hover");
-							 $(this).find(".i-mc").show();
-						  //}
-						  
-				  },
-				  function(e){
-														  
-						$(this).removeClass("hover");
-						$(this).find(".i-mc").hide();
-				  }
-			);
+   //$(".categorys div .item").hover(
+   //                function(e){
+	//
+	//					  $(this).siblings().removeClass("hover").find(".i-mc").hide();
+   //
+	//					  //如果有更多元素
+	//					  //if($(this).find(".i-mc a").length > 0){
+	//						 $(this).addClass("hover");
+	//						 $(this).find(".i-mc").show();
+	//					  //}
+	//
+	//			  },
+	//			  function(e){
+	//
+	//					$(this).removeClass("hover");
+	//					$(this).find(".i-mc").hide();
+	//			  }
+	//		);
 	 //边栏搜索选择参数
 	 $(".side_st").find('li').click(function(){
 	 

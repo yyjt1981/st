@@ -115,7 +115,7 @@
     padding-top:8px;
     overflow: hidden;}
 
-a:hover{
+.tabcon .list-con .li-top p.tit a:hover{
     color: #f60;
     text-decoration: underline;
 }
