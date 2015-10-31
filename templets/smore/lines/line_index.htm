@@ -45,7 +45,7 @@
       <!--边栏开始-->
       <div class="line_home_left">
       	<div class="mmd_option">
-        	<h3>线路导航：</h3>
+        	<h3>产品导航：</h3>
           <div class="diy_select" id="mdd_choose">
             <input type="hidden" name="" class="diy_select_input">
             <div class="diy_select_txt navname"></div>
@@ -115,48 +115,7 @@
           </div>
         {/sline:leftnav}
        
-      	
-        <div class="shortcut_cz">
-        	<h3>不知道去哪儿？试试小助手吧！</h3>
-          <div class="side_st">
-            <div class="diy_select">
-            	<div class="diy_tit">出行天数</div>
-              <input type="hidden" name="day" id="dayid" value="0" class="diy_select_input">
-              <div class="diy_select_txt">不限</div>
-              <div class="diy_select_btn"></div>
-              <ul class="diy_select_list">
-                {sline:getlineguide flag='day'}
-                 <li data-value="[field:word/]" data-field="dayid">[field:title/]</li>
-                {/sline:getlineguide}
-               
-              </ul>
-            </div>
-            <div class="diy_select">
-            	<div class="diy_tit">出行类型</div>
-              <input type="hidden" name="dest_id" id="dest_id" value="0" >
-              <div class="diy_select_txt">不限</div>
-              <div class="diy_select_btn"></div>
-              <ul class="diy_select_list">
-               {sline:getdest flag='top'}
-                <li data-value="[field:id/]" data-pinyin="[field:pinyin/]" data-field="dest_id">[field:title/]</li>
-               {/sline:getdest}
-              </ul>
-            </div>
-            <div class="diy_select">
-            	<div class="diy_tit">价格区间</div>
-              <input type="hidden" name="priceid" id="priceid" value="0" class="diy_select_input">
-              <div class="diy_select_txt">不限</div>
-              <div class="diy_select_btn"></div>
-              <ul class="diy_select_list">
-                {sline:getlineguide flag='price'}
-                 <li data-value="[field:aid/]" data-field="priceid">[field:title/]</li>
-                {/sline:getlineguide}
-              
-              </ul>
-            </div>
-            <div class="side_st_btn btn_search"><a href="javascript:;">立即查询</a></div>
-          </div>
-        </div>
+
          {sline:getrightcontent pagename='index'/}
       </div>
       <!--边栏结束-->
