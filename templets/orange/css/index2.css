@@ -410,11 +410,11 @@
 	margin-top:20px}
 .gl_con .gl_bt {
 	float:left;
-	width:960px;
+	width:940px;
 	height:40px;
 	line-height:40px;
 	border-bottom:3px solid #ff7200;
-	background:url(../images/index2.png) no-repeat 755px -367px}
+	background:url(../images/index2.png) no-repeat 740px -367px}
 .gl_con .gl_bt h3 {
 	float:left;
 	color:#464646;
@@ -429,10 +429,10 @@
 	background:url(../images/index2.png) no-repeat 0 -166px}
 .gl_ul_top{
 	float:left;
-	width:960px}
+	width:940px}
 .gl_ul_top li{
 	float:left;
-	width:310px;
+	width:303px;
 	height:215px;
 	overflow:hidden;
 	margin:15px 15px 0 0;
@@ -622,7 +622,7 @@
 
 .sidleTabs-cj .list_bt{
 	float:left;
-	width:960px;
+	width:941px;
 	height:40px;
 	line-height:40px;
 	border-bottom:3px solid #ff7200;
