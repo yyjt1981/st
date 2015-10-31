@@ -1,28 +1,49 @@
 <!-- 底部介绍开始 -->
-  <div class="big">
+<div class="big">
     <div class="width_1210">
-      <div class="footer">
-        <div class="foot_menu">
-          {sline:serverlist}
-              <a href="[field:url/]" rel="nofollow">[field:servername/]<s>|</s></a>
-          {/sline:serverlist}
-         
-       
+        <div class="new_footer">
+            <div class="limi_info clearfix">
+                <div class="limi_contact">
+                    <p>
+                        <div class="footer_phone_num">
+                            <p style="font-size: 24px">0571-8825925</p>
+                        </div>
+                    </p>
+                    <p>公司地址：{sline:global.cfg_company_address/}</p>
+                    <p>公司邮箱：{sline:global.cfg_company_email/}</p>
+                </div>
+                <div class="limi_about">
+                    <h2>关于夏令王国</h2>
+                    <div class="clearfix">
+                        <div class="fl_new">
+                            {sline:serverlist}
+                            <text>
+                                <a href="[field:url/]" rel="nofollow">[field:servername/]</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </text>
+                            {/sline:serverlist}
+                            <!--<a href="[field:url/]" rel="nofollow">[field:servername/]<s>|</s></a>-->
+                            <!--<p><a target="_blank" href="http://www.2limi.com/job">招聘信息</a></p>-->
+                            <!--<p><a target="_blank" href="http://www.2limi.com/law">法律声明</a></p>-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="wrap">
+                <div class="new_footer_icon clearfix">
+                    <a href="https://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=dov73ne26zbqq0ilcr2gs9w5imthzi8pw1" class="footer_icon_0" target="_blank"><img src="http://www.2limi.com/img/gs_icon.png"></a>
+                    <a target="_blank" href="http://www.cyberpolice.cn/wfjb/" class="footer_icon_0"><img src="http://www.2limi.com/img/wj_icon.png"></a>
+                    <a target="_blank" href="http://www.zx110.org/" class="footer_icon_4"></a>
+                    <a target="_blank" href="http://www.shjbzx.cn/" class="footer_icon_5"></a>
+                </div>
+            </div>
+            <div class="limi_copr">
+                <p>上海乐骋国际旅行社股份有限公司</p>
+                <p>lecheng© copyright 2015. all rights reserved 沪ICP备14050600号-2</p>
+            </div>
         </div>
-        <div class="foot_con">
-          <p>{sline:global.cfg_footer/}{sline:global.cfg_html_kefu/}</p>
-          <p>{sline:global.cfg_tongjicode function=stripslashes(@me)/}</p>
-          <p>{sline:global.cfg_beian/}</p>
-        </div>
-        <div class="foot_img">
-             {sline:licenselist}
-        	   <a href="[field:picurl/]" target="_blank"><img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]" /></a>
-             {/sline:licenselist}
-        	
-        </div>
-      </div>
     </div>
-  </div> 
+</div>
 <script>
 $(function(){
 	$('#roll').hide();
@@ -36,6 +57,10 @@ $(function(){
     }
   });
   $('#roll_top').click(function(){$('html,body').animate({scrollTop: '0px'}, 800);});
+
+    //footer展示动态添加样式
+    $('.addcls:odd').addClass('ml20');
+
 });
 </script>
 <style type="text/css">
