@@ -29,8 +29,17 @@ $(function(){
 	  var suitid = $(".tc_class a.on").attr('data-suitid');
 	  var lineid = $("#lineid").val();
 	  var adultnum = $("#adultnum").val().replace(/\b(0+)/gi,"");
+	  if (!adultnum) {
+		  adultnum = 0;
+	  }
 	  var childnum = $("#childnum").val().replace(/\b(0+)/gi,"");
+	  if (!childnum) {
+		  childnum = 0;
+	  }
       var oldnum = $("#oldnum").val().replace(/\b(0+)/gi,"");
+	  if (!oldnum) {
+		  oldnum =0;
+	  }
 	  if(datevalue == null || suitid==undefined){
 	     alert('当前产品不可预订');
 		 return false;
@@ -47,6 +56,11 @@ $(function(){
 	  }
   
   })
+
+	$('.yd_error_hide').focus(function(){
+		$('.yd_error').attr("style","display:none");
+	});
+
   //酒店轮播
   $(".ulSmallPic li").each(function(i){
 	   
