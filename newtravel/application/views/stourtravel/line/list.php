@@ -48,7 +48,7 @@
      </div>
      
      <div class="change-btn-list mt-5 ml-10">
-       <span class="change-btn-xz btnbox" id="destination" data-url="box/index/type/destlist" data-result="result_dest" >目的地&nbsp;&gt;&nbsp;<span id="result_dest">全部</span></span>
+       <span class="change-btn-xz btnbox" id="destination" data-url="box/index/type/destlist" data-result="result_dest" >产品分类&nbsp;&gt;&nbsp;<span id="result_dest">全部</span></span>
 
      </div>
      
@@ -319,7 +319,7 @@
 
                },
 			   {
-				   text:'线路名称',
+				   text:'产品名称',
 				   width:'30%',
 				   dataIndex:'linename',
 				   align:'left',
