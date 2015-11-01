@@ -3652,3 +3652,20 @@ img {
 .ml20 {
     margin-left: 20px;
 }
+.must_input {
+    color: #ff5741;
+    font-family: simsun;
+    margin-right: 4px;
+    font-style: normal;
+}
+.yd_error {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    display: inline;
+    line-height: 24px;
+    padding: 0 8px 0 26px;
+    background: url(../images/ico_error.png) no-repeat 8px 0;
+    overflow: hidden;
+    color: #e32d2c;
+}

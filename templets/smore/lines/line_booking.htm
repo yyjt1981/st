@@ -46,9 +46,9 @@
           <dl>
             <dt>报名人数：</dt>
             <dd>
-              <span class="w_xt adultcontain">成人&nbsp;&nbsp;<input type="text" class="text" name="dingnum" id="dingnum" onkeyup="gettotal()" value="{sline:field.dingnum/}" />&nbsp;&nbsp;名</span>
-              <span class="w_xt childcontain">儿童&nbsp;&nbsp;<input type="text" class="text" name="childnum" id="childnum"  onkeyup="gettotal()" value="{sline:field.childnum/}" />&nbsp;&nbsp;名</span>
-              <span class="w_xt oldcontain">老人&nbsp;&nbsp;<input type="text" class="text" name="oldnum" id="oldnum"  onkeyup="gettotal()" value="{sline:field.oldnum/}" />&nbsp;&nbsp;名</span>
+              <span class="w_xt adultcontain">成人&nbsp;&nbsp;<input type="text" class="text" name="dingnum" id="dingnum" onkeyup="gettotal()" readonly value="{sline:field.dingnum/}" />&nbsp;&nbsp;名</span>
+              <span class="w_xt childcontain">儿童&nbsp;&nbsp;<input type="text" class="text" name="childnum" id="childnum"  onkeyup="gettotal()" readonly value="{sline:field.childnum/}" />&nbsp;&nbsp;名</span>
+              <span class="w_xt oldcontain">老人&nbsp;&nbsp;<input type="text" class="text" name="oldnum" id="oldnum"  onkeyup="gettotal()" readonly value="{sline:field.oldnum/}" />&nbsp;&nbsp;名</span>
             </dd>
           </dl>
           <dl>
@@ -56,27 +56,27 @@
             <dd><input type="text" class="date_txt" name="usedate" id="usedate" disabled value="{sline:field.usedate/}" readonly /></dd>
           </dl>
         </div>
-        <div class="or_show or_bg_2">
-          <h3>优惠信息</h3>
-          {sline:if var='_has_jifentprice'}
-            <dl>
-              <dt>积分可抵现金：</dt>
-              <dd>{sline:field.jifentprice/}</dd>
-            </dl>
-          {/sline:if}
-          {sline:if var='_has_jifenbook'}
-          <dl>
-          	<dt>购买送积分：</dt>
-            <dd>{sline:field.jifenbook/}</dd>
-          </dl>
-          {/sline:if}
-          {sline:if var='_has_jifencomment'}
-          <dl>
-          	<dt>评论送积分：</dt>
-            <dd>{sline:field.jifencomment/}</dd>
-          </dl>
-          {/sline:if}
-        </div>
+        <!--<div class="or_show or_bg_2">-->
+          <!--<h3>优惠信息</h3>-->
+          <!--{sline:if var='_has_jifentprice'}-->
+            <!--<dl>-->
+              <!--<dt>积分可抵现金：</dt>-->
+              <!--<dd>{sline:field.jifentprice/}</dd>-->
+            <!--</dl>-->
+          <!--{/sline:if}-->
+          <!--{sline:if var='_has_jifenbook'}-->
+          <!--<dl>-->
+          	<!--<dt>购买送积分：</dt>-->
+            <!--<dd>{sline:field.jifenbook/}</dd>-->
+          <!--</dl>-->
+          <!--{/sline:if}-->
+          <!--{sline:if var='_has_jifencomment'}-->
+          <!--<dl>-->
+          	<!--<dt>评论送积分：</dt>-->
+            <!--<dd>{sline:field.jifencomment/}</dd>-->
+          <!--</dl>-->
+          <!--{/sline:if}-->
+        <!--</div>-->
         <div class="or_show or_bg_3">
           <h3>联系人资料</h3>
           <dl>

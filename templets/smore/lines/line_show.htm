@@ -115,7 +115,7 @@
                       <strong><s style=" color:#f50">*</s>成人：</strong>
                       <span class="order_number">
                         <!--<a href="javascript:void(0)" class="reduce reduce_gray"></a>-->
-                        <input type="text" id="adultnum" name="adult" value="1">
+                        <input type="text" id="adultnum" name="adult" value="1" onkeyup="this.value=this.value.replace(/\D/g,'')">
                         <!--<a href="javascript:void(0)" class="plus plus_green"></a>-->
                       </span>
                   </span>
@@ -125,7 +125,7 @@
                       <strong>儿童：</strong>
                       <span class="order_number">
                         <!--<a href="javascript:void(0)" class="reduce reduce_gray"></a>-->
-                        <input type="text" id="childnum" name="child" value="0">
+                        <input type="text" id="childnum" name="child" value="0" onkeyup="this.value=this.value.replace(/\D/g,'')">
                         <!--<a href="javascript:void(0)" class="plus plus_green"></a>-->
                       </span>
                    </span>
@@ -135,10 +135,11 @@
                           <strong>老人：</strong>
                           <span class="order_number">
                             <!--<a href="javascript:void(0)" class="reduce reduce_gray"></a>-->
-                            <input type="text" id="oldnum" name="oldnum" value="0">
+                            <input type="text" id="oldnum" name="oldnum" value="0" onkeyup="this.value=this.value.replace(/\D/g,'')">
                             <!--<a href="javascript:void(0)" class="plus plus_green"></a>-->
                           </span>
                   </span>
+                  <span class="yd_error" style="display: none">预订总人数必须大于1人</span>
                 </div>
                 <div class="yd_sm">
                   <a href="javascript:;" class="btn_book">立即预订</a>

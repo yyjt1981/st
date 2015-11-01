@@ -83,7 +83,7 @@
                     <!--<em class="btys01">{sline:field.kindname/}</em>-->
                     <!--<a class="more" href="/lines/{sline:field.pinyin/}/">更多&gt;&gt;</a>-->
                 <!--</div>-->
-                <div class="tabcon" style="display: none;">
+                <div class="tabcon">
                     <div class="pic">
                         {sline:field.leftad/}
                     </div>
@@ -92,7 +92,7 @@
                             {sline:getlinelist type="mdd" flag="recommend" row="6"}
                                 <li class="li-top">
                                     <p class="img">
-                                        <a class="fl" href="[field:url/]" target="_blank"><img class="fl lazyimg" src="" data-original="[field:lit160/]" alt="[field:title/]" width="230" height="170" title="[field:title/]"></a>
+                                        <a class="fl" href="[field:url/]" target="_blank"><img class="fl" src="[field:lit160/]" alt="[field:title/]" width="230" height="170" title="[field:title/]"></a>
                                         <span class="txt" style="bottom: -70px;">推荐理由：[field:sellpoint/]</span>
                                     </p>
                                     <p class="tit"><a href="[field:url/]" target="_blank"><span style="[field:color/]">[field:title/]</span>[field:iconlist function=Helper_Archive::getIconList(@me)/]</a></p>
@@ -186,7 +186,7 @@
         $('img[data-original]').lazyload({container:"window",threshold:100});
 
         //团购优惠最后一个添加class
-        $(".tuan_con").find("li:last").addClass('mr_0');
+//        $(".tuan_con").find("li:last").addClass('mr_0');
 
     });
 
