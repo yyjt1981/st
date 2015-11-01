@@ -28,15 +28,19 @@ $(function(){
 	  var childprice = $("#date_list").find("option:selected").attr("data-childprice");//儿童价格
 	  var suitid = $(".tc_class a.on").attr('data-suitid');
 	  var lineid = $("#lineid").val();
-	  var adultnum = $("#adultnum").val();
-	  var childnum = $("#childnum").val();
-      var oldnum = $("#oldnum").val();
+	  var adultnum = $("#adultnum").val().replace(/\b(0+)/gi,"");
+	  var childnum = $("#childnum").val().replace(/\b(0+)/gi,"");
+      var oldnum = $("#oldnum").val().replace(/\b(0+)/gi,"");
 	  if(datevalue == null || suitid==undefined){
 	     alert('当前产品不可预订');
 		 return false;
 	  }
 	  else{
-
+		  var sum = adultnum + childnum + oldnum;
+		  if (sum <= 0) {
+			  $('.yd_error').show();
+			  return;
+		  }
 		   var url = 'booking.php?usedate='+datevalue+"&lineid="+lineid+"&price="+price+"&childprice="+childprice+"&suitid="+suitid+"&oldnum="+oldnum;
 		   url = url+"&adultnum="+adultnum+"&childnum="+childnum;
 		   window.open(url);
