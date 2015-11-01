@@ -439,7 +439,7 @@
 			   },
 			   {
 				   text:'适用人群',
-				   width:'10%',
+				   width:'15%',
 				   dataIndex:'propgroup',
 				   align:'center',
 				   border:0,
@@ -502,25 +502,25 @@
 					    }
 					}			  
 				},
-			    {
-				   text:'最低利润(元)',
-				   width:'5%',
-				   align:'center',
-				   dataIndex:'minprofit',
-				   border:0,
-				   cls:'mod-2',
-				   sortable:false,
-				   listeners:{
-					    afterrender:function(obj,eopts)
-						{
-							if(window.display_mode!=2)
-							    obj.hide();
-                            else
-                                obj.show();
-
-					    }
-					}			  
-				},
+//			    {
+//				   text:'最低利润(元)',
+//				   width:'5%',
+//				   align:'center',
+//				   dataIndex:'minprofit',
+//				   border:0,
+//				   cls:'mod-2',
+//				   sortable:false,
+//				   listeners:{
+//					    afterrender:function(obj,eopts)
+//						{
+//							if(window.display_mode!=2)
+//							    obj.hide();
+//                            else
+//                                obj.show();
+//
+//					    }
+//					}
+//				},
 				{
 				   text:'管理',
 				   width:'12%',
