@@ -941,8 +941,18 @@ function getNewRealPrice($aid,$webid)
     $lineid = $model->getField('id',"aid='$aid' and webid='$webid'");
     $time = time();
     $sql = "select min(adultprice) as price from #@__line_suit_price where lineid='$lineid' and day > '$time' limit 60";
-    $row = $dsql->GetOne($sql);
-    return $row['price'] ? $row['price'] : 0;
+	$adultPrice = $dsql->GetOne($sql);
+	if(empty($adultPrice['price'])){
+		$adultPrice['price'] = 0;
+	}
+
+	$sql = "select min(childprice) as price from #@__line_suit_price where lineid='$lineid' and day > '$time' limit 60";
+	$childPrice = $dsql->GetOne($sql);
+	if(empty($childPrice['price'])){
+		$childPrice['price'] = 0;
+	}
+
+    return min($adultPrice['price'], $childPrice['price']);
 }
 
 //获取车子新版最低报价
