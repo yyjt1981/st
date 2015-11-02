@@ -80,11 +80,11 @@
         <div class="or_show or_bg_3">
           <h3>联系人资料</h3>
           <dl>
-            <dt>联 系 人：</dt>
+            <dt><em class="must_input">*</em>联 系 人：</dt>
             <dd><input type="text" class="data_text" name="linkman" id="linkman" value="{sline:field.linkman/}" /></dd>
           </dl>
           <dl>
-            <dt>电话号码：</dt>
+            <dt><em class="must_input">*</em>电话号码：</dt>
             <dd><input type="text" class="data_text" name="linktel" id="linktel" value="{sline:field.linktel/}" /></dd>
           </dl>
           <dl>
@@ -186,14 +186,14 @@
 				 
 				  usedate:{
 				   required: true
-				  }
+				  },
 				  
-				 /* linkman:{
+				  linkman:{
 				   required: true
 				  },
 				  linktel:{
 				   required: true
-				  }*/
+				  }
 				 
 				}, 
 				messages: { 
@@ -204,14 +204,14 @@
 				   },
 				   usedate:{
 				    required:"请选择出行日期"
-				   }/*,
+				   },
 				   linkman:{
 				    required:"请填写联系人信息"
 					
 				   },
 				   linktel:{
 					required:"请填写联系电话"
-				   }*/
+				   }
 				 
 				}
 

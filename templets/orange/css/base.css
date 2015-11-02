@@ -3669,3 +3669,6 @@ img {
     overflow: hidden;
     color: #e32d2c;
 }
+.error {
+    color: #e32d2c;
+}
