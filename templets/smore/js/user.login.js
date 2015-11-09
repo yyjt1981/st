@@ -1,4 +1,8 @@
 $(function(){
+
+	//点击回车登陆
+	init_enter_sub();
+
 //登陆名点击
   $("#loginname").focusEffect();
   //表单验证
@@ -82,6 +86,15 @@ $(function(){
 	     });
 
 })
+
+function init_enter_sub() {
+	//新增回车键登陆
+	$('.enter_sub').keyup(function(e){
+		if(e.keyCode ==13){
+			$(this).parents('form').submit()
+		}
+	})
+}
 
 
 
