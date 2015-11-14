@@ -104,7 +104,7 @@ Ext.onReady(
                 'addtime',
                 'usedate',
                 'totalnum',
-                'price',
+                'totalval',
                 'childprice',
                 'childnum',
                 'oldnum',
@@ -269,7 +269,7 @@ Ext.onReady(
                 {
                     text: '价格',
                     width: '10%',
-                    dataIndex: 'price',
+                    dataIndex: 'totalval',
                     align: 'left',
                     border: 0,
                     sortable: false,

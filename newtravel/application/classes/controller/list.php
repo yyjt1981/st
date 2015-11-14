@@ -38,9 +38,9 @@ class Controller_list extends Stourweb_Controller
             $row[1] = iconv('utf-8', 'gbk', $v['productname']);
             $row[2] = iconv('utf-8', 'gbk', $v['linkman']);
             $row[3] = iconv('utf-8', 'gbk', $v['linktel']);
-            $row[4] = iconv('utf-8', 'gbk', $this->formatDate($v['addtime']));
+            $row[4] = iconv('utf-8', 'gbk', Common::myDate('Y-m-d',$v['addtime']));
             $row[5] = iconv('utf-8', 'gbk', $v['dingnum'] + $v['childnum'] + $v['oldnum']);
-            $row[6] = iconv('utf-8', 'gbk', $v['dingnum'] * $v['price'] + $v['childprice'] + $v['oldprice']);
+            $row[6] = iconv('utf-8', 'gbk', $v['dingnum'] * $v['price'] + $v['childnum'] * $v['childprice'] + $v['oldnum'] * $v['oldprice']);
             $row[7] = iconv('utf-8', 'gbk', $this->getStatus($v['status']));
             fputcsv($fp, $row);
         }
@@ -59,14 +59,6 @@ class Controller_list extends Stourweb_Controller
             $realStatus = "取消订单";
         }
         return $realStatus;
-    }
-
-    public function formatDate($date)
-    {
-        if ($date == null) {
-            return;
-        }
-        return date('Y-m-d', $date);
     }
 
 }

@@ -54,8 +54,6 @@ class Controller_Order extends Stourweb_Controller{
             }
             $w.=empty($webid)?' and a.webid=0':" and a.webid=$webid";
 
-
-
             $sql="select a.*  from sline_member_order as a $w $order limit $start,$limit";
             //echo $sql;
 
@@ -67,6 +65,7 @@ class Controller_Order extends Stourweb_Controller{
             {
                 $v['addtime'] = Common::myDate('Y-m-d H:i:s',$v['addtime']);
                 $v["totalnum"] = $v["dingnum"] + $v["childnum"] + $v["oldnum"];
+                $v["totalval"] = $v['dingnum'] * $v['price'] + $v['childnum'] * $v['childprice'] + $v['oldnum'] * $v['oldprice'];
                 $new_list[] = $v;
             }
             $result['total']=$totalcount_arr[0]['num'];
