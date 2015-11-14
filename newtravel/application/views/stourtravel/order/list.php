@@ -103,7 +103,7 @@ Ext.onReady(
                 'productname',
                 'addtime',
                 'usedate',
-                'dingnum',
+                'totalnum',
                 'price',
                 'childprice',
                 'childnum',
@@ -256,7 +256,7 @@ Ext.onReady(
                 {
                     text: '预订数量',
                     width: '5%',
-                    dataIndex: 'dingnum',
+                    dataIndex: 'totalnum',
                     align: 'left',
                     border: 0,
                     sortable: false,

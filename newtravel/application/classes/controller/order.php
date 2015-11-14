@@ -66,6 +66,7 @@ class Controller_Order extends Stourweb_Controller{
             foreach($list as $k=>$v)
             {
                 $v['addtime'] = Common::myDate('Y-m-d H:i:s',$v['addtime']);
+                $v["totalnum"] = $v["dingnum"] + $v["childnum"] + $v["oldnum"];
                 $new_list[] = $v;
             }
             $result['total']=$totalcount_arr[0]['num'];
