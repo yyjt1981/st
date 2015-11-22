@@ -28,6 +28,7 @@
                 <div class="pro-search">
                     <input type="text" id="searchkey" value="订单号/产品名称/联系人" datadef="订单号/产品名称/联系人" class="sty-txt1 set-text-xh wid_200" />
                     <input type="button" id="btn_search" value="搜索" onclick="search()" class="sty-btn1 default-btn wid_60" />
+                    <input type="button" id="btn_export" value="导出" onclick="exportLineOrder()" class="sty-btn1 default-btn wid_60" />
                 </div>
 
             </div>
@@ -103,9 +104,10 @@ Ext.onReady(
                 'addtime',
                 'usedate',
                 'totalnum',
-                'price',
+                'totalval',
                 'childprice',
                 'childnum',
+                'oldnum',
                 'linkman',
                 'status'
 
@@ -267,7 +269,7 @@ Ext.onReady(
                 {
                     text: '价格',
                     width: '10%',
-                    dataIndex: 'price',
+                    dataIndex: 'totalval',
                     align: 'left',
                     border: 0,
                     sortable: false,
@@ -431,6 +433,15 @@ function search() {
     window.product_store.load();
 
 
+}
+
+//导出
+function exportLineOrder() {
+    var keyword = $.trim($("#searchkey").val());
+    var datadef = $("#searchkey").attr('datadef');
+    keyword = keyword==datadef ? '' : keyword;
+    window.location = SITEURL+"list/export_lineOrder?keyword=" + keyword;
+    return false;
 }
 
 

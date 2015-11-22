@@ -21,16 +21,6 @@
           <li class="web-home"><a href="../" target="_blank" ><img src="{$GLOBALS['cfg_public_url']}images/top-operate-01.png" alt="网站首页" title="网站首页" ></a></li>
           <li class="clear-style"><a href="javascript:;" id="clearbtn"><img src="{$GLOBALS['cfg_public_url']}images/top-operate-02.png" alt="清除缓存" title="清除缓存" ></a></li>
           <li class="create-txt"><a href="javascript:;" id="makehtml"><img src="{$GLOBALS['cfg_public_url']}images/top-operate-03.png" alt="生成HTML" title="生成HTML" ></a></li>
-            <li class="manager">
-                <a href="javascript:;" id="userbtn"><img src="{$GLOBALS['cfg_public_url']}images/top-operate-04.png" alt="帮助" title="帮助"></a>
-                <div class="top-help-list">
-                    <a class="ico_1" target="_blank" href="http://bbs.heirui.cn/">使用帮助</a>
-                    <a class="ico_2" target="_blank" href="http://bbs.heirui.cn/">视频教程</a>
-                    <a class="ico_3" target="_blank" href="http://bbs.heirui.cn/">意见反馈</a>
-                    <a class="ico_4" target="_blank" href="http://bbs.heirui.cn/">交流论坛</a>
-                    <a class="ico_5" target="_blank" href="http://bbs.heirui.cn/">商业源码</a>
-                </div>
-            </li>
           <li class="drop-out"><a href="javascript:;" id="clickout"><img src="{$GLOBALS['cfg_public_url']}images/top-operate-05.png" alt="退出" title="退出" ></a></li>
         </ul>
       </div>
