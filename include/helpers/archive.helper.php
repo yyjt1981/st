@@ -1761,8 +1761,20 @@ public static function getUrl($val=null,$key=null,$exclude=null,$arr,$url,$table
 	   return '';
 	    
    }
-	
-  
+
+
+	/**
+	 * 保存订单相关的预订用户信息
+	 * @param $tourerArr
+	 * @return bool
+	 */
+	public static function addTourers($tourerArr)
+	{
+		self::loadModule('common');
+		$model = new CommonModule('#@__tourer');
+		$flag = $model->add($tourerArr);
+		return $flag;
+	}
 
 
    //订单提交公共函数

@@ -28,7 +28,7 @@
           <div class="order_cd">感谢您对 {sline:global.cfg_webname/} 的支持与信任！</div>
         </div>
         <div class="jindu"></div>
-        <form id="dingfrm" action="?dopost=savebooking" method="post">
+            <form id="dingfrm" action="?dopost=savebooking" method="post">
         <div class="or_show or_bg_1">
           <h3>订单详细</h3>
           <dl>
@@ -81,11 +81,17 @@
           <h3>预订人资料</h3>
           <dl>
             <dt><em class="must_input">*</em>联 系 人：</dt>
-            <dd><input type="text" class="data_text" name="linkman" id="linkman" value="{sline:field.linkman/}" /></dd>
+            <dd>
+                <input type="text" class="data_text" name="linkman" id="linkman" value="{sline:field.linkman/}" />
+                <b id='linkmanError' class='line_order_error' style='display: none'>请输入正确的姓名</b>
+            </dd>
           </dl>
           <dl>
             <dt><em class="must_input">*</em>电话号码：</dt>
-            <dd><input type="text" class="data_text" name="linktel" id="linktel" value="{sline:field.linktel/}" /></dd>
+            <dd>
+                <input type="text" class="data_text" name="linktel" id="linktel" value="{sline:field.linktel/}" />
+                <b id='linktelError' class='line_order_error' style='display: none'>请输入正确的手机号</b>
+            </dd>
           </dl>
           <dl>
             <dt>常用邮箱：</dt>
@@ -96,22 +102,27 @@
             <dd><input type="text" class="data_text" name="linkqq" id="linkqq" value="" /></dd>
           </dl>
         </div>
-            <div class="or_show paylist">
-                <dl>
-                    <dt>支付方式：</dt>
+        <div class="or_show paylist">
+            <dl>
+                <dt>支付方式：</dt>
+                <dd>{sline:field.id function="Helper_Archive::getPayTypeList()"/}</dd>
+            </dl>
+        </div>
 
-                    <dd>{sline:field.id function="Helper_Archive::getPayTypeList()"/}</dd>
-                </dl>
+        <div class="or_show or_bg_3">
+            <input type="hidden" id="adult"/>
+            <input type="hidden" id="child"/>
+            <input type="hidden" id="old"/>
+        </div>
 
 
-            </div>
         <div class="order_price">
           <ul>
             <li class="li_1">订单总金额：&yen;<span class="total">{sline:field.totalprice/}</span>元</li>
             {sline:if var='_djsupport'}
               <li class="li_2"><strong>支付订金：<b>&yen;{sline:field.dingjin/}</b>元</strong><span>(支持订金订单，付款时仅需在线支付订金报名即可，剩余金额签约付款)</span></li>
             {/sline:if}
-            <li class="li_3"><input type="submit" name="" value="提交订单" /></li>
+            <li class="li_3"><input type="button" id="commitOrderForm" value="提交订单" /></li>
           </ul>
         </div>
         <!--隐藏域-->
@@ -155,20 +166,20 @@
         getnewprice();
   	//表单验证
 
-	 $("#dingfrm").validate({ 
-			
-			 submitHandler:function(form){  
-              
+	 $("#dingfrm").validate({
+
+			 submitHandler:function(form){
+
 				var flag = ST.User.isLogin();
-				
+
 				if(flag == 0)
 				{
 				   ST.User.showLogin(function(){
 					   var param=$("#dingfrm").serialize();
 					   bookSubmit(param,"?dopost=savebooking");
 					   BOX.getBoxClose();
-					   })	
-				} 
+					   })
+				}
 				else
 				{
 					var param=$("#dingfrm").serialize();
@@ -176,46 +187,30 @@
 				  	//form.submit();
 				}
 				return false;
-				
-             } ,     
-			rules: { 
-			     
-				  dingnum: { 
+
+             } ,
+			rules: {
+
+				  dingnum: {
 				   required: true
 				  },
-				 
+
 				  usedate:{
 				   required: true
-				  },
-				  
-				  linkman:{
-				   required: true
-				  },
-				  linktel:{
-				   required: true
 				  }
-				 
-				}, 
-				messages: { 
-				  
+				},
+				messages: {
+
 				   dingnum:{
 				    required:"请填写成人数量"
-						
+
 				   },
 				   usedate:{
 				    required:"请选择出行日期"
-				   },
-				   linkman:{
-				    required:"请填写联系人信息"
-					
-				   },
-				   linktel:{
-					required:"请填写联系电话"
 				   }
-				 
 				}
 
-				
+
 	     });
 
 
