@@ -54,8 +54,6 @@
    		
 	}
 	
-	
-	
 	//登陆函数(邮箱或者手机号登陆)
 	function login($uid,$pwd,$thirdpart=false)
 	{

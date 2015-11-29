@@ -16,6 +16,6 @@ class YunPianMsgTest extends PHPUnit_Framework_TestCase
 
         $result = $msg->sendMsg('18668140360', $text);
 
-        echo $result;
+        assertTrue($result);
     }
 }

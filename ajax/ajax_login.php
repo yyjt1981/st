@@ -111,9 +111,49 @@ if($dopost=='ajaxLogin')
 	exit();
 	
 }
+
+if($dopost=='getValidateCode'){
+	$sql = "select count(*) as totalCount from #@__mobile_code where mobile = '$mobile' and TO_DAYS(createTime)=TO_DAYS(NOW())";
+	$result = $dsql->GetOne($sql);
+	if($result['totalCount'] >= 3 ){
+		$data['status']='hasFull';
+		echo json_encode($data);
+		exit();
+	}
+
+	$code = rand(100000, 999999);
+	$text = "您的验证码为：".$code."，5分钟内有效，请尽快验证。如非本人操作，请忽略本短信。【夏令王国】";
+	$msg = new ZhiYanMsg();
+	$sendResult = $msg->sendMsg($mobile, $text);
+
+	if($sendResult->result != "SUCCESS"){
+		$data['status']='sendFailed';
+		echo json_encode($data);
+		exit();
+	}
+
+	$sql="insert into #@__mobile_code(mobile,code,createTime) values('$mobile','$code',now())";
+	if($dsql->ExecuteNoneQuery($sql)) {
+		$data['status']='hasSend';
+	}
+	echo json_encode($data);
+	exit();
+}
+
 //ajaxReg
 if($dopost=='ajaxReg')
 {
+	$sql = "select id, code from #@__mobile_code where mobile='$mobile' and status=0 ORDER BY createTime DESC limit 1";
+	$result = $dsql->GetOne($sql);
+
+	if($result == null || $msgcode != $result['code']){
+		$data['status']='invalidCode';
+		echo json_encode($data);
+		exit();
+	} else{
+		$sql = "update #@__mobile_code set status=1 where id=".$result['id'];
+		$dsql->ExecuteNoneQuery($sql);
+	}
 
 	$pwd=md5($mobile);
 	$jointime=time();
@@ -125,25 +165,14 @@ if($dopost=='ajaxReg')
         $nickname=substr($mobile,0,5).'***';
 		$sql="insert into #@__member(nickname,pwd,email,mobile,jointime,joinip,jifen) values('$nickname','$pwd','','$mobile','$jointime','$joinip','$jifen')";
 		
-	
-		
 		if($dsql->ExecuteNoneQuery($sql))
 		{
-			$content="尊敬的用户{$mobile}你好,你已经成功注册成为{$GLOBALS['cfg_webname']}会员,你的登陆名是:{$mobile},密码是:{$mobile},为了你的帐户安全,请尽快修改密码!";
-
-            $msgInfo = Helper_Archive::getDefineMsgInfo(0);
+			$content="尊敬的用户".$mobile."你好,你已经成功注册成为".$GLOBALS['cfg_webname']."会员,你的登陆名是:".$mobile.",密码是:".$mobile.",为了你的帐户安全,请尽快修改密码!";
 
             if(isset($msgInfo['isopen']))
             {
-                $nickname = $mobile;
-                $password = $mobile;
-                $content = $msgInfo['msg'];
-                $content = str_replace('{#LOGINNAME#}',$mobile,$content);
-                $content = str_replace('{#PASSWORD#}',$mobile,$content);
-                $content = str_replace('{#WEBNAME#}',$GLOBALS['cfg_webname'],$content);
-                $content = str_replace('{#PHONE#}',$GLOBALS['cfg_phone'],$content);
-
-                Helper_Archive::sendMsg($mobile,$mobile,$content);//注册短信
+				$msg = new ZhiYanMsg();
+				$msg->sendMsg($mobile, $text);
             }
 			//sendMsg('',$content,$mobile,'','shortmsg');
 			

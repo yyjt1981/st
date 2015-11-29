@@ -32,6 +32,17 @@ if($dopost=='reg')
 //用户注册
 if($dopost=='doreg')
 {
+    $sql = "select id, code from #@__mobile_code where mobile='$mobile' and status=0 ORDER BY createTime DESC limit 1";
+    $result = $dsql->GetOne($sql);
+
+    if($result == null || $msgcode != $result['code']){
+        $data['status']='invalidCode';
+        ShowMsg('验证码输入有误，!',$fromurl,1);
+        exit();
+    } else{
+        $sql = "update #@__mobile_code set status=1 where id=".$result['id'];
+        $dsql->ExecuteNoneQuery($sql);
+    }
 
 	$pwd=md5($pwd1);
 	$jointime=time();
@@ -96,16 +107,16 @@ if($dopost=='doreg')
 		$fromurl = empty($fromurl) ? $GLOBAL['cfg_basehost'].'/member/' : $fromurl;
         $msgInfo = Helper_Archive::getDefineMsgInfo(0);
 
-        if(isset($msgInfo['isopen'])) //如果开启
-        {
-            // $nickname = !empty($nickname) ? $nickname : $mobile;
-            $content = $msgInfo['msg'];
-            $content = str_replace('{#LOGINNAME#}',$mobile,$content);
-            $content = str_replace('{#PASSWORD#}',$pwd1,$content);
-            $content = str_replace('{#WEBNAME#}',$GLOBALS['cfg_webname'],$content);
-            $content = str_replace('{#PHONE#}',$GLOBALS['cfg_phone'],$content);
-            Helper_Archive::sendMsg($mobile,$mobile,$content);//注册短信
-        }
+//        if(isset($msgInfo['isopen'])) //如果开启
+//        {
+//            // $nickname = !empty($nickname) ? $nickname : $mobile;
+//            $content = $msgInfo['msg'];
+//            $content = str_replace('{#LOGINNAME#}',$mobile,$content);
+//            $content = str_replace('{#PASSWORD#}',$pwd1,$content);
+//            $content = str_replace('{#WEBNAME#}',$GLOBALS['cfg_webname'],$content);
+//            $content = str_replace('{#PHONE#}',$GLOBALS['cfg_phone'],$content);
+//            Helper_Archive::sendMsg($mobile,$mobile,$content);//注册短信
+//        }
 		Helper_Archive::showMsg('注册成功!'.$ucsynlogin,$fromurl,1);
 		//ShowMsg("注册成功，正在为你跳转...", $fromurl);
 		
@@ -190,26 +201,38 @@ else if($dopost=='checkcode')
 
 else if($dopost=='sendmsgcode')
 {
-        if(!empty($mobile))
-        {
-            $code = getRandCode(5);//验证码
-            $msgInfo = Helper_Archive::getDefineMsgInfo2('reg_msgcode');
+    if(empty($mobile))
+    {
+        $data['status']='errorMobile';
+        echo json_encode($data);
+        exit();
+    }
 
-            $content = $msgInfo['msg'];
-            $content = str_replace('{#CODE#}',$code,$content);
-            $content = str_replace('{#WEBNAME#}',$GLOBALS['cfg_webname'],$content);
-            $content = str_replace('{#PHONE#}',$GLOBALS['cfg_phone'],$content);
-            $flag = Helper_Archive::sendMsg($mobile,'',$content);
-            if($flag->Success)//发送成功
-            {
-               $status = 'ok';
-            }
+    $sql = "select count(*) as totalCount from #@__mobile_code where mobile = '$mobile' and TO_DAYS(createTime)=TO_DAYS(NOW())";
+    $result = $dsql->GetOne($sql);
+    if($result['totalCount'] >= 5 ){
+        $data['status']='hasFull';
+        echo json_encode($data);
+        exit();
+    }
 
+    $code = rand(100000, 999999);
+    $text = "您的验证码为：".$code."，5分钟内有效，请尽快验证。如非本人操作，请忽略本短信。【夏令王国】";
+    $msg = new ZhiYanMsg();
+    $sendResult = $msg->sendMsg($mobile, $text);
 
+    if($sendResult->result != "SUCCESS"){
+        $data['status']='sendFailed';
+        echo json_encode($data);
+        exit();
+    }
 
-        }
-
-        echo $status;
+    $sql="insert into #@__mobile_code(mobile,code,createTime) values('$mobile','$code',now())";
+    if($dsql->ExecuteNoneQuery($sql)) {
+        $data['status']='hasSend';
+    }
+    echo json_encode($data);
+    exit();
 }
 //检测短信验证码是否正确
 else if($dopost == 'ckcode')

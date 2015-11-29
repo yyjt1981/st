@@ -7,15 +7,15 @@
 <style type="text/css">
  .login_yuding,.login_yuding ul{
 	float:left;
-	width:600px;
+	width:680px;
 	height:250px;}	
 .login_yuding ul li{
 	float:left;
-	width:299px;
+	width:320px;
 	height:250px}
 .login_yuding ul li h3{
 	float:left;
-	width:270px;
+	width:291px;
 	display:inline;
 	margin:10px 0 10px 10px;
 	padding-left:10px;
@@ -24,7 +24,7 @@
 	border-bottom:1px solid #ddd}	
 .user_account{
 	float:left;
-	width:280px;
+	width:300px;
 	display:inline;
 	margin:10px 0 10px 10px}
 .account_text,.password_text,.phonenum{
@@ -92,6 +92,10 @@
             	<td width="65" height="35" align="right" style=" font-size:14px">手机号：</td>
             	<td width="203" height="35"><input type="text" name="mobile" id="mobile" class="phonenum" value="" /></td>
             </tr>
+			<tr>
+				<td width="65" height="35" align="right" style=" font-size:14px">验证码：</td>
+				<td width="203" height="35"><input type="text" name="msgcode" id="msgcode" class="phonenum" value="" /> <button id="MobileInvCode" onclick="ST.User.ajaxGetValidateCode()">获取验证码</button></td>
+			</tr>
             <tr>
             	<td></td>
               <td><input type="image" src="{sline:global.cfg_templets_skin/}/images/fast.png" id="ks_yuding" class="ks_yuding" onClick="ST.User.ajaxReg()"  /></td>

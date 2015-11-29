@@ -394,18 +394,98 @@ $.fn.hoverDelay = function(fnOver, fnOut,timeIn,timeOut) {
 	   return flag;
 	
 	},
+	 CodeTimeout:function (v) {
+		if(v>0)
+		{
+			$('#MobileInvCode').html('重新获取('+(--v)+'s)');
+			setTimeout(function(){ST.User.CodeTimeout(v)},1000);
+		}
+		else
+		{
+			$('#MobileInvCode')[0].disabled=false;
+			$('#MobileInvCode').html('重新获取');
+		}
+		//var count = 60;
+		//$("#getCodeBtn").attr("disabled", true);
+		//$("#getCodeBtn").val(count + "秒后重发");
+		//var countdown = setInterval(CountDown, 1000);
+		//function CountDown() {
+		//	$("#getCodeBtn").val(count + "秒后重发");
+		//	if (count == 0) {
+		//		$("#getCodeBtn").val("获取验证码").removeAttr("disabled");
+		//		clearInterval(countdown);
+		//	}
+		//	count--;
+		//}
+	},
+	ajaxGetValidateCode:function (){
+		var mobile = $("#mobile").val();
+		//alert(mobile);
+		var regPartton=/1[3-8]+\d{9}/;
+		if (!regPartton.test(mobile))
+		{
+			alert('请输入正确的手机号码');
+			return false;
+		}
+		$('#MobileInvCode')[0].disabled=true;
+		var url = siteUrl + "member/reg.php?dopost=sendmsgcode&mobile="+mobile;
+
+		$.ajax({type:'POST',url:url,async:false,dataType:'json',
+			success:function(data){
+				if(data.status=='errorMobile'){
+					alert("输入手机号码有误！");
+					$('#MobileInvCode')[0].disabled=false;
+					return false;
+				}
+				if(data.status=='hasFull') {
+					alert("超出当日发送验证短信次数，请联系客服!");
+					$('#MobileInvCode')[0].disabled=false;
+					return false;
+				}else if(data.status =="sendFailed"){
+					alert("发送短信失败!");
+					$('#MobileInvCode')[0].disabled=false;
+					return false;
+				}else if (data.status == 'hasSend'){
+					ST.User.CodeTimeout(60);
+					return false;
+				}
+			}
+
+		})
+
+		//var mobile=$("#mobile").val();
+		//var flag=0;
+		//if(!(/^1[3|4|5|8][0-9]\d{8}$/.test(mobile))){
+		//	alert('请填写正确的手机号码');
+		//	return false;
+		//}
+        //
+		//ST.User.ajaxDisableGetCodeBtn();
+        //
+		//var url=siteUrl+'ajax/ajax_login.php?dopost=getValidateCode&mobile='+mobile;
+        //
+
+	},
 	//ajax注册
 	ajaxReg:function(){
-	    
+		var msgcode = $("#msgcode").val();
+		if(msgcode==''){
+			alert("请输入验证码!");
+			return false;
+		}
+
 		var mobile=$("#mobile").val();
 		var flag=0;
 		if((/^1[3|4|5|8][0-9]\d{8}$/.test(mobile))){
 			
-		 var url=siteUrl+'ajax/ajax_login.php?dopost=ajaxReg&mobile='+mobile;
+		 var url=siteUrl+'ajax/ajax_login.php?dopost=ajaxReg&mobile='+mobile+'&msgcode='+msgcode;
 		
 	     $.ajax({type:'POST',url:url,async:false,dataType:'json',success:function(data){
-			  
-			   if(data.status=='hasReg'){
+
+			   if(data.status == 'invalidCode'){
+				   alert("验证码错误，请核对后准确输入!");
+				   flag=0;
+			   }else if(data.status=='hasReg'){
 			      alert("此手机号码已经注册,可以直接登陆!");
 				  flag=0;
 			   }else{
@@ -417,8 +497,7 @@ $.fn.hoverDelay = function(fnOver, fnOut,timeIn,timeOut) {
 			 }})
 	
 
-		}
-		else{
+		} else {
 		  alert('请填写正确的手机号码');
 		  return false;
 		}

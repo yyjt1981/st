@@ -33,4 +33,20 @@ class HttpHelper
         curl_close($ci);
         return $response;
     }
+
+    public static function postJson($url, $jsonStr){
+        $ch = curl_init();
+        //参数设置
+        $res= curl_setopt ($ch, CURLOPT_URL,$url);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt ($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonStr);
+        curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+        $result = curl_exec ($ch);
+        curl_close($ch);
+
+        return $result;
+    }
 }
