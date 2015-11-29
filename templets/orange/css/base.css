@@ -3672,3 +3672,12 @@ img {
 .error {
     color: #e32d2c;
 }
+.line_order_error {
+    margin-top: 10px;
+    display: inline;
+    line-height: 24px;
+    padding: 5px 8px 0 26px;
+    background: url(../images/ico_error.png) no-repeat 8px 0;
+    overflow: hidden;
+    color: #e32d2c;
+}

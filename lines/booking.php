@@ -117,6 +117,42 @@ else if($dopost=="savebooking")
   
    if(Helper_Archive::addOrder($arr))
    {
+       //成人信息
+       for($i=1;$i<=$dingnum;$i++){
+           $dingArr = array(
+               'memberorderid'=>  $arr['ordersn'],
+               'tourertype'=> 'adult',
+               'name'=> ${"adultName".$i},
+               'mobile'=>${"adultMobile".$i},
+               'cardnum'=>${"adultCardNum".$i}
+           );
+           Helper_Archive::addTourers($dingArr);
+       }
+
+       //儿童信息
+       for($i=1;$i<=$childnum;$i++){
+           $childArr = array(
+               'memberorderid'=>  $arr['ordersn'],
+               'tourertype'=> 'child',
+               'name'=> ${"childName".$i},
+               'mobile'=>${"childMobile".$i},
+               'cardnum'=>${"childCardNum".$i}
+           );
+           Helper_Archive::addTourers($childArr);
+       }
+
+       //老人信息
+       for($i=1;$i<=$oldnum;$i++){
+           $childArr = array(
+               'memberorderid'=>  $arr['ordersn'],
+               'tourertype'=> 'old',
+               'name'=> ${"childName".$i},
+               'mobile'=>${"childMobile".$i},
+               'cardnum'=>${"childCardNum".$i}
+           );
+           Helper_Archive::addTourers($childArr);
+       }
+
        $model = new CommonModule('#@__member_order');
        $orderid = $model->getField('id',"ordersn='$ordersn'");
        //判断是否开启在线支付且不是二次确认付款
