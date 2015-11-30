@@ -82,9 +82,9 @@ $(function(){
 	for(var i = 1; i <= dingNum;i++){
 		var divHtml = "<h3>游客" + subscript + "(成人)</h3><dl><dt><em class='must_input'>*</em>姓名：</dt>" +
 			"<dd><input type='text' class='data_text' name='adultName" + i +"'/><b id='adultNameError" + i + "' class='line_order_error' style='display: none'>请输入正确的姓名</b></dd></dl>" +
-			"<dl><dt>联系电话：</dt>" +
+			"<dl><dt><em class='must_input'>*</em>联系电话：</dt>" +
 			"<dd><input type='text' class='data_text' name='adultMobile" + i + "'/><b id='adultMobileError" + i + "' class='line_order_error' style='display: none'>请输入正确的手机号</b></dd></dl><dl>" +
-			"<dt>身份证号：</dt><dd><input type='text' class='data_text' name='adultCardNum" + i + "'/><b id='adultCardNumError" + i + "' class='line_order_error' style='display: none'>请输入正确的身份证号</b></dd></dl>";
+			"<dt><em class='must_input'>*</em>身份证号：</dt><dd><input type='text' class='data_text' name='adultCardNum" + i + "'/><b id='adultCardNumError" + i + "' class='line_order_error' style='display: none'>请输入正确的身份证号</b></dd></dl>";
 		dingNumHtml = dingNumHtml + divHtml;
 		subscript ++;
 	}
@@ -96,9 +96,9 @@ $(function(){
 	for(var i = 1; i <= childNum;i++){
 		var divHtml = "<h3>游客" + subscript + "(儿童)</h3><dl><dt><em class='must_input'>*</em>姓名</dt>" +
 			"<dd><input type='text' class='data_text' name='childName" + i +"'/><b id='childNameError" + i + "' class='line_order_error' style='display: none'>请输入正确的姓名</b></dd></dl>" +
-			"<dl><dt>联系电话：</dt>" +
+			"<dl><dt><em class='must_input'>*</em>联系电话：</dt>" +
 			"<dd><input type='text' class='data_text' name='childMobile" + i + "'/><b id='childMobileError" + i + "' class='line_order_error' style='display: none'>请输入正确的手机号</b></dd></dl><dl>" +
-			"<dt>身份证号：</dt><dd><input type='text' class='data_text' name='childCardNum" + i + "'/><b id='childCardNumError" + i + "' class='line_order_error' style='display: none'>请输入正确的身份证号</b></dd></dl>";
+			"<dt><em class='must_input'>*</em>身份证号：</dt><dd><input type='text' class='data_text' name='childCardNum" + i + "'/><b id='childCardNumError" + i + "' class='line_order_error' style='display: none'>请输入正确的身份证号</b></dd></dl>";
 		childNumHtml = childNumHtml + divHtml;
 		subscript ++;
 	}
@@ -109,9 +109,9 @@ $(function(){
 	for(var i = 1; i <= oldNum;i++){
 		var divHtml = "<h3>游客" + subscript + "(老人)</h3><dl><dt><em class='must_input'>*</em>姓名</dt>" +
 			"<dd><input type='text' class='data_text' name='oldName" + i +"'/><b id='oldNameError" + i + "' class='line_order_error' style='display: none'>请输入正确的姓名</b></dd></dl>" +
-			"<dl><dt>联系电话：</dt>" +
+			"<dl><dt><em class='must_input'>*</em>联系电话：</dt>" +
 			"<dd><input type='text' class='data_text' name='oldMobile" + i + "'/><b id='oldMobileError" + i + "' class='line_order_error' style='display: none'>请输入正确的手机号</b></dd></dl><dl>" +
-			"<dt>身份证号：</dt><dd><input type='text' class='data_text' name='oldCardNum" + i + "'/><b id='oldCardNumError" + i + "' class='line_order_error' style='display: none'>请输入正确的身份证号</b></dd></dl>";
+			"<dt><em class='must_input'>*</em>身份证号：</dt><dd><input type='text' class='data_text' name='oldCardNum" + i + "'/><b id='oldCardNumError" + i + "' class='line_order_error' style='display: none'>请输入正确的身份证号</b></dd></dl>";
 		oldNumHtml = oldNumHtml + divHtml;
 		subscript ++;
 	}
