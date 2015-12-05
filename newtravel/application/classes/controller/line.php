@@ -448,7 +448,16 @@ class Controller_Line extends Stourweb_Controller{
 
         }
         $imgstr=trim($imgstr,',');
-        $data_arr['piclist']=$imgstr;
+		$imgstrArr = explode('||', $imgstr);
+		$real_imgstr = '';
+		foreach ($imgstrArr as $k => $v) {
+			if ($v != $data_arr['linepic'] && $v != '') {
+				$real_imgstr = $real_imgstr . $v . '||';
+			}
+		}
+		if ($this->startWith($real_imgstr, ',')) {
+			$data_arr['piclist']=substr($real_imgstr, 1);
+		}
         $data_arr['linedoc']=Arr::get($_POST,'linedoc');
 
 
@@ -486,6 +495,11 @@ class Controller_Line extends Stourweb_Controller{
 		else
 		  echo 'no';
 	}
+
+	function startWith($str, $needle) {
+		return strpos($str, $needle) === 0;
+	}
+
     //保存介绍
     public function savejieshao($lineid)
     {
