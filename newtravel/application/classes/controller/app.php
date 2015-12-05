@@ -284,6 +284,9 @@ class Controller_App extends Stourweb_Controller{
             $pid=Arr::get($_POST,'pid');
             $model=ORM::factory('plugin_leftnav');
             $model->pid=$pid;
+            if ($pid == 0) {
+                $model->webid=$pid;
+            }
             $model->kindname="自定义";
             $model->displayorder='9999';
             $model->save();
