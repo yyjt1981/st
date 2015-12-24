@@ -23,7 +23,7 @@
         </dl>
         <dl class="list_dl">
             <dt class="wid_90">人数：</dt>
-            <dd>{$info['dingnum']}</dd>
+            <dd>{$count}</dd>
         </dl>
 
         <dl class="list_dl">
@@ -31,7 +31,7 @@
             <dd><input type="text" class="set-text-xh text_200 mt-4" name="price" id="price" value="{$info['price']}" ></dd>
         </dl>
         <dl class="list_dl">
-            <dt class="wid_90">客户姓名：</dt>
+            <dt class="wid_90">预订人姓名：</dt>
             <dd>{$info['linkman']}</dd>
         </dl>
 
@@ -39,6 +39,9 @@
             <dt class="wid_90">联系电话：</dt>
             <dd>{$info['linktel']}</dd>
         </dl>
+
+        <input type="hidden" value="{$resultVal}" id="tourer"/>
+
         <dl class="list_dl">
             <dt class="wid_90">订单状态：</dt>
             <dd>
@@ -73,21 +76,27 @@
                 form  : "frm",
                 success  :  function(response, opts)
                 {
-
                     var data = $.parseJSON(response.responseText);
                     if(data.status)
                     {
                         ST.Util.showMsg('保存成功!','4',2000);
-
-
                     }
-
-
                 }});
-
         })
 
-
+        //显示预订用户
+        var resultVal = $('#tourer').val();
+        var tours = resultVal.split('|');
+        var temp = 1;
+        var innerHtml = '';
+        for (var i = 0; i < tours.length - 1; i++) {
+            var t = tours[i];
+            var nameAndMobile = t.split(',');
+            <!--增加预订人相关信息-->
+            innerHtml = innerHtml + "<dl class='list_dl'><dt class='wid_90'>游客资料" + temp +"：</dt><dd>" + nameAndMobile[0] + "</dd><dd>(" + nameAndMobile[1] + ")</dd></dl>";
+            temp ++;
+        }
+        $("#tourer").after(innerHtml);
     })
 
 </script>

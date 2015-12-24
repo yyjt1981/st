@@ -142,6 +142,16 @@ class Controller_Order extends Stourweb_Controller{
         }
 
         $this->assign('info',$info);
+        $count = $info['dingnum'] + $info['childnum'] + $info['oldnum'];
+        $ordersn = $info['ordersn'];
+        $tourer = ORM::factory('tourer')->where('memberorderid','=',$ordersn)->find_all()->as_array();
+        $resultVal = '';
+        foreach($tourer as $k => $v) {
+            $tour = $v->as_array();
+            $resultVal = $resultVal . $tour['name'] . ',' . $tour['mobile'] . '|';
+        }
+        $this->assign('count',$count);
+        $this->assign('resultVal',$resultVal);
         $this->display('stourtravel/order/'.$templet);
     }
     /*
