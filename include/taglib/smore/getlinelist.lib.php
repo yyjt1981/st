@@ -52,10 +52,10 @@ function lib_getlinelist(&$ctag,&$refObj)
 	$limit=!empty($limit)?$limit:0;
 	if($type=='startcity')
 	{
-		$sql="select  {$basefield},c.isjian,c.istejia,c.isding  from #@__line as a left join #@__kindorderlist as c on (c.classid=$sonid and a.id=c.aid  and c.typeid=1) where a.ishidden=0 and and startcity='{$startcity}' and FIND_IN_SET($sonid,a.kindlist) and a.ishidden=0 {$orderby}  limit {$limit},{$row}";
+		$sql="select  {$basefield},c.isjian,c.istejia,c.isding  from #@__line as a left join #@__allorderlist as c on (c.classid=$sonid and a.id=c.aid  and c.typeid=1) where a.ishidden=0 and and startcity='{$startcity}' and FIND_IN_SET($sonid,a.kindlist) and a.ishidden=0 {$orderby}  limit {$limit},{$row}";
 	}
 	if($type=='mdd') //指定目的地时关联文章调用.
-	{  
+	{
 	   if($flag=='hot')
 	   {
 		  $orderby='order by c.isding desc,case when c.displayorder is null then 9999 end,c.displayorder asc';   
@@ -72,21 +72,22 @@ function lib_getlinelist(&$ctag,&$refObj)
 	   {
 		   $orderby='order by c.isding desc,case when c.displayorder is null then 9999 end,c.displayorder asc';
 	   }
+
 	   $sonid=isset($definekind) ? $definekind : $refObj->Fields['kindid'];
 	   $shownum=isset($row) ? $row : $refObj->Fields['shownum'];
 	   $shownum = empty($shownum) ? 6 : $shownum;
-	  
-	
+
+
 	   if(isset($sonid))
 	   {
-	        
-			$number=isset($refObj->Fields['shownumber']) ? $refObj->Fields['shownumber'] : $row;//如果模块设置了显示数量则使用.
-			$sql="select {$basefield},c.isjian,c.istejia,c.isding  from #@__line as a left join #@__kindorderlist as c on (c.classid=$sonid and a.id=c.aid  and c.typeid=1) where a.ishidden=0 and  FIND_IN_SET($sonid,a.kindlist) {$orderby}  limit {$limit},{$shownum}";
 
-		   
-		
+			$number=isset($refObj->Fields['shownumber']) ? $refObj->Fields['shownumber'] : $row;//如果模块设置了显示数量则使用.
+			$sql="select {$basefield},c.isjian,c.istejia,c.isding  from #@__line as a left join #@__allorderlist as c on (a.id=c.aid  and c.typeid=1) where a.ishidden=0 and  FIND_IN_SET($sonid,a.kindlist) {$orderby}  limit {$limit},{$shownum}";
+
+
+
 	   }
-	  
+
 	   else return '';
 	}
 	//搜索页面推荐.
@@ -95,7 +96,7 @@ function lib_getlinelist(&$ctag,&$refObj)
 		if($GLOBALS['childid']!=0)
 		{
 		  $kchild=$GLOBALS['childid'];
-		  $sql="select  distinct {$basefield}  from #@__line as a left join #@__kindorderlist as c on (c.classid=$kchild and a.id=c.aid  and c.typeid=1) where a.ishidden=0 and c.isjian=1 and FIND_IN_SET($kchild,a.kindlist) order by case when c.displayorder is null then 9999 end,c.displayorder asc   limit 0,4";
+		  $sql="select  distinct {$basefield}  from #@__line as a left join #@__allorderlist as c on (c.classid=$kchild and a.id=c.aid  and c.typeid=1) where a.ishidden=0 and c.isjian=1 and FIND_IN_SET($kchild,a.kindlist) order by case when c.displayorder is null then 9999 end,c.displayorder asc   limit 0,4";
 		}
 		else
 		{
@@ -110,7 +111,7 @@ function lib_getlinelist(&$ctag,&$refObj)
 		if($GLOBALS['destid']!=0)
 		{
 		  $kchild=$GLOBALS['destid'];
-		  $sql="select {$basefield} from #@__line as a left join #@__kindorderlist as c on (c.classid=$kchild and a.id=c.aid  and c.typeid=1) where  a.ishidden=0 and FIND_IN_SET($kchild,a.kindlist) {$orderby}  limit 0,4";
+		  $sql="select {$basefield} from #@__line as a left join #@__allorderlist as c on (c.classid=$kchild and a.id=c.aid  and c.typeid=1) where  a.ishidden=0 and FIND_IN_SET($kchild,a.kindlist) {$orderby}  limit 0,4";
 		}
 		else
 		{
