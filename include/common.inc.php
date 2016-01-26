@@ -122,7 +122,7 @@ $cfg_isUrlOpen = @ini_get("allow_url_fopen");
 //网站host
 $cfg_clihost = 'http://'.$_SERVER['HTTP_HOST'];
 
-$cfg_domain_cookie=substr($_SERVER['HTTP_HOST'],strpos($_SERVER['HTTP_HOST'],'.'));
+$cfg_domain_cookie=getDomain();
 $cfg_basehost=$cfg_clihost;
 //根目录
 $cfg_basedir = preg_replace('#'.$cfg_cmspath.'\/include$#i', '', SLINEINC);
@@ -275,6 +275,19 @@ if($cfg_mobile_open == '1')
         header("Location:$url");//跳转到手机页面
         exit();
     }
+}
+
+function getDomain(){
+    $host = $_SERVER['HTTP_HOST'];
+    $count = substr_count($host,".");
+    if($count = 1){
+        return $host;
+    }
+    if(!filter_var($host, FILTER_VALIDATE_IP)){
+        return $host;
+    }
+
+    return substr($_SERVER['HTTP_HOST'],strpos($_SERVER['HTTP_HOST'],'.'));
 }
 
 

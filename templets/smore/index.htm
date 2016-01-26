@@ -89,7 +89,7 @@
                     </div>
                     <div class="list-con">
                         <ul>
-                            {sline:getlinelist type="mdd" flag="recommend" row="3"}
+                            {sline:getlinelist type="mdd" flag="hot" row="3"}
                                 <li class="li-top">
                                     <p class="img">
                                         <a class="fl" href="[field:url/]" target="_blank"><img class="fl" src="[field:lit160/]" alt="[field:title/]" width="230" height="170" title="[field:title/]"></a>
@@ -119,14 +119,14 @@
         <!--线路产品分类列表结束-->
 
             <!--攻略游记开始-->
-            <div class="gl_con">
-                <div class="gl_bt"><s></s><h3>攻略游记</h3><a href="/raiders/" target="_blank">更多</a></div>
-                <ul class="gl_ul_top">
-                    {sline:getarclist flag='recommend' haspic="1" row='3'}
+            <!--<div class="gl_con">-->
+                <!--<div class="gl_bt"><s></s><h3>攻略游记</h3><a href="/raiders/" target="_blank">更多</a></div>-->
+                <!--<ul class="gl_ul_top">-->
+                    <!--{sline:getarclist flag='recommend' haspic="1" row='3'}-->
 
-                    <li [field:global.autoindex runphp='yes']if(@me%3==0)@me='class="mr_0"';else @me='';[/field:global.autoindex]><a class="fl" href="[field:url/]" target="_blank"><img class="fl lazyimg" src="" data-original="[field:litpic/]" width="310" height="215" alt="[field:title/]" /></a><p><a href="[field:url/]" target="_blank">[field:title/]</a></p></li>
-                    {/sline:getarclist}
-                </ul>
+                    <!--<li [field:global.autoindex runphp='yes']if(@me%3==0)@me='class="mr_0"';else @me='';[/field:global.autoindex]><a class="fl" href="[field:url/]" target="_blank"><img class="fl lazyimg" src="" data-original="[field:litpic/]" width="310" height="215" alt="[field:title/]" /></a><p><a href="[field:url/]" target="_blank">[field:title/]</a></p></li>-->
+                    <!--{/sline:getarclist}-->
+                <!--</ul>-->
                 <!--<div class="gl_list_con">-->
                     <!--<ul>-->
                         <!--{sline:getarclist flag='recommend' haspic='1' row='2' limit='3'}-->
@@ -141,7 +141,7 @@
                         <!--{/sline:getarclist}-->
                     <!--</ul>-->
                 <!--</div>-->
-            </div>
+            <!--</div>-->
             <!--攻略游记结束-->
 
       </div>

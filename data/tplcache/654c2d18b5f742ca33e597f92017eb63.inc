@@ -1,1 +1,0 @@
-<li data-value="[field:id/]" data-field="visatype">[field:title/]</li>
