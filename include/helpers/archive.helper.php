@@ -1980,7 +1980,7 @@ public static function getUrl($val=null,$key=null,$exclude=null,$arr,$url,$table
 
         }
 
-		return $num ? $num + 20 : 30;
+		return $num;
 	  
   }
   //获取虚拟购买数量
